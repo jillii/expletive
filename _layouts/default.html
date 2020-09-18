@@ -1,0 +1,30 @@
+{% assign sections = site.sections | sort: "weight" %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <header>
+      {% include header.md %}
+    </header>
+    {% for section in sections %}
+      <section id="{{ section.title }}" data-aos="fade-up">
+        {% unless section.title == "about" %}
+          <h1>
+            {{ section.title }}
+          </h1>
+          {% endunless %}
+          {{ section.content }}
+      </section>
+    {% endfor %}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+  <footer>
+    {% include footer.md %}
+  </footer>
+</html>

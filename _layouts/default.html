@@ -10,15 +10,21 @@
       {% include header.md %}
     </header>
     {% for section in sections %}
-      <section id="{{ section.title }}" data-aos="fade-up">
+      <section id="{{ section.title }}">
         {% unless section.title == "about" %}
-          <h1>
-            {{ section.title }}
-          </h1>
-          {% endunless %}
-          {{ section.content }}
+          <div class="container fixed">
+            <h1>
+              {{ section.title }}
+            </h1>
+            {% endunless %}
+            {{ section.content }}
+          </div>
       </section>
     {% endfor %}
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

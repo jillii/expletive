@@ -1,70 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Playfair+Display&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Playfair+Display&display=swap);
+
 @font-face {
-  font-family: 'Atari-Classic';
-    src:  url('../atari/Atari-Classic.ttf.woff') format('woff'),
-    url('../atari/Atari-Classic.ttf.svg#Atari-Classic') format('svg'),
-    url('../atari/Atari-Classic.ttf.eot'),
-    url('../atari/Atari-Classic.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
+  font-family: Atari-Classic;
+  src: url(../atari/Atari-Classic.ttf.woff) format("woff"), url(../atari/Atari-Classic.ttf.svg#Atari-Classic) format("svg"), url(../atari/Atari-Classic.ttf.eot), url(../atari/Atari-Classic.eot?#iefix) format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
-$primary-font: 'Cutive Mono', monospace;
-$secondary-font: 'Playfair Display', serif;
-$atari: 'Atari-Classic';
-
-@mixin center($hor, $ver) {
-  position: absolute;
-  @if $hor {
-    top: 50%;
-    @unless $ver {
-      transform: translateY(-50%);
-    }
-  }
-  @if $ver {
-    left: 50%;
-    @unless $hor {
-      transform: translateX(-50%);
-    }
-  }
-  @if $hor and $ver {
-    transform: translate(-50%, -50%);
-  }
-}
-/* General Styles */
 html {
   scroll-behavior: smooth;
 }
+
 body {
+  margin: 0;
   font-size: 20px;
   line-height: 1.1;
-  font-family: $primary-font;
+  font-family: "Cutive Mono",monospace;
 }
+
 div {
   box-sizing: border-box;
 }
+
+.container {
+  margin: 0 8px;
+}
+
 a {
   text-decoration: none;
+
   &:focus {
-    outline: none;
+    outline: 0;
   }
+
   &:visited {
     color: unset;
   }
 }
+
 section {
+  position: relative;
   min-height: 100vh;
+  padding: 33px 0;
+
+  &:nth-child(even) {
+    background-color: #eee;
+  }
+
+  &:nth-child(odd) {
+    background-color: #ddd;
+  }
+
+  &:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
 }
-/* Fonts */
+
 h1, h2, h3, h4, h5, h6 {
-  background-color: #fff;
   z-index: 1;
 }
+
 h1 {
   font-size: 44px;
   line-height: 45px;
 }
-/* Navigation */
+
 #primary-nav {
   display: flex;
   flex-direction: column;
@@ -72,21 +76,22 @@ h1 {
   position: fixed;
   right: 0;
   z-index: 999;
+
   a, p {
-    font-family: $atari;
+    font-family: Atari-Classic;
     text-transform: uppercase;
     cursor: pointer;
   }
+
   a {
     display: none;
   }
-  &:hover {
-    a {
-      display: block;
-    }
+
+  &:hover a {
+    display: block;
   }
 }
-/* Socials */
+
 .socials .fab {
   position: relative;
   height: 21px;
@@ -94,19 +99,24 @@ h1 {
   border-radius: 50%;
   border: 1px solid;
   font-size: 12px;
+
   &:before {
-    @include center(true, true);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+
   &:hover {
     background-color: #000;
+
     &:before {
       color: #fff;
     }
   }
 }
-/* Forms and form related elemenets */
-input,
-.input {
+
+.input, input {
   -webkit-appearance: none;
   height: 33px;
   padding: 6px 12px;
@@ -114,89 +124,131 @@ input,
   margin-bottom: 6px;
   border: 1px solid;
   border-radius: 0;
-  font-family: $primary-font;
+  font-family: "Cutive Mono",monospace;
   font-size: 18px;
   box-sizing: border-box;
-  & + .btn {
-    height: 33px;
+}
+
+.input + .btn, input + .btn {
+  height: 33px;
+}
+
+form {
+  max-width: 280px;
+  width: 100%;
+
+  .input {
+    width: 100%;
+  }
+
+  textarea {
+    height: 3em;
+  }
+
+  label {
+    display: block;
+    font-size: 16px;
+  }
+
+  .btn {
+    display: block;
+    float: right;
   }
 }
+
 .btn {
-	position: relative;
+  position: relative;
   width: 60px;
-	padding: 4px 10px;
+  margin: 0 0 11px;
+  padding: 4px 10px;
   border: 6px solid #000;
   border-top-color: #00000029;
   border-left-color: #00000014;
   border-right-color: #000;
-  background-color: #fff;
+  background-color: #efefef;
   cursor: pointer;
+
   &:before {
     content: "z";
     position: absolute;
     animation: float 1s forwards infinite;
   }
+
   &:after {
     content: "-_-";
     white-space: nowrap;
   }
+
   &:hover {
     &:before {
       content: none;
     }
+
     &:after {
       animation: slow-blink-to-anger 10s forwards;
     }
   }
+
   &:active {
     border-bottom-color: #00000029;
     border-right-color: #00000014;
     border-left-color: #000;
     border-top-color: #000;
+
     &:after {
       animation: blink 2.5s;
     }
   }
+
   &:focus {
-    outline: none;
+    outline: 0;
   }
 }
-/* Animation */
+
 @keyframes float {
   0% {
     bottom: 100%;
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     bottom: calc(100% + 20px);
     opacity: 0;
   }
 }
+
 @keyframes slow-blink-to-anger {
   0% {
     content: "-_·";
   }
+
   2% {
-    content: "·_-"
+    content: "·_-";
   }
+
   4% {
-    content: "·_·"
+    content: "·_·";
   }
+
   100% {
-    content: "ಠ_ಠ"
+    content: "ಠ_ಠ";
   }
 }
+
 @keyframes blink {
   0% {
     content: "-_·";
   }
+
   25% {
-    content: "·_-"
+    content: "·_-";
   }
+
   50% {
-    content: "·_·"
+    content: "·_·";
   }
 }

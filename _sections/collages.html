@@ -7,7 +7,7 @@ weight: 2
 		<div class="collage">
 			{{ collage.title }}
 			<div class="img-container">
-				<img src="/assets/images/collag/{{ collage.image | relative_path }}">
+				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
 			</div>	
 			<div class="desc" data-aos="flip-left">{{ collage.desc }}</div>
 		</div>

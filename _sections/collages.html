@@ -1,0 +1,15 @@
+---
+title: chaos.
+weight: 2
+---
+<div id="collages">
+	{% for collage in site.data.collages %}
+		<div class="collage">
+			{{ collage.title }}
+			<div class="img-container">
+				<img src="/assets/images/collag/{{ collage.image | relative_path }}">
+			</div>	
+			<div class="desc" data-aos="flip-left">{{ collage.desc }}</div>
+		</div>
+	{% endfor %}
+</div>

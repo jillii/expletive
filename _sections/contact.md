@@ -2,7 +2,7 @@
 title: contact
 weight: 3
 ---
-Inquiries, advice, complaints:
+Questions? Comments? Concerns?
 <form id="contact-form" action="https://getsimpleform.com/messages?form_api_token=3757f10fb2e6ec83f5b80b3facba9248" method="post">
    <label>Name</label>
     <input type="text" class="input" name="name">

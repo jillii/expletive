@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Playfair+Display&display=swap);
+
+$primary-bg: #eff0f4;
+$secondary-bg: #efefef;
+
+@mixin box-shadow {
+  box-shadow: 0 0 10px #c9c9c9;
+  background-color: $secondary-bg;
+}
+
+@mixin inset {
+  box-shadow: inset 3px 3px 7px #ababab, 
+            inset -3px -3px 7px #e7e7e7;
+  background-color: inherit;
+}
+
+@mixin button {
+background: linear-gradient(145deg, #d7d7d7, #b5b5b500);
+box-shadow:  5px 5px 17px #b7b7b7, 
+             -5px -5px 17px #dbdbdb;
+}
+@mixin double-shadow {
+  position: relative;
+  &:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    border-radius: inherit;
+    top: 4px;
+    left: 4px;
+    z-index: -999;
+  }
+}
+@font-face {
+  font-family: Atari-Classic;
+  src: url(../atari/Atari-Classic.ttf.woff) format("woff"), url(../atari/Atari-Classic.ttf.svg#Atari-Classic) format("svg"), url(../atari/Atari-Classic.ttf.eot), url(../atari/Atari-Classic.eot?#iefix) format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal;
+}

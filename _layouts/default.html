@@ -13,9 +13,9 @@
       <section id="{{ section.title }}">
         {% unless section.title == "about" %}
           <div class="container fixed">
-            <h1>
+            <h2 class="flicker-text">
               {{ section.title }}
-            </h1>
+            </h2>
             {% endunless %}
             {{ section.content }}
           </div>
@@ -29,6 +29,7 @@
     <script>
       AOS.init();
     </script>
+    <script type="text/javascript" src="{{ '/assets/js/scripts.min.js' | relative_url }}"></script>
   </body>
   <footer>
     {% include footer.md %}

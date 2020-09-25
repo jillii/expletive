@@ -4,14 +4,17 @@ weight: 1
 ---
 <div class="flexbox">
 	<div class="copy-area">
-		You're dealing with a wide range of stuff here. We're here to help you figure out what you're looking for. Start by entering a key phrase to help identify what you'd like to listen to. 
+		<p>
+			You're dealing with a wide range of stuff here. We're here to help you figure out what you're looking for. Start by entering a key phrase to help identify what you'd like to listen to.
+		</p> 
 		<input class="input" type="text" ><button class="btn" type="submit"></button>
 	</div>
 
 	<div class="music-container">
 		{% for track in site.data.tracks %}
 			<div class="music">
-				<labe>{{ track.title }}</labe>
+				<label>{{ track.title }}</label>
+				<div class="close"></div>
 				<div class="player">
 					<audio id="player-{{ forloop.index0 }}" src="{{ track.mp3 }}"></audio>
 					<div> 

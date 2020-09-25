@@ -3,14 +3,25 @@ title: chaos.
 weight: 2
 name: collages
 ---
-<div id="collages">
+<div class="supertext" data-aos="fade-in"><span id="slide-number">1</span> out of {{ site.data.collages | size }}</div>
+<div class="nav flexbox">
+	<div id="left" class="dir">
+		&xlarr;
+	</div>
+	<div id="right" class="dir">
+		&xrarr;
+	</div>
+</div>
+<div id="collages" class="slider">
 	{% for collage in site.data.collages %}
-		<div class="collage">
-			{{ collage.title }}
+		<div class="collage flexbox slide {% if forloop.index0 == 0 %}active{% else %}pre{% endif %}">
 			<div class="img-container">
 				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
-			</div>	
-			<div class="desc" data-aos="flip-left">{{ collage.desc }}</div>
+			</div>
+			<div class="copy-container">
+				<h4>{{ collage.title }}</h4>
+				<div class="desc">{{ collage.desc }}</div>
+			</div>
 		</div>
 	{% endfor %}
 </div>

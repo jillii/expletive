@@ -15,7 +15,7 @@ name: collages
 <div id="collages" class="slider">
 	{% for collage in site.data.collages %}
 		<div class="collage flexbox slide {% if forloop.index0 == 0 %}active{% else %}pre{% endif %}">
-			<div class="img-container">
+			<div class="img-container" style="background-image: url({{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }})">
 				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
 			</div>
 			<div class="copy-container">

@@ -19,8 +19,8 @@
 			width: 60%;
 			background-position: center;
 			background-size: 50%;		
-			background-color: $pink;
-			background-blend-mode: darken;
+			background-color: $blue;
+			background-blend-mode: hard-light;
 
 			img {
 				position: absolute;
@@ -31,12 +31,13 @@
 			}
 		}
 		.copy-container {
+			text-shadow: 1px 1px 0 $shadow-color;
 			width: 40%;
 			padding: 44px 12px;
-			background-color: $blue;
 			z-index: 1;
 			.desc {
-				font-size: 12px;
+				font-size: 13px;
+				font-weight: 700;
 			}
 		}
 	}

@@ -6,12 +6,29 @@ weight: 1
 	<p>
 		You're dealing with a wide range of stuff here. We're here to help you figure out what you're looking for. Start by entering a key phrase to help identify what you'd like to listen to.
 	</p> 
-	<input class="input" type="text" ><button class="btn" type="submit"></button>
+	<input class="input" type="text" id="search"><button id="search-by-tag" class="btn" type="submit"></button>
+</div>
+<div id="tags">
+	{% assign tags  = site.data.tracks | map: "tags" | join: ',' | split: ',' | sort %}
+	{% assign count = 1 %}
+	{% for tag in tags %}
+		{% if prev %}
+			{% if tag == prev %}
+				{% assign count = count | plus: 1 %}
+			{% else %}
+				<button class="tag" id="{{ prev }}">{{ prev }}<span class="num">{{ count }}</span></button>
+				{% assign count = 1 %}
+			{% endif %}
+		{% endif %}
+
+		{% assign prev = tag %}
+
+	{% endfor %}
 </div>
 
 <div class="music-container">
 	{% for track in site.data.tracks %}
-		<div class="music">
+		<div class="music" data-value="{{ track.tags | join: ' ' }}">
 			<label>{{ track.title }}</label>
 			<div class="close"></div>
 			<div class="player">

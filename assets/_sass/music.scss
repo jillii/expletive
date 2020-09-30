@@ -6,7 +6,34 @@
 		max-width: 100%;
 	}
 }
+.tag {
+	position: relative;
+    color: $blue;
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    padding-right: 30px;
+    box-shadow: 2px 2px 0 $shadow-color;
+    border: 2px solid $blue;
+    border-radius: 21px;
+    .num {
+	    position: absolute;
+	    height: 100%;
+	    border-left: 2px solid #30f;
+	    top: 0;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    right: 10px;
+	    padding-left: 5px;
+	    font-weight: 600;
+    }
+}
 .music-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	max-width: 600px;
 	margin-left: auto;
@@ -18,9 +45,11 @@
 	.music {
 		position: absolute;
 		padding: 33px;
+		height: 100px;
 		border: 1px solid;
 		border-radius: 0;
 		box-shadow: 3px 4px 0 $shadow-color;
+		transition: all .8s ease;
 		animation: floatacross 20s infinite;
 		animation-duration: 60s;
 		&:after {
@@ -34,6 +63,16 @@
 		}
 		&:hover {
 			animation-play-state: paused;
+		}
+		&.match {
+			position: relative;
+			margin-left: calc(50% - 600px / 2) !important;
+			top: unset !important;
+			left: unset !important;
+			animation-play-state: paused;
+		}
+		&.no-match {
+			display: none;
 		}
 		label {
 			width: 100%;
@@ -62,8 +101,8 @@
 	}
 	@for $i from 1 through 100 {
 		.music:nth-child(#{$i}) {
-			top: percentage(random(100) / 100);
-			left: percentage(random(100) / 100);
+			top: percentage(random(80) / 100);
+			left: percentage(random(230) / 100);
 		}
 	}
 }

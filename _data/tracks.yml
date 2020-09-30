@@ -1,17 +1,347 @@
 - title: tokyo sonata
+  tags:
+    - chopped up
+    - melancholy
+    - introspective
+    - movie soundtrack
+    - thoughtful
+    - minimal
+    - contemplative
+    - tokyo sonata
 
 - title: love is in the air
+  tags:
+    - bass
+    - gritty
+    - overcompressed
+    - fast
+    - driving
+    - love
+    - 4-to-the-floor
+    - acid
 
 - title: big shift
+  tags:
+    - melancholy
+    - complex
+    - subtle
+    - subversive
+    - slow-build
+    - melodic
+    - 4-to-the-floor
+    - minimal
+    - big shift
 
 - title: static
+  tags:
+    - simple
+    - 808
+    - noisey
+    - driving
+    - fast
+    - slow-build
+    - pads
+    - bit-crushed
+    - 4-to-the-floor
+    - repetetive
+    - static
+    - minimal
 
 - title: bighton 1
+  tags:
+    - fast
+    - energetic
+    - chopped up
+    - brighton
+    - melodic
+    - vocoder vocals
+    - repetetive
+    - hardcore elements
+    - minimal
 
 - title: brighton 2
+  tags:
+    - fast
+    - melodic
+    - breaks
+    - breakbeat
+    - whisk
+    - detergent
+    - laundry
+    - square waves
+    - 8-bit
+    - chiptune
+    - 4-to-the-floor
+    - lush
+    - brighton
 
 - title: brighton 3
+  tags:
+    - fast
+    - melodic
+    - laundry
+    - detergent
+    - laundromat
+    - breaks
+    - breakbeat
+    - square waves
+    - 8-bit
+    - chiptune
+    - 4-to-the-floor
+    - lush
+    - brighton
 
 - title: what if i'm not ready
+  tags:
+    - what if i'm not ready
+    - breaks
+    - amen
+    - static
+    - noisey
+    - chopped up
+    - melodic
+    - piano
+    - self-aware vocals
+    - hardcore elements
+    - lush
 
 - title: (--;)
+  tags:
+    - melodic
+    - chiptune
+    - punk
+    - fast
+
+- title: forgetting
+  tags:
+    - forgetting
+    - melodic
+    - melancholy
+    - posi-acid
+    - hopeful
+    - ambivalence
+    - ambivalent
+    - apathy
+    - apathetic
+    - contemplative
+
+- title: detergent
+  tags:
+    - detergent
+    - subtractive synthesis
+    - 4-to-the-floor
+    - driving
+    - hard techno
+    - minimal
+    - laundry
+    - detergent
+    - bass
+    - fast
+
+- title: the kuiper belt with alan stern v1
+  tags:
+    - the kuiper belt with alan stern v1
+    - squelchy
+    - acid
+    - minimal
+    - bass
+    - repetetive
+    - fast
+
+- title: the kuiper belt with alan stern v2
+  tags:
+    - the kuiper belt with alan stern v2
+    - minimal
+    - vocoder
+    - melodic
+    - lush
+    - slow-build
+    - house
+    - fast
+
+- title: em cares
+  tags:
+    - em cares
+    - melodic
+    - slow-build
+    - square waves
+    - arpeggiated
+    - melancholy
+
+- title: butter
+  tags:
+    - butter
+    - food
+    - driving
+    - fast
+    - bass
+    - 4-to-the-floor
+    - compression
+    - forceful
+    - claps
+
+- title: now with 50% more plastic
+  tags:
+    - now with 50% more plastic
+    - plastic
+    - 50's commercials
+    - whisk
+    - laundry
+    - detergent
+    - celery
+    - driving
+    - fast
+    - chopped up
+    - bubbly
+    - claps
+
+- title: computer_stacks.jpg
+  tags:
+    - computer_stacks
+    - jpeg
+    - fast
+    - data
+    - arpeggiated
+    - apathetic
+    - knowledge
+    - claps
+    - noisey
+    - minimal
+    - melodic
+    - square waves
+
+- title: taxmasters idk like 10
+  tags:
+    - melodic
+    - melancholy
+    - throwback
+    - noisey
+    - taxmasters
+
+- title: imposter syndrome
+  tags:
+    - imposter syndrome
+    - throwback
+    - contemplative
+    - piano
+    - noisey
+    - psychosis
+
+- title: underdone + hard bits
+  tags:
+    - underdone + hard bits
+    - cooking
+    - gritty
+    - noisey
+    - bubbly
+    - food
+    - overcompressed
+
+- title: helen
+  tags:
+    - melodic
+    - melancholy
+
+- title: daisy
+  tags:
+    - daisy
+    - fast
+    - vocoder
+    - 808
+    - dial-up
+
+- title: beep test
+  tags:
+    - beep test
+    - melodic
+    - melancholy
+    - beepy
+    - clangy
+    - acid
+    - saw waves
+    - squelchy
+
+- title: workings of a modern fax machine
+  tags:
+    - workings of a modern fax machine
+    - posi-acid
+    - melodic
+    - squelchy
+    - noisey
+    - anthem
+    - acid
+    - after the rave
+    - fast
+
+- title: sorting data
+  tags:
+    - sorting data
+    - contemplative
+    - data
+    - arpeggiated
+    - 808
+    - fast
+    - software
+    - melodic
+    - uplifting
+    - textured
+    - vocoder
+
+- title: you got it bad
+  tags:
+    - you got it bad
+    - throwback
+    - acid
+    - posi-acid
+    - fast
+    - squelchy
+    - melodic
+    - melancholy
+
+- title: marge
+  tags:
+    - marge
+    - melodic
+    - heaven
+    - joyful
+
+- title: fruit !@#$%
+  tags:
+    - fruit !@#$%
+    - food
+    - chopped up
+    - modest mouse remix
+
+- title: standing outside a broken phonebooth with money in my !@#$%
+  tags:
+    - chopped up
+
+- title: tokyo sonata 2
+  tags:
+    - tokyo sonata 2
+    - chopped up
+    - driving
+    - melodic
+    - movie soundtrack
+    - slow-build
+
+- title: ladies and gentlemen we're floa-!@#$%
+  tags:
+    - ladies and gentlemen we're floa-!@#$%
+    - chopped up
+    - fast
+    - bubbly
+
+- title: errors
+  tags:
+    - errors
+    - arpeggiated
+    - acid
+    - 8-bit
+    - melodic
+    - contemplative
+    - vocoder
+    - 4-to-the-floor
+    - fast
+    - slow-build
+    - degrade

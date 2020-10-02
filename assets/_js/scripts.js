@@ -54,7 +54,6 @@ $("#search").keyup(function(){
 		reset = true;
 	}
 	update_musics(input, reset);
-	update_tags(input, reset);
 });
 $(".tag").click(function(){
 	var btn   = $(this),
@@ -64,48 +63,54 @@ $(".tag").click(function(){
 	if (btn.hasClass("active")) {
 		reset = true;
 	}
+
 	update_musics(id, reset);
-	update_tags(id, reset);
 	btn.toggleClass("active");
 
 });
 
 function update_musics(input, reset, time = 5) {
+	var active_tags = "";
+
 	musics.each(function(){
 		// hide musics with non-matching tags
-		var item = $(this);
+		var music = $(this);
 
-		setTimeout( function() {
+		if (reset) {
+			music.removeClass("no-match")
+					.removeClass("match");
+		} else {
 
-			if (reset) {
-				item.removeClass("no-match")
+			if (!music.data("value").includes(input)) {
+				music.addClass("no-match")
 						.removeClass("match");
 			} else {
+				music.addClass("match")
+					.removeClass("no-match");
 
-				if (!item.data("value").includes(input)) {
-					item.addClass("no-match")
-							.removeClass("match");
+				// collect active tags
+				active_tags += music.data("value");
+			}
+		}
+	});
+  
+	update_tags(active_tags, reset);
+}
+function update_tags(active_tags, reset, time = 5) {
+	tags.each(function(){
+		var tag = $(this),
+		 		id  = tag.attr("id");
+
+		setTimeout( function(){
+			if (reset) {
+				tag.show();
+			} else {
+				if (!active_tags.includes(tag.attr("id"))) {
+					tag.hide();
 				} else {
-					item.addClass("match")
-						.removeClass("no-match");
+					tag.show();
 				}
 			}
 		}, time += 5);
 	});
-}
-function update_tags(input, reset, time = 5) {
-		tags.each(function(){
-			var tag = $(this),
-			 		id  = tag.attr("id");
-
-			setTimeout( function(){
-				if (reset) {
-					tag.show();
-				} else {
-					if (!id.includes(input)) {
-						tag.hide();
-					}
-				}
-			}, time += 5);
-		});
 }

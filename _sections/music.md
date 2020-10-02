@@ -28,7 +28,7 @@ weight: 1
 
 <div class="music-container">
 	{% for track in site.data.tracks %}
-		<div class="music" data-value="{{ track.tags | join: ' ' }}">
+		<div class="music" data-value="{{ track.tags | join: ' ' }}" data-aos="zoom-out" data-aos-anchor="tags" data-aos-delay="{{ forloop.index0 | times: 100 }}">
 			<label>{{ track.title }}</label>
 			<div class="close"></div>
 			<div class="player">

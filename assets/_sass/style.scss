@@ -123,6 +123,10 @@ p {
 
   a {
     display: none;
+    transition: transform .1s linear;
+    &:hover {
+      transform: scale(1.8);
+    }
   }
 
   &:hover a {
@@ -169,11 +173,9 @@ footer {
     }
   }
   #signup {
-    direction: rtl;
     text-align: left;
     max-width: 300px;
     margin-left: auto;
-
     transform: rotate(270deg) translate(16px, 120px);
   }
 
@@ -182,29 +184,39 @@ footer {
     justify-content: center;
     align-items: center;
     .fab {
-      @include button;
+      background-color: $primary-bg;
       position: relative;
       height: 21px;
       width: 21px;
+      flex: none;
       margin: 0 6px;
       padding: 3px;
       border-radius: 50%;
       font-size: 12px;
       color: $blue;
-
+      transition: transform .5s linear, margin 3s ease, background-color .5s ease;
+      animation: reverse-roll 1s linear;
       &:before {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-
-      &:hover {
+    }
+    &:hover {
+      .fab {
+        animation: roll 1s forwards infinite linear;
+        animation-direction: reverse;
+      }
+      .fab:hover {
         background-color: $shadow-color;
-        box-shadow: none;
-
+        margin: 0 100%;
+        animation: none;
         &:before {
           color: #fff;
+        }
+        & + .fab {
+          animation-direction: normal;
         }
       }
     }
@@ -381,5 +393,21 @@ form {
   }
   to {
     transform: rotate(720deg) scale(0);
+  }
+}
+@keyframes roll {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes reverse-roll {
+  from {
+    transform: rotate(720deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }

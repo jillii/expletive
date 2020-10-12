@@ -136,6 +136,7 @@ footer {
   text-align: center;
   font-size: 12px;
   font-weight: 600;
+  overflow: hidden;
   #stars {
     position: absolute;
     bottom: 0;
@@ -286,6 +287,7 @@ form {
   &:after {
     content: "-_-";
     white-space: nowrap;
+    animation: snore 1.6s forwards infinite;
   }
 
   &:hover {
@@ -324,7 +326,16 @@ form {
     opacity: 0;
   }
 }
-
+@keyframes snore {
+  0% {
+    content: "-_-";
+    font-size: 12px;
+  }
+  50% {
+    content: "´ ・｀";
+    /*font-size: 11px;*/
+  }
+}
 @keyframes slow-blink-to-anger {
   0% {
     content: "-_·";

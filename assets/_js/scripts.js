@@ -34,12 +34,13 @@ $(function(){
 // detect when user has reached bottom of page
 // and add fallen class to stars div
 window.onscroll = function() {
-  var d = document.documentElement;
-  var offset = d.scrollTop + window.innerHeight;
-  var height = d.offsetHeight;
+    var d       = document.documentElement,
+  	    offset  = d.scrollTop + window.innerHeight,
+  	    section = $("section.active"),
+  		height  = section.height();
 
   if (offset >= height) {
-    $("#stars").addClass("fallen");
+    section.find("#stars").addClass("fallen");
   }
 };
 // handle music items

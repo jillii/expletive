@@ -1,48 +1,36 @@
-$(function(){
+// $(function(){
 
-	var slider     = $(".slider"),
-	    len        = slider.children().length,
-	    margin     = parseInt(slider.css("margin-left").replace(/[^-\d\.]/g, '')),
-		counter    = $("#slide-number"),
-		curr_index = 1;
+// 	var slider     = $(".slider"),
+// 	    len        = slider.children().length,
+// 	    margin     = parseInt(slider.css("margin-left").replace(/[^-\d\.]/g, '')),
+// 		counter    = $("#slide-number"),
+// 		curr_index = 1;
 
 
-	$(".dir").click(function(){
-		var dir = $(this).attr("id");
+// 	$(".dir").click(function(){
+// 		var dir = $(this).attr("id");
 
-		if (dir == "right") {
-			if (curr_index < len) {
-				margin -= 100;
-				curr_index++;
-			} else {
-				margin = 0;
-				curr_index = 1;
-			}
-		} else { // dir == left
-			if (curr_index > 1) {
-				margin += 100;
-				curr_index--;
-			} else {
-				margin = (len - 1) * -100;
-				curr_index = len;
-			}
-		}
-		slider.css("margin-left", margin + '%');
-		counter.text(curr_index);
-	});
-});
-// detect when user has reached bottom of page
-// and add fallen class to stars div
-window.onscroll = function() {
-    var d       = document.documentElement,
-  	    offset  = d.scrollTop + window.innerHeight,
-  	    section = $("section.active"),
-  		height  = section.height();
-
-  if (offset >= height) {
-    section.find("#stars").addClass("fallen");
-  }
-};
+// 		if (dir == "right") {
+// 			if (curr_index < len) {
+// 				margin -= 100;
+// 				curr_index++;
+// 			} else {
+// 				margin = 0;
+// 				curr_index = 1;
+// 			}
+// 		} else { // dir == left
+// 			if (curr_index > 1) {
+// 				margin += 100;
+// 				curr_index--;
+// 			} else {
+// 				margin = (len - 1) * -100;
+// 				curr_index = len;
+// 			}
+// 		}
+// 		slider.css("margin-left", margin + '%');
+// 		counter.text(curr_index);
+// 	});
+// });
 // handle music items
 var musics = $('.music'),
 		tags   = $('.tag');

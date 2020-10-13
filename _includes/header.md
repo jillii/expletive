@@ -2,7 +2,7 @@
 <div id="primary-nav" class="flexbox">
 	<p id="menu-toggle">Menu</p>
   {% for section in sections %}
-    <a href="#" onclick="$('section.active').removeClass('active');$('#{{ section.title }}').addClass('active')">
+    <a href="#" onclick="event.preventDefault();$('section.active').removeClass('active');$('#{{ section.title }}').addClass('active')">
     	{{ section.title }}
 	</a>
   {% endfor %}

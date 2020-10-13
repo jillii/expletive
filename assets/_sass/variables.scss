@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Playfair+Display&display=swap);
 
 $primary-bg: #eff0f4;
-$secondary-bg: #000;
-$tertiary-bg: #eee;
 $shadow-color: #0e0e8a;
 $lime: #cf0;
 $blue: #3300ff;
 $pink: #ff00cc;
+$teal: #add8e6;
 
 @mixin boxshadow {
   text-shadow: 2px 5px 0 $shadow-color;

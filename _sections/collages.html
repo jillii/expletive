@@ -3,25 +3,20 @@ title: collages
 weight: 2
 name: chaos
 ---
-<div class="supertext" data-aos="fade-in"><span id="slide-number">1</span> out of {{ site.data.collages | size }}</div>
-<div class="nav flexbox">
-	<div id="left" class="dir">
-		&xlarr;
-	</div>
-	<div id="right" class="dir">
-		&xrarr;
-	</div>
-</div>
-<div id="collages" class="slider">
+<div data-aos="zoom-out-down" style="position: fixed;top: 0;left: -8px; z-index: 1;">
 	{% for collage in site.data.collages %}
-		<div class="collage flexbox slide {% if forloop.index0 == 0 %}active{% else %}pre{% endif %}">
-			<div class="img-container" style="background-image: url({{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }})">
+		{% assign id = collage.title | replace: ' ', '-' %}
+		<div class="collage flexbox" id="{{ id }}">
+			<div class="img-container" style="background-image: url({{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}); background-color: {% cycle '#282227', '#e5e9ef','lightblue', '#ccb8d6', '#e5e3dc', '#c6c5c1', '#c7d7df', '#9cb8d3' %}">
 				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
 			</div>
-			<div class="copy-container">
-				<h4>{{ collage.title }}</h4>
-				<div class="desc">{{ collage.desc }}</div>
+			<div class="copy-container" style="background-color:  {% cycle '#fcccc5', '#c0bccd', '#000','#f0ebe5', '#cda04f', '#c6c5c1', '#c7d7df','#282227', '#e5e9ef', '#d7b5bf', '#f8f5ed' %}; color: {% cycle  '#f75929', '#efedeb', '#d5dfe9','#ba3833', '#e5e3dc', '#fff', '#495116', '#c7afac', '#a1a1a1', '#eeecec', '#9cb8d3' %}">
+				<div data-aos-duration="1000" data-aos="fade-right">
+					<h4>{{ collage.title }}</h4>
+					<div class="desc">{{ collage.desc }}</div>
+				</div>
 			</div>
 		</div>
+		{% assign prev_id = id %}
 	{% endfor %}
 </div>

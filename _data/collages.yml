@@ -1,6 +1,7 @@
 - title: Adam N' God
   image: adamngod.png
   desc: collage version of michangelo's creation of adam
+  z: 999
 
 - title: Godzilla with Freud
   image: godzilla-with-freud.png
@@ -9,6 +10,7 @@
 - title: Sleep
   image: sleep.png
   desc: 9 out of 10 psychiatrics say that most americans don't get enough sleep
+  z: 999
 
 - title: CF Sept 2019
   image: cfsept2019.png
@@ -17,6 +19,7 @@
 - title: Thank You
   image: hand.png
   desc: you're welcome
+  z: 999
 
 - title: MCHN HH44 Gritty
   image: MCHN-HH44-Gritty.png
@@ -25,6 +28,7 @@
 - title: Spring
   image: spring.png
   desc: moody may
+  z: 999
 
 - title: Cake Politics
   image: cakism.png
@@ -33,6 +37,7 @@
 - title: Chocolate Surprise
   image: chocolate.png
   desc: I don't even know what the surprise is!
+  z: 999
 
 - title: Bubbles 1
   image: man-n-bubble-1.jpg

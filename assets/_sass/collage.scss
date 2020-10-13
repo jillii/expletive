@@ -10,20 +10,28 @@ section#collages {
 		margin: 0;
 		padding: 0;
 		.collage {
-			height: 450px;
+			width: 100vw;
+			position: relative;
 			.img-container {
+				width: 100%;
 				background-size: 80%;
 				align-items: center;
-				overflow: hidden;
-				background-blend-mode: multiply;
+				background-blend-mode: soft-light;
 				img {
-					max-width: 100%;
+					max-width: calc(100% + 12px);
+					transform: scale(1.05);
+					z-index: 10;
 				}
 			}
 			.copy-container {
-				font-size: 51px;
+				width: 300px;
+				min-height: 124px;
+				position: absolute;
+				right: 12px;
+				bottom: 12px;
 				flex-direction: column;
-				justify-content: center;
+				text-shadow: 0 3px 1px #1026347d;
+				z-index: 999;
 				h4 {
 					color: unset;
 				}
@@ -31,11 +39,15 @@ section#collages {
 			.img-container,
 			.copy-container {
 				display: flex;
-				flex: 1 0 50%;
-
 			}
 			&:nth-child(even) {
 				flex-direction: row-reverse;
+				.copy-container {
+					left: 12px;
+				}
+				.img-container {
+					justify-content: flex-end;
+				}
 			}
 		}
 	}

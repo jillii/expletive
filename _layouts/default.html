@@ -23,10 +23,10 @@
             </h2>
           {% endunless %}
           {{ section.content }}
+          <footer>
+            {% include footer.md %}
+          </footer>
         </div>
-        <footer>
-          {% include footer.md %}
-        </footer>
       </section>
     {% endfor %}
     <script

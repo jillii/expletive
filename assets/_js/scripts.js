@@ -1,43 +1,10 @@
-// $(function(){
-
-// 	var slider     = $(".slider"),
-// 	    len        = slider.children().length,
-// 	    margin     = parseInt(slider.css("margin-left").replace(/[^-\d\.]/g, '')),
-// 		counter    = $("#slide-number"),
-// 		curr_index = 1;
-
-
-// 	$(".dir").click(function(){
-// 		var dir = $(this).attr("id");
-
-// 		if (dir == "right") {
-// 			if (curr_index < len) {
-// 				margin -= 100;
-// 				curr_index++;
-// 			} else {
-// 				margin = 0;
-// 				curr_index = 1;
-// 			}
-// 		} else { // dir == left
-// 			if (curr_index > 1) {
-// 				margin += 100;
-// 				curr_index--;
-// 			} else {
-// 				margin = (len - 1) * -100;
-// 				curr_index = len;
-// 			}
-// 		}
-// 		slider.css("margin-left", margin + '%');
-// 		counter.text(curr_index);
-// 	});
-// });
 // handle music items
 var musics = $('.music'),
-		tags   = $('.tag');
+	tags   = $('.tag');
 
 $("#search").keyup(function(){
 	var input = $(this).val(),
-			reset = false;
+		reset = false;
 
 	if (input == "") {
 		reset = true;
@@ -46,8 +13,8 @@ $("#search").keyup(function(){
 });
 $(".tag").click(function(){
 	var btn   = $(this),
-			id    = btn.attr("id");
-			reset = false;
+		id    = btn.attr("id");
+		reset = false;
 
 	if (btn.hasClass("active")) {
 		reset = true;
@@ -63,19 +30,27 @@ function update_musics(input, reset, time = 5) {
 
 	musics.each(function(){
 		// hide musics with non-matching tags
-		var music = $(this);
+		var music = $(this),
+			title = music.find("label").html(),
+		    tags  = music.data("value");
 
 		if (reset) {
 			music.removeClass("no-match")
-					.removeClass("match");
+				 .removeClass("match");
 		} else {
 
-			if (!music.data("value").includes(input)) {
+			if (!tags.includes(input)) {
 				music.addClass("no-match")
-						.removeClass("match");
+					 .removeClass("match");
+			    if (music.hasClass("exact-match")) {
+			    	music.removeClass("exact-match");
+			    }
 			} else {
+				if (title == input) { // if exact match
+					music.addClass("exact-match");
+				}
 				music.addClass("match")
-					.removeClass("no-match");
+					 .removeClass("no-match");
 
 				// collect active tags
 				active_tags += music.data("value");
@@ -88,13 +63,13 @@ function update_musics(input, reset, time = 5) {
 function update_tags(active_tags, reset, time = 5) {
 	tags.each(function(){
 		var tag = $(this),
-		 		id  = tag.attr("id");
+		 	id  = tag.attr("id");
 
 		setTimeout( function(){
 			if (reset) {
 				tag.show();
 			} else {
-				if (!active_tags.includes(tag.attr("id"))) {
+				if (!active_tags.includes(id)) {
 					tag.hide();
 				} else {
 					tag.show();

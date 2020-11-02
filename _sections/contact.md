@@ -20,6 +20,8 @@ Questions? Comments? Concerns?
 <script>
   window.addEventListener("DOMContentLoaded", function() {
 
+  	console.log("enter function");
+
     // get the form elements defined in your form HTML above
     
     var form = document.getElementById("contact-form");
@@ -31,6 +33,7 @@ Questions? Comments? Concerns?
     function success() {
       form.reset();
       status.innerHTML = "Thanks!";
+      console.log("step 1");
     }
 
     function error() {
@@ -41,7 +44,9 @@ Questions? Comments? Concerns?
 
     form.addEventListener("submit", function(ev) {
       ev.preventDefault();
+      console.log("step 2");
       var data = new FormData(form);
+      console.log("step 3");
       ajax(form.method, form.action, data, success, error);
     });
   });
@@ -49,17 +54,25 @@ Questions? Comments? Concerns?
   // helper function for sending an AJAX request
 
   function ajax(method, url, data, success, error) {
+  	console.log("enter ajax function");
     var xhr = new XMLHttpRequest();
+    console.log("step 4");
     xhr.open(method, url);
+    console.log("step 5");
     xhr.setRequestHeader("Accept", "application/json");
+    console.log('step 6');
     xhr.onreadystatechange = function() {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    	console.log("on ready function enter");
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;console.log("done");
       if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);
+        success(xhr.response, xhr.responseType);console.log("error 200");
       } else {
+      	console.log("step 7");
         error(xhr.status, xhr.response, xhr.responseType);
       }
     };
+    console.log("before send");
     xhr.send(data);
+    console.log("after send");
   }
 </script>

@@ -42,7 +42,7 @@
 	.music {
 		position: absolute;
 		padding: 33px;
-		margin-left: -100%;
+		margin-left: -600px;
 		height: 100px;
 		background-color: violet;
 		border: 1px solid;
@@ -66,7 +66,6 @@
 		&.match {
 			position: relative;
 			margin-left: calc(50% - 600px / 2) !important;
-			top: unset !important;
 			left: unset !important;
 			animation-play-state: paused;
 		}
@@ -100,7 +99,7 @@
 	}
 	@for $i from 1 through 100 {
 		.music:nth-child(#{$i}) {
-			top: percentage(random(80) / 100);
+			top: percentage(random(60) / 100);
 			left: percentage(random(230) / 100);
 			animation-delay: random(10) + s;
 		}

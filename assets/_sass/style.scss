@@ -39,7 +39,6 @@ a {
 section {
   position: absolute;
   border-radius: 50%;
-  width: 197.3vw; /* account for scroll bar */
   transform: scale(0);
   transition: transform .2s ease;
   color: #fff;

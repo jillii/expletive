@@ -183,6 +183,19 @@ footer {
     transform: rotate(270deg) translate(16px, 120px);
     .popup {
       transform: rotate(-270deg);
+      input {
+        margin-bottom: 11px;
+        border-color: #000;
+        color: #000;
+        text-align: center;
+        &::placeholder {
+          color: #000;
+        }
+      }
+      button {
+        float: none;
+        margin: auto;
+      }
     }
   }
 

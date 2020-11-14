@@ -65,7 +65,7 @@ Questions? Comments? Concerns?
     	console.log("on ready function enter");
       if (xhr.readyState !== XMLHttpRequest.DONE) return;console.log("done");
       if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);console.log("error 200");
+        success(xhr.response, xhr.responseType);console.log("error 200");console.log(xhr);
       } else {
       	console.log("step 7");
         error(xhr.status, xhr.response, xhr.responseType);

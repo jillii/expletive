@@ -36,7 +36,8 @@ function update_musics(input, reset, time = 5) {
 
 		if (reset) {
 			music.removeClass("no-match")
-				 .removeClass("match");
+				 .removeClass("match")
+				 .removeClass("exact-match");
 		} else {
 
 			if (!tags.includes(input)) {
@@ -48,6 +49,10 @@ function update_musics(input, reset, time = 5) {
 			} else {
 				if (title == input) { // if exact match
 					music.addClass("exact-match");
+				} else {
+					if (music.hasClass("exact-match")) {
+						music.removeClass("exact-match");
+					}
 				}
 				music.addClass("match")
 					 .removeClass("no-match");

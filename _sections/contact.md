@@ -54,25 +54,17 @@ Questions? Comments? Concerns?
   // helper function for sending an AJAX request
 
   function ajax(method, url, data, success, error) {
-  	console.log("enter ajax function");
     var xhr = new XMLHttpRequest();
-    console.log("step 4");
     xhr.open(method, url);
-    console.log("step 5");
     xhr.setRequestHeader("Accept", "application/json");
-    console.log('step 6');
     xhr.onreadystatechange = function() {
-    	console.log("on ready function enter");
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;console.log("done");
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
-        success(xhr.response, xhr.responseType);console.log("error 200");console.log(xhr);
+        success(xhr.response, xhr.responseType);
       } else {
-      	console.log("step 7");
         error(xhr.status, xhr.response, xhr.responseType);
       }
     };
-    console.log("before send");
     xhr.send(data);
-    console.log("after send");
   }
 </script>

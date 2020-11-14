@@ -27,9 +27,18 @@
 			<div class="close" onclick="$('#signup-popup.active').removeClass('active')"></div>
 		</div>
 		Sign me up!<br><br>
-		<button></button>
+		<form id="contact-form"
+			  class="contact-form"
+			  action="https://formspree.io/f/xqkgpllv"
+			  method="POST">
+			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'">
+		    <input type="hidden" name="message" value="sign me up for emails">
+		    <button type="submit" class="contact-form-button btn" value="-_-"></button>
+		    <p class="contact-form-status"></p>
+		</form>
 	</div>
 </div>
+
 <p>Do you use<br>"social media?"</p>
 <div data-aos="fade-up" data-aos-anchor="#contact" class="socials">
   <a class="fab fa-facebook-f" href="https://www.facebook.com/generalexpletive"></a>

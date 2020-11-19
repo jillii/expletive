@@ -3,12 +3,12 @@ title: collages
 weight: 2
 name: chaos
 ---
-<div data-aos="zoom-out-down" style="position: fixed;top: 0;left: -8px; z-index: 1;">
+<div data-aos="zoom-out-down" class="collages">
 	{% for collage in site.data.collages %}
 		{% assign id = collage.title | replace: ' ', '-' %}
-		<div class="collage" id="{{ id }}">
-			<div class="img-container" style="background-image: url({{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}); background-color: {% cycle '#282227', '#e5e9ef','lightblue', '#ccb8d6', '#e5e3dc', '#c6c5c1', '#c7d7df', '#9cb8d3' %}">
-				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}" style="z-index: {{ collage.z }}">
+		<div class="collage" id="{{ id }}" style="z-index: {{ collage.z }}">
+			<div class="img-container" style="background-color: {% cycle '#282227', '#e5e9ef','lightblue', '#ccb8d6', '#e5e3dc', '#c6c5c1', '#c7d7df', '#9cb8d3' %}">
+				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
 			</div>
 			<div class="copy-container">
 				<div>

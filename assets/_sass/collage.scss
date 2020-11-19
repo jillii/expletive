@@ -1,54 +1,24 @@
 @import 'variables.scss';
-section#collages {
-	width: 100vw;
-	margin: 0;
-	padding: 0;
-	border-radius: 50%;
-}
-#collages {
-	.container {
-		margin: 0;
-		padding: 0;
-		.collage {
-			width: 100vw;
-			position: relative;
-			.img-container {
-				width: 100%;
-				background-size: 80%;
-				align-items: center;
-				background-blend-mode: soft-light;
-				img {
-					max-width: calc(100% + 12px);
-					transform: scale(1.05);
-					z-index: 10;
-				}
+.collages {
+	.collage {
+		height: 400px;
+		width: 450px;
+		display: inline-flex;
+		position: relative;
+		box-shadow: 2px 5px 0 $shadow-color;
+		&:nth(4) {
+			align-self: flex-end;
+		}
+		.img-container {
+			width: 100%;
+			img {
+				height: auto;
+				width: auto
 			}
-			.copy-container {
-				width: 300px;
-				min-height: 124px;
-				position: absolute;
-				right: 12px;
-				bottom: 12px;
-				flex-direction: column;
-				text-shadow: 0 3px 1px #1026347d;
-				z-index: 999;
-				h4 {
-					color: unset;
-				}
-			}
-			.img-container,
-			.copy-container {
-				display: flex;
-			}
-			&:nth-child(even) {
-				flex-direction: row-reverse;
-				.copy-container {
-					left: 12px;
-				}
-				.img-container {
-					justify-content: flex-end;
-				}
-			}
+		}
+		.copy-container {
+			position: absolute;
+			width: 100%;
 		}
 	}
 }

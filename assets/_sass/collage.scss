@@ -1,5 +1,7 @@
 @import 'variables.scss';
 .collages {
+	display: flex;
+	flex-wrap: wrap;
 	.collage {
 		height: 400px;
 		width: 450px;
@@ -11,14 +13,59 @@
 		}
 		.img-container {
 			width: 100%;
+			display: inline-flex;
+			justify-content: center;
+			align-self: center;
 			img {
 				height: auto;
-				width: auto
+				width: auto;
+				transition: all .2s linear;
+			}
+			button {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 999;
 			}
 		}
 		.copy-container {
 			position: absolute;
 			width: 100%;
+			.desc {
+				display: none;
+				padding: 33px 21px;
+				background-color: $primary-bg;
+				border: 1px solid gray;
+				border-radius: 0;
+				color: #000;
+			}
 		}
+		&.active {
+			box-shadow: none;
+			.img-container {
+				display: block;
+				img {
+					height: 110vh;
+					position: absolute;
+					top: 0;
+					left: 100%;
+				}
+			}
+			.desc {
+				display: block;
+				animation: scroll-out 1s forwards linear;
+			}
+		}
+	}
+}
+@keyframes scroll-out {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: none;
 	}
 }

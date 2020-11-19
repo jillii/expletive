@@ -83,3 +83,31 @@ function update_tags(active_tags, reset, time = 5) {
 		}, time += 5);
 	});
 }
+$(function(){
+	var collages = $(".collage"),
+		btn      = $(".collage button");
+
+	btn.click(function(e){
+		var target = $(e.target).data("value");
+
+		if ($('#' + target).hasClass("active")) {
+			collages.each(function(){
+				$(this).show();
+			});
+			$(".collage.active").removeClass("active");
+			btn.html("View");
+		} else {
+			window.scrollTo(0, 0);
+			collages.each(function(){
+				var collage = $(this);
+
+				if (collage.attr("id") != target) {
+					collage.hide();
+				} else {
+					collage.addClass("active");
+				}
+			});
+			btn.html("Return");
+		}
+	});
+});

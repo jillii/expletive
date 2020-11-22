@@ -3,10 +3,8 @@ const options = {
   variation: 10, // randomized variation on each point's angle
   points: 5 // number of points in explosion
 }
-
-
-// const inputs = document.querySelectorAll('input, select');
 const close = document.getElementsByClassName('close');
+
 for (var i = 0; i < close.length; i++) {
   close[i].addEventListener('click', e => explode(e, options));
 }
@@ -38,17 +36,20 @@ function explode(e, options) {
     
     if (i == 0) {
       popup.addEventListener('animationend', () => {
-        if ($(target).parent().hasClass("music")) {
-          $(target).parent().addClass("spin-out")
-                            .addEventListener('animationend', () => {
-                              $(this).removeClass("spin-out");
-                            });
+        var parent = $(target).parent(),
+            grandparent = parent.parent();
+
+        if (parent.hasClass("music")) {
+          parent.addClass("spin-out");
         }
-        if ($(target).parent().parent().hasClass("popup")) {
-          $(target).parent().parent().addClass("spin-out")
-                                     .addEventListener('animationend', () => {
-                                       $(this).removeClass("spin-out");
-                                     });
+        if (grandparent.hasClass("popup")) {
+          grandparent.addClass("spin-out");
+          grandparent[0].addEventListener('animationend', (e) => {
+            if (e.animationName == "spinout") {
+              grandparent.removeClass("active")
+                         .removeClass("spin-out");
+            }
+          });
         }
         target.removeChild(container);
       });
@@ -59,16 +60,3 @@ function explode(e, options) {
 function randomAngleBetween(minAngle, maxAngle) {
   return (Math.random() * (maxAngle - minAngle) + minAngle) / 180 * Math.PI - Math.PI/2;
 }
-
-function handleInput() {
-  const option = this.dataset.option;
-  options[option] = this.value;
-  if (option == 'duration') {
-    document.documentElement.style.setProperty('--duration', `${this.value}s`);
-  }
-  const valueDisplay = document.querySelector(`.${option}-value`);
-  if (valueDisplay) {
-    valueDisplay.textContent = this.value;
-  }
-}
-

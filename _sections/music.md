@@ -4,7 +4,7 @@ weight: 1
 ---
 <div class="copy-area">
 	<p>
-		You're dealing with a wide range of stuff here. We're here to help you figure out what you're looking for. Start by entering a key phrase to help identify what you'd like to listen to.
+		Please enter a key phrase to help identify what you'd like to listen to.
 	</p> 
 	<input class="input" type="text" id="search"><button id="search-by-tag" class="btn" type="submit"></button>
 </div>

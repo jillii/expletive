@@ -62,7 +62,7 @@ section {
     transform: scale(1);
   }
   .container {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     padding: 51px 28px;
   }
@@ -154,7 +154,6 @@ p {
 }
 /* Footer */
 footer {
-  position: relative;
   width: 100%;
   padding: 80vh 0 51px;
   text-align: center;
@@ -164,7 +163,9 @@ footer {
   #stars {
     position: absolute;
     width: 100vw;
-    height: 600px;
+    height: 560px;
+    left: 0;
+    bottom: 0;
     z-index: -999;
     .star {
       position: absolute;

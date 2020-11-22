@@ -15,16 +15,12 @@
 	<div class="star"></div>
 	<div class="star"></div>
 	<div class="star"></div>
-	<div class="star"></div>
-	<div class="star"></div>
-	<div class="star"></div>
-	<div class="star"></div>
 </div>
 
 <div id="signup" onclick="$(this).prev().addClass('fallen')"><a href="#" onclick="event.preventDefault();$(this).next().toggleClass('active');">Sign up</a> for !@#$%'s mailing list and stay updated about show's. Will talk about other things upon request.
 	<div id="signup-popup" class="popup">
 		<div class="top">
-			<div class="close" onclick="$('#signup-popup.active').removeClass('active')"></div>
+			<div class="close"></div>
 		</div>
 		Sign me up!<br><br>
 		<form id="contact-form"

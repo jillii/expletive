@@ -14,9 +14,9 @@ $(".draggable").mousedown(function(e) {
     pos4 = e.clientY;
 
     draggy.css("animation-play-state", "pause");
-    el.onmouseup = closeDragElement;
+    document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
-    el.onmousemove = elementDrag;
+    document.onmousemove = elementDrag;
 
     function elementDrag(e) {
       e.preventDefault();
@@ -33,8 +33,8 @@ $(".draggable").mousedown(function(e) {
     function closeDragElement() {
       /* stop moving when mouse button is released:*/
       draggy.css("animation-play-state", "paused");
-      el.onmouseup = null;
-      el.onmousemove = null;
+      document.onmouseup = null;
+      document.onmousemove = null;
     }
 
 });

@@ -26,9 +26,9 @@ weight: 1
 	{% endfor %}
 </div>
 
-<div class="music-container">
+<div class="music-container" id="draggy">
 	{% for track in site.data.tracks %}
-		<div class="music" data-value="{{ track.tags | join: ' ' }}">
+		<div class="music draggable" data-value="{{ track.tags | join: ' ' }}">
 			<label>{{ track.title }}</label>
 			<div class="close"></div>
 			<div class="player">

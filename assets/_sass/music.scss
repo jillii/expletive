@@ -36,23 +36,19 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	margin-left: auto;
 	height: 500px;
-	position: relative;
 	.music {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: absolute;
 		padding: 33px;
-		margin-left: -600px;
 		height: 100px;
 		border: 1px solid;
 		border-radius: 3px;
 		box-shadow: 3px 4px 0 $shadow-color;
-		transition: all .8s ease;
 		animation: floatacross 20s infinite;
-		animation-duration: 60s;
+		transition: transform .2s ease;
 		&:after {
 			position: absolute;
 			height: 100%;
@@ -77,8 +73,7 @@
 		}
 		&.exact-match {
 			transform: scale(2.8);
-			top: 0 !important;
-			margin-left: 0 !important;
+			top: 0;
 		}
 		label {
 			width: 100%;
@@ -89,7 +84,8 @@
 			font-size: 12px;
 			font-weight: 400;
 			margin-bottom: 11px;
-			color: #fff
+			color: #fff;
+			cursor: pointer;
 		}
 		button {
 			height: 21px;
@@ -109,15 +105,15 @@
 		.music:nth-child(#{$i}) {
 			top: percentage(random(60) / 100);
 			left: percentage(random(230) / 100);
-			animation-delay: random(10) + s;
+			/*animation-delay: random(10) + s;*/
 		}
 	}
 }
 @keyframes floatacross {
 	0% {
-		margin-left: -100%;
+		transform: translateX(-100%);
 	}
 	100% {
-		margin-left: 100%;
+		transform: translateX(100%);
 	}
 }

@@ -64,8 +64,8 @@
 		&.match {
 			position: relative;
 			margin-left: calc(50% - 600px / 2) !important;
-			top: 0 !important;
-			left: unset !important;
+			top: 0;
+			left: unset;
 			animation-play-state: paused;
 		}
 		&.no-match {

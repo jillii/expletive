@@ -31,7 +31,6 @@ $(".draggable").mousedown(function(e) {
     }
 
     function closeDragElement() {
-      console.log("mouse up");
       /* stop moving when mouse button is released:*/
       draggy.css("animation-play-state", "paused");
       document.onmouseup = null;

@@ -1,3 +1,21 @@
+$(function(){
+	// navigation
+	var hash = location.hash;
+
+	if (hash != "") {
+		$("section.active").removeClass("active");
+
+		$(hash).addClass("active");		
+	}
+	$("#primary-nav").on("click", ".nav-link", function(e){
+		e.preventDefault();
+		$("section.active").removeClass("active");
+		var id = $(e.target).data("value");
+
+		$('#' + id).addClass("active");
+		location.hash = id;
+	});
+});
 // handle music items
 var musics = $('.music'),
 	tags   = $('.tag');

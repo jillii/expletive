@@ -63,7 +63,7 @@ section {
   }
   .container {
     position: absolute;
-    width: 100vw;
+    width: 99vw;
     padding: 51px 28px;
   }
 }
@@ -258,28 +258,28 @@ footer {
     }
   }
 }
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  border-bottom: 2px solid #616161;
+  .close {
+    color: #616161
+  }
+}
 .popup {
   display: none;
   position: absolute;
   min-width: 200px;
   margin-top: -300px;
   border: 2px solid #616161;
-  background-color: #ddd;
+  background-color: #ccc;
   padding: 33px 12px 12px;
   box-shadow: 12px 12px 0 $shadow-color;
   color: #616161;
   text-align: center;
-  .top {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 14px;
-    border-bottom: 2px solid #616161;
-    .close {
-      color: #616161
-    }
-  }
   button {
     @extend .btn;
     border-color: #616161 !important;
@@ -315,6 +315,13 @@ footer {
     opacity: .2;
     z-index: 1;
   }
+}
+
+.windows {
+  border: none;
+  border-radius: 0;
+  background-color: #d7d3ce;
+  box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 12px 12px 0 $shadow-color;
 }
 
 .input + .btn, input + .btn {
@@ -389,6 +396,10 @@ form {
   &:focus {
     outline: 0;
   }
+}
+.copy-area {
+  width: Max(300px, calc(100% - 600px));
+  max-width: 100%;
 }
 
 #primary-nav a {
@@ -525,3 +536,11 @@ form {
     height: 0em;
   }
 }
+  .monitor {
+    animation: tvflicker .5s infinite alternate; 
+  }
+
+  @keyframes tvflicker {
+    0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+    100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+  }

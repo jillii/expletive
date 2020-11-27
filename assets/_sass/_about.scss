@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+$height: 245px;
+$width: 317px;
+
+#jill {
+  text-align: center;
+  .about--image {
+  	position: absolute;
+  	height: $height;
+  	width: $width;
+  	border-radius: 3px;
+    border: 1px solid;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	img {
+  		position: absolute;
+  		height: 66%;
+      margin-top: 33px;
+  		cursor: pointer;
+  	}
+  }
+  .closed {
+    display: none;
+  }
+  &.bye {
+    img {
+      display: none;
+    }
+    .closed {
+      display: block;
+    }
+  }
+}
+.x {
+  animation: x 13s linear infinite alternate;
+  &:hover {
+  	animation-play-state: paused;
+  }
+}
+
+.y {
+  animation: y 7s linear infinite alternate;
+  &:hover {
+  	animation-play-state: paused;
+  }
+}
+
+@keyframes x {
+  100% {
+    transform: translateX( calc(95vw - #{$width}) );
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY( calc(95vh - #{$height}) );
+  }
+}

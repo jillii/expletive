@@ -2,17 +2,22 @@ $(function(){
 	// navigation
 	var hash = location.hash;
 
+	$(".aos-animate").removeClass("aos-animate");
+
 	if (hash != "") {
 		$("section.active").removeClass("active");
 
-		$(hash).addClass("active");		
+		$(hash).addClass("active")
+			   .find(".aos-init").addClass("aos-animate");
 	}
 	$("#primary-nav").on("click", ".nav-link", function(e){
 		e.preventDefault();
 		$("section.active").removeClass("active");
 		var id = $(e.target).data("value");
 
-		$('#' + id).addClass("active");
+		$('#' + id).addClass("active")
+				   .find(".aos-init").addClass("aos-animate");
+
 		location.hash = id;
 	});
 });

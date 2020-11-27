@@ -6,10 +6,10 @@ name: " "
 <div data-aos="zoom-out-down" class="collages">
 	{% for collage in site.data.collages %}
 		{% assign id = collage.title | replace: ' ', '-' %}
-		<div class="collage" id="{{ id }}" style="z-index: {{ collage.z }}">
+		<div class="collage fire-explosion" id="{{ id }}" style="z-index: {{ collage.z }}">
 			<div class="img-container" style="background-color: {% cycle '#282227', '#e5e9ef','lightblue', '#ccb8d6', '#e5e3dc', '#c6c5c1', '#c7d7df', '#9cb8d3' %}">
 				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
-				<button data-value="{{ id }}">View</button>
+				<button data-value="{{ id }}" class="explode" data-value="{{ id }}">View</button>
 			</div>
 			<div class="copy-container">
 				<div>

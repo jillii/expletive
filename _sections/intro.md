@@ -1,5 +1,5 @@
 ---
-title: about
+title: home
 weight: 0
 ---
 <div class="bottom-left flicker-text">

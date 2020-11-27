@@ -12,16 +12,13 @@
     {% for section in sections %}
       <section id="{{ section.title }}"{% if forloop.index0 == 0 %} class="active"{% endif %}>
         <div class="container fixed">
-        {% unless section.title == "about" %}
-          <!-- <div class="container fixed"> -->
-            <h2 class="flicker-text">
-              {% if section.name %}
-                {{ section.name }}
-              {% else %}
-                {{ section.title }}
-              {% endif %}
-            </h2>
-          {% endunless %}
+          <h2 class="flicker-text x" style="position:absolute;">
+            {% if section.name %}
+              {{ section.name }}
+            {% else %}
+              {{ section.title }}
+            {% endif %}
+          </h2>
           {{ section.content }}
           <footer>
             {% include footer.md %}

@@ -27,7 +27,7 @@
 			  class="contact-form"
 			  action="https://formspree.io/f/xqkgpllv"
 			  method="POST">
-			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'">
+			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'" validate="email">
 		    <input type="hidden" name="message" value="sign me up for emails">
 		    <button type="submit" class="contact-form-button btn" value="-_-"></button>
 		    <p class="contact-form-status"></p>

@@ -1,5 +1,5 @@
 - title: "chase me (!@#$% remix)"
-  mp3: "chase me (!@%23$%25).wav"
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fchase%20me%20(!%40%23%24%25).wav?alt=media&token=572c9b8e-cf80-476b-8a7d-def1525b3450
   tags:
     - chopped up
     - chase me
@@ -81,7 +81,7 @@
     - big shift
 
 - title: static
-  mp3: static.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fstatic.wav?alt=media&token=a44eaced-e3bc-4731-92f3-58cafaa68df4
   tags:
     - simple
     - 808
@@ -127,7 +127,7 @@
     - brighton
 
 - title: brighton 3
-  mp3: brighton 3.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fbrighton%203.wav?alt=media&token=20133717-fa2e-4c72-8929-778987f021d9
   tags:
     - fast
     - melodic
@@ -144,7 +144,7 @@
     - brighton
 
 - title: what if i'm not ready
-  mp3: poop.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fpoop.wav?alt=media&token=3eb2c32c-3775-49eb-afdc-e3aa389ec863
   tags:
     - what if i'm not ready
     - breaks
@@ -170,7 +170,7 @@
   mp3: Youtube Videos/(--;) - secret version w billie holiday.wav
 
 - title: forgetting
-  mp3: forgetting.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fforgetting.wav?alt=media&token=842db9cc-bc2b-4f24-ad5a-7d0a42b44ec2
   tags:
     - forgetting
     - melodic
@@ -209,7 +209,7 @@
     - fast
 
 - title: the kuiper belt with alan stern v2
-  mp3: the kuiper belt with alan stern 2.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fthe%20kuiper%20belt%20with%20alan%20stern%202.wav?alt=media&token=3421967b-ab8b-4c05-933c-6cd623e2c534
   tags:
     - the kuiper belt with alan stern v2
     - minimal
@@ -244,7 +244,7 @@
     - claps
 
 - title: now with 50% more plastic
-  mp3: now with 50 more plastic.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fnow%20with%2050%20more%20plastic.wav?alt=media&token=acc83130-f172-4fd0-b147-59d492f2a04c
   tags:
     - now with 50% more plastic
     - plastic
@@ -260,7 +260,7 @@
     - claps
 
 - title: computer_stacks.jpg
-  mp3: slots.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fslots.wav?alt=media&token=17fefcb7-a92f-4e95-8c83-4ce08562a5e5
   tags:
     - computer_stacks
     - jpeg
@@ -276,7 +276,7 @@
     - square waves
 
 - title: imposter syndrome
-  mp3: noise.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fnoise.wav?alt=media&token=e1d84694-3961-4c5e-afe8-65ea0af0b816
   tags:
     - imposter syndrome
     - throwback
@@ -286,7 +286,7 @@
     - psychosis
 
 - title: underdone + hard bits v2
-  mp3: underdone + hard bits.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Funderdone%20%2B%20hard%20bits.wav?alt=media&token=9d313597-fca0-4b95-93ca-53e199556b0b
   tags:
     - underdone + hard bits v2
     - cooking
@@ -307,7 +307,7 @@
     - claps
 
 - title: helen
-  mp3: helen.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fhelen.wav?alt=media&token=7d5f2b95-ee53-439e-9feb-c3505ab13357
   tags:
     - melodic
     - melancholy
@@ -322,7 +322,7 @@
     - dial-up
 
 - title: beep test
-  mp3: beep test.mp3
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fbeep%20test.mp3?alt=media&token=793919da-887b-4421-98fb-1d54defdf864
   tags:
     - beep test
     - melodic

@@ -34,7 +34,7 @@ weight: 1
 			<div class="close"></div>
 			<div class="player">
 				<audio id="player-{{ id }}" preload="metadata" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')">
-					<source src="/assets/audio/{{ track.mp3 }}" type="audio/wav">
+					<source src="{{ track.mp3 }}" type="audio/wav">
 				</audio>
 				<div class="controls"> 
 				  <button class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;</button> 

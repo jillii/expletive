@@ -106,7 +106,7 @@
     - minimal
 
 - title: bighton 1
-  mp3: brighton.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fbrighton.wav?alt=media&token=1bdd6baf-617a-4187-9449-98eefa960179
   tags:
     - fast
     - energetic
@@ -119,7 +119,7 @@
     - minimal
 
 - title: brighton 2
-  mp3: brighton 2.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fbrighton%202.wav?alt=media&token=e6eb61a3-48a6-4bd3-bcbe-1fb88db1947e
   tags:
     - fast
     - melodic

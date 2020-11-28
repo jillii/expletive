@@ -110,7 +110,8 @@
     - minimal
 
 - title: brighton 2
-  tags: brighton 2.wav
+  mp3: brighton 2.wav
+  tags:
     - fast
     - melodic
     - breaks
@@ -283,16 +284,26 @@
     - noisey
     - psychosis
 
-- title: underdone + hard bits
+- title: underdone + hard bits v2
   mp3: underdone + hard bits.wav
   tags:
-    - underdone + hard bits
+    - underdone + hard bits v2
+    - cooking
+    - bubbly
+    - food
+    - claps
+
+- title: underdone + hard bits v1
+  mp3: Cooking and Food Related/underdone + hard bits v2.wav
+  tags:
+    - underdone + hard bits v1
     - cooking
     - gritty
     - noisey
-    - bubbly
     - food
     - overcompressed
+    - 8-bit
+    - claps
 
 - title: helen
   mp3: helen.wav
@@ -378,7 +389,7 @@
     - modest mouse remix
 
 - title: standing outside a broken phonebooth with money in my !@#$%
-  mp3: Tape Stop _Remixes_/standing outside a broken phonebooth with money in my hand 2.wav
+  mp3: Tape Stop _Remixes_/stading outside a broken phonebooth with money in my !@#$%.wav
   tags:
     - chopped up
     - remix

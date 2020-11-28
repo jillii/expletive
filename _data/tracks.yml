@@ -15,7 +15,7 @@
     - minimal
 
 - title: storer
-  mp3: Tutorials/storer.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTutorials%2Fstorer.wav?alt=media&token=7ce78f09-8b14-4f79-b648-b65f591c9b0b
   tags:
     - storer
     - tutorials
@@ -29,7 +29,7 @@
     - piano
 
 - title: how to install eclipse on a windows system
-  mp3: Tutorials/how to install eclipse on a windows system.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTutorials%2Fhow%20to%20install%20eclipse%20on%20a%20windows%20system.wav?alt=media&token=5b25a6de-83a7-422e-8b11-96c2c46666b4
   tags:
     - fast
     - tutorials
@@ -38,20 +38,21 @@
     - installations
 
 - title: video
-  mp3: Acoustic/video.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FAcoustic%2Fvideo.wav?alt=media&token=621149ae-6f1d-4c16-81d6-500db72a22b2
   tags:
     - video
     - piano
     - Acoustic
 
 - title: karma's payment 2
-  mp3: Tape Stop _Remixes_/karma's payment 2.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTape%20Stop%20_Remixes_%2Fkarma's%20payment%202.wav?alt=media&token=897d9579-fb18-4175-9c7c-5c58febfeadb
   tags:
     - karma's payment 2
     - remix
     - chopped up
 
 - title: tokyo sonata
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTape%20Stop%20_Remixes_%2Ftokyo%20sonata.wav?alt=media&token=12e62b03-629a-40b6-ae7c-a4dbb43c966b
   tags:
     - chopped up
     - melancholy
@@ -76,7 +77,7 @@
     - acid
 
 - title: big shift
-  mp3: high hopes.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fhigh%20hopes.wav?alt=media&token=068ba373-4825-4dfa-aa3a-8f70fbb28351
   tags:
     - melancholy
     - complex
@@ -167,15 +168,16 @@
     - lush
 
 - title: (--;)
-  mp3: Youtube Videos/(--;) - real version.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FYoutube%20Videos%2F(--%3B)%20-%20real%20version.wav?alt=media&token=94c968b3-4c6b-4cfd-8fa3-92de7266a6d6
   tags:
+    - (--;)
     - melodic
     - chiptune
     - punk
     - fast
 
 - title: (--;)
-  mp3: Youtube Videos/(--;) - secret version w billie holiday.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FYoutube%20Videos%2F(--%3B)%20-%20secret%20version%20w%20billie%20holiday.wav?alt=media&token=cb97d073-92d1-4907-ac99-6fa5f7c2e329
 
 - title: forgetting
   mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fforgetting.wav?alt=media&token=842db9cc-bc2b-4f24-ad5a-7d0a42b44ec2
@@ -206,7 +208,7 @@
     - fast
 
 - title: the kuiper belt with alan stern v1
-  mp3: THANK YOU NASA.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTHANK%20YOU%20NASA.wav?alt=media&token=a170660a-b71f-42f6-84a8-e534aeb338a5
   tags:
     - the kuiper belt with alan stern v1
     - squelchy
@@ -229,7 +231,7 @@
     - fast
 
 - title: em cares
-  mp3: em cares.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fem%20cares.wav?alt=media&token=5a47fa1f-ac5f-4689-93b7-7c01d67e4095
   tags:
     - em cares
     - melodic
@@ -239,7 +241,7 @@
     - melancholy
 
 - title: butter
-  mp3: flakey.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fflakey.wav?alt=media&token=a5fbd678-b316-4c72-9c15-f7d6440e1fa5
   tags:
     - butter
     - food
@@ -303,7 +305,7 @@
     - claps
 
 - title: underdone + hard bits v1
-  mp3: Cooking and Food Related/underdone + hard bits v2.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FCooking%20and%20Food%20Related%2Funderdone%20%2B%20hard%20bits%20v2.wav?alt=media&token=54b0ef0b-9b16-4962-bae1-0986d7109be1
   tags:
     - underdone + hard bits v1
     - cooking
@@ -321,7 +323,7 @@
     - melancholy
 
 - title: daisy
-  mp3: daisy.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fdaisy.wav?alt=media&token=af2b159d-bc90-4820-bf19-1e647df81869
   tags:
     - daisy
     - fast
@@ -355,7 +357,7 @@
     - fast
 
 - title: sorting data
-  mp3: Tutorials/sorting data on a computer + big shift.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTutorials%2Fsorting%20data%20on%20a%20computer%20%2B%20big%20shift.wav?alt=media&token=7f553c46-0714-4e52-b16d-18688e5ba71f
   tags:
     - sorting data
     - contemplative
@@ -390,7 +392,7 @@
     - joyful
 
 - title: fruit !@#$%
-  mp3: Tape Stop _Remixes_/fruit mix.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTape%20Stop%20_Remixes_%2Ffruit%20mix.wav?alt=media&token=e26a8584-97eb-48cb-9e24-7139d28c5aea
   tags:
     - fruit !@#$%
     - food
@@ -398,14 +400,14 @@
     - modest mouse remix
 
 - title: standing outside a broken phonebooth with money in my !@#$%
-  mp3: Tape Stop _Remixes_/stading outside a broken phonebooth with money in my !@#$%.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTape%20Stop%20_Remixes_%2Fstading%20outside%20a%20broken%20phonebooth%20with%20money%20in%20my%20!%40%23%24%25.wav?alt=media&token=afa1b0a7-4758-408c-a250-9278786170a7
   tags:
     - chopped up
     - remix
     - standing outside a broken phonebooth with money in my hand
 
 - title: tokyo sonata 2
-  mp3: Tape Stop _Remixes_/tokyo sonata 2.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTape%20Stop%20_Remixes_%2Ftokyo%20sonata%202.wav?alt=media&token=81dca8f4-6629-464c-a8a8-8ecd3250c920
   tags:
     - tokyo sonata 2
     - chopped up
@@ -415,7 +417,7 @@
     - slow-build
 
 - title: ladies and gentlemen we're floa-!@#$%
-  mp3: Tape Stop _Remixes_/ladies and gentlemen we're floa!@%23$%25.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTape%20Stop%20_Remixes_%2Fladies%20and%20gentlemen%20we're%20floa!%40%23%24%25.wav?alt=media&token=b7240792-f606-4e04-8a83-ef4dba179e52
   tags:
     - ladies and gentlemen we're floa-!@#$%
     - chopped up
@@ -423,7 +425,7 @@
     - bubbly
 
 - title: errors
-  mp3: Tutorials/errors.wav
+  mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2FTutorials%2Ferrors.wav?alt=media&token=41f192b7-bc72-4bbb-ad33-6acc929de0cc
   tags:
     - errors
     - arpeggiated

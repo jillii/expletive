@@ -1,12 +1,13 @@
 $(".draggable").mousedown(function(e) {
-  var draggy = $(this),
-      el = draggy[0],
-      pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-
     // only drag musics if user clicks top bar
-    if (draggy.hasClass("music") && !$(e.target).is("label")) {
-      return false;
+    if ($(this).is("label")) {
+      draggy = $(this).parent();
+    } else {
+      draggy = $(this);
     }
+
+  var el = draggy[0],
+      pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 
     e.preventDefault();
     // get the mouse cursor position at startup:

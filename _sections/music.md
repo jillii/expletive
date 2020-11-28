@@ -28,18 +28,56 @@ weight: 1
 
 <div class="music-container" id="draggy">
 	{% for track in site.data.tracks %}
-		<div class="music draggable" data-value="{{ track.tags | join: ' ' }}">
-			<label>{{ track.title }}</label>
+    {% assign id = forloop.index0 %}
+		<div class="music" data-value="{{ track.tags | join: ' ' }}">
+			<label class="draggable">{{ track.title }}</label>
 			<div class="close"></div>
 			<div class="player">
-				<audio id="player-{{ forloop.index0 }}" src="{{ track.mp3 }}"></audio>
-				<div> 
-				  <button onclick="document.getElementById('player-{{ loop.index0 }}').play()">&#x23f5;</button> 
-				  <button onclick="document.getElementById('player-{{ loop.index0 }}').pause()">&#x23f8;</button> 
-				  <button onclick="document.getElementById('player-{{ loop.index0 }}').volume += 0.1">+</button> 
-				  <button onclick="document.getElementById('player-{{ loop.index0 }}').volume -= 0.1">-</button> 
+				<audio id="player-{{ id }}" preload="metadata" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')">
+					<source src="/assets/audio/{{ track.mp3 }}" type="audio/wav">
+				</audio>
+				<div class="controls"> 
+				  <button class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;</button> 
+				  <button class="pause" onclick="document.getElementById('player-{{ id }}').pause();">&#x23f8;</button> 
+				  <button class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
+				  <button class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
+				  <button class="volume"><span>1.0</span></button>
+          <button>
+            <span id="curr-{{ id }}" class="current-time"></span>
+          </button>
 				</div>
+        <div class="range-container">
+  				<input id="dur-{{ id }}" type="range" name="rng" min="0" value="0" onchange="mSet('{{ id }}')">
+        </div>
 			</div>
 		</div>
 	{% endfor %}
 </div>
+
+<script type="text/javascript">
+	function mDur(id) {
+  var aud = document.getElementById("player-" + id),
+      dur = document.getElementById("dur-" + id);
+
+  dur.max = aud.duration;
+}
+function mPlay(id) {
+  var aud  = document.getElementById("player-" + id),
+      dur  = document.getElementById("dur-" + id),
+      curr = $("#curr-" + id);
+
+  dur.value = aud.currentTime;
+
+  curr.html(aud.currentTime);
+}
+function mSet(id) {
+  var aud  = document.getElementById("player-" + id),
+    dur  = document.getElementById("dur-" + id),
+    curr = $("#curr-" + id);
+
+  aud.currentTime = dur.value;
+
+  curr.html(aud.currentTime);
+}
+
+</script>

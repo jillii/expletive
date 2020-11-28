@@ -1,3 +1,48 @@
+- title: "chase me (!@#$% remix)"
+  mp3: "chase me (!@%23$%25).wav"
+  tags:
+    - chopped up
+    - chase me
+    - remix
+    - minimal
+
+- title: storer
+  mp3: Tutorials/storer.wav
+  tags:
+    - storer
+    - tutorials
+
+- title: ice milk
+  mp3: Cooking and Food Related/ice milk.wav
+  tags:
+    - fast
+    - ice milk
+    - food
+    - piano
+
+- title: how to install eclipse on a windows system
+  mp3: Tutorials/how to install eclipse on a windows system.wav
+  tags:
+    - fast
+    - tutorials
+    - how to install eclipse on a windows system
+    - data
+    - installations
+
+- title: video
+  mp3: Acoustic/video.wav
+  tags:
+    - video
+    - piano
+    - Acoustic
+
+- title: karma's payment 2
+  mp3: Tape Stop _Remixes_/karma's payment 2.wav
+  tags:
+    - karma's payment 2
+    - remix
+    - chopped up
+
 - title: tokyo sonata
   tags:
     - chopped up
@@ -8,8 +53,10 @@
     - minimal
     - contemplative
     - tokyo sonata
+  mp3: Tape Stop _Remixes_/tokyo sonata.wav
 
 - title: love is in the air
+  mp3: Acid/love is in the air.wav
   tags:
     - bass
     - gritty
@@ -21,6 +68,7 @@
     - acid
 
 - title: big shift
+  mp3: high hopes.wav
   tags:
     - melancholy
     - complex
@@ -33,6 +81,7 @@
     - big shift
 
 - title: static
+  mp3: static.wav
   tags:
     - simple
     - 808
@@ -48,6 +97,7 @@
     - minimal
 
 - title: bighton 1
+  mp3: brighton.wav
   tags:
     - fast
     - energetic
@@ -60,7 +110,7 @@
     - minimal
 
 - title: brighton 2
-  tags:
+  tags: brighton 2.wav
     - fast
     - melodic
     - breaks
@@ -76,7 +126,7 @@
     - brighton
 
 - title: brighton 3
-  tags:
+  tags: brighton 3.wav
     - fast
     - melodic
     - laundry
@@ -92,6 +142,7 @@
     - brighton
 
 - title: what if i'm not ready
+  mp3: poop.wav
   tags:
     - what if i'm not ready
     - breaks
@@ -106,13 +157,18 @@
     - lush
 
 - title: (--;)
+  mp3: Youtube Videos/(--;) - real version.wav
   tags:
     - melodic
     - chiptune
     - punk
     - fast
 
+- title: (--;)
+  mp3: Youtube Videos/(--;) - secret version w billie holiday.wav
+
 - title: forgetting
+  mp3: forgetting.wav
   tags:
     - forgetting
     - melodic
@@ -126,6 +182,7 @@
     - contemplative
 
 - title: detergent
+  mp3: Commercials/detergent.wav
   tags:
     - detergent
     - subtractive synthesis
@@ -139,6 +196,7 @@
     - fast
 
 - title: the kuiper belt with alan stern v1
+  mp3: THANK YOU NASA.wav
   tags:
     - the kuiper belt with alan stern v1
     - squelchy
@@ -149,6 +207,7 @@
     - fast
 
 - title: the kuiper belt with alan stern v2
+  mp3: the kuiper belt with alan stern 2.wav
   tags:
     - the kuiper belt with alan stern v2
     - minimal
@@ -160,6 +219,7 @@
     - fast
 
 - title: em cares
+  mp3: em cares.wav
   tags:
     - em cares
     - melodic
@@ -169,6 +229,7 @@
     - melancholy
 
 - title: butter
+  mp3: flakey.wav
   tags:
     - butter
     - food
@@ -181,6 +242,7 @@
     - claps
 
 - title: now with 50% more plastic
+  mp3: now with 50 more plastic.wav
   tags:
     - now with 50% more plastic
     - plastic
@@ -196,6 +258,7 @@
     - claps
 
 - title: computer_stacks.jpg
+  mp3: slots.wav
   tags:
     - computer_stacks
     - jpeg
@@ -210,15 +273,8 @@
     - melodic
     - square waves
 
-- title: taxmasters idk like 10
-  tags:
-    - melodic
-    - melancholy
-    - throwback
-    - noisey
-    - taxmasters
-
 - title: imposter syndrome
+  mp3: noise.wav
   tags:
     - imposter syndrome
     - throwback
@@ -228,6 +284,7 @@
     - psychosis
 
 - title: underdone + hard bits
+  mp3: underdone + hard bits.wav
   tags:
     - underdone + hard bits
     - cooking
@@ -238,11 +295,13 @@
     - overcompressed
 
 - title: helen
+  mp3: helen.wav
   tags:
     - melodic
     - melancholy
 
 - title: daisy
+  mp3: daisy.wav
   tags:
     - daisy
     - fast
@@ -251,6 +310,7 @@
     - dial-up
 
 - title: beep test
+  mp3: beep test.mp3
   tags:
     - beep test
     - melodic
@@ -262,6 +322,7 @@
     - squelchy
 
 - title: workings of a modern fax machine
+  mp3: Acid/lil cheese.wav
   tags:
     - workings of a modern fax machine
     - posi-acid
@@ -274,6 +335,7 @@
     - fast
 
 - title: sorting data
+  mp3: Tutorials/sorting data on a computer + big shift.wav
   tags:
     - sorting data
     - contemplative
@@ -288,6 +350,7 @@
     - vocoder
 
 - title: you got it bad
+  mp3: Acid/you got it bad.wav
   tags:
     - you got it bad
     - throwback
@@ -299,6 +362,7 @@
     - melancholy
 
 - title: marge
+  mp3: marge.wav
   tags:
     - marge
     - melodic
@@ -306,6 +370,7 @@
     - joyful
 
 - title: fruit !@#$%
+  mp3: Tape Stop _Remixes_/fruit mix.wav
   tags:
     - fruit !@#$%
     - food
@@ -313,10 +378,14 @@
     - modest mouse remix
 
 - title: standing outside a broken phonebooth with money in my !@#$%
+  mp3: Tape Stop _Remixes_/standing outside a broken phonebooth with money in my hand 2.wav
   tags:
     - chopped up
+    - remix
+    - standing outside a broken phonebooth with money in my hand
 
 - title: tokyo sonata 2
+  mp3: Tape Stop _Remixes_/tokyo sonata 2.wav
   tags:
     - tokyo sonata 2
     - chopped up
@@ -326,6 +395,7 @@
     - slow-build
 
 - title: ladies and gentlemen we're floa-!@#$%
+  mp3: Tape Stop _Remixes_/ladies and gentlemen we're floa!@%23$%25.wav
   tags:
     - ladies and gentlemen we're floa-!@#$%
     - chopped up
@@ -333,6 +403,7 @@
     - bubbly
 
 - title: errors
+  mp3: Tutorials/errors.wav
   tags:
     - errors
     - arpeggiated
@@ -345,3 +416,4 @@
     - fast
     - slow-build
     - degrade
+    - tutorials

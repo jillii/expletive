@@ -127,7 +127,8 @@
     - brighton
 
 - title: brighton 3
-  tags: brighton 3.wav
+  mp3: brighton 3.wav
+  tags:
     - fast
     - melodic
     - laundry

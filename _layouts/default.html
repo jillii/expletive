@@ -12,7 +12,7 @@
     {% for section in sections %}
       <section id="{{ section.title }}"{% if forloop.index0 == 0 %} class="active"{% endif %}>
         <div class="container fixed">
-          <h2 class="flicker-text x" style="position:absolute;">
+          <h2 class="flicker-text" style="position:absolute;">
             {% if section.name %}
               {{ section.name }}
             {% else %}
@@ -26,6 +26,16 @@
         </div>
       </section>
     {% endfor %}
+    <div id="media-player" class="windows">
+      <marquee id="track-title"></marquee>
+      <div class="controls"> 
+        <button class="play" onclick="$('.paused audio')[0].play();">&#x23f5;</button> 
+        <button class="pause" onclick="$('.playing audio')[0].pause();">&#x23f8;</button> 
+          <span id="current-time" class="current-time"></span>
+        </button>
+        <!-- <div id="track-progress"></div> -->
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="

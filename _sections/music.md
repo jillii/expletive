@@ -6,7 +6,10 @@ weight: 1
 	<p>
 		Please enter a key phrase to help identify what you'd like to listen to.
 	</p> 
-	<input class="input" type="text" id="search"><button id="search-by-tag" class="btn" type="submit"></button>
+	<input class="input" type="text" id="search">
+  <button id="search-by-tag" class="btn" type="submit"></button>
+  <button id="playall">Play All</button>
+
 </div>
 <div id="tags">
 	{% assign tags  = site.data.tracks | map: "tags" | join: ',' | split: ',' | sort %}
@@ -26,14 +29,14 @@ weight: 1
 	{% endfor %}
 </div>
 
-<div class="music-container" id="draggy">
+<div class="music-container">
 	{% for track in site.data.tracks %}
     {% assign id = forloop.index0 %}
 		<div class="music" data-value="{{ track.tags | join: ' ' }}">
 			<label class="draggable">{{ track.title }}</label>
 			<div class="close"></div>
 			<div class="player">
-				<audio id="player-{{ id }}" preload="metadata" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')">
+				<audio id="player-{{ id }}" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')" data-title="{{ track.title }}">
 					<source src="{{ track.mp3 }}" type="audio/wav">
 				</audio>
 				<div class="controls"> 
@@ -53,31 +56,3 @@ weight: 1
 		</div>
 	{% endfor %}
 </div>
-
-<script type="text/javascript">
-	function mDur(id) {
-  var aud = document.getElementById("player-" + id),
-      dur = document.getElementById("dur-" + id);
-
-  dur.max = aud.duration;
-}
-function mPlay(id) {
-  var aud  = document.getElementById("player-" + id),
-      dur  = document.getElementById("dur-" + id),
-      curr = $("#curr-" + id);
-
-  dur.value = aud.currentTime;
-
-  curr.html(aud.currentTime);
-}
-function mSet(id) {
-  var aud  = document.getElementById("player-" + id),
-    dur  = document.getElementById("dur-" + id),
-    curr = $("#curr-" + id);
-
-  aud.currentTime = dur.value;
-
-  curr.html(aud.currentTime);
-}
-
-</script>

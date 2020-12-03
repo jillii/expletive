@@ -77,8 +77,7 @@ function update_musics(input, reset, time = 5) {
 						music.removeClass("exact-match");
 					}
 				}
-				music.addClass("match")
-					 .removeClass("no-match");
+				music.addClass("match");
 
 				// collect active tags
 				active_tags += music.data("value");
@@ -95,12 +94,10 @@ function update_tags(active_tags, reset, time = 5) {
 
 		setTimeout( function(){
 			if (reset) {
-				tag.show();
+				tag.removeClass("active").show();
 			} else {
 				if (!active_tags.includes(id)) {
 					tag.hide();
-				} else {
-					tag.show();
 				}
 			}
 		}, time += 5);

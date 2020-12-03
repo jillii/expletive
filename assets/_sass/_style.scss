@@ -21,7 +21,7 @@ div {
   display: flex;
 }
 button {
-  appearance: button;
+  appearance: none;
   -webkit-writing-mode: horizontal-tb !important;
   text-rendering: auto;
   color: -internal-light-dark(black, white);
@@ -38,6 +38,11 @@ button {
   border-image: initial;
   outline: none;
   cursor: pointer;
+}
+.controls button {
+  appearance: none;
+  border: none;
+  background-color: transparent;
 }
 a {
   color: #fff;
@@ -188,7 +193,7 @@ footer {
     }
     &.fallen {
       .star {
-        top: 100%;
+        top: calc(100% - 55px);
       }
     }
   }

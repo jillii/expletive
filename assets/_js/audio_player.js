@@ -1,6 +1,7 @@
-var mediaPlayer = $("#media-player"),
+var mediaPlayer = $("#media-player"), 
     title       = $("#track-title"),
-    progress    = $("#track-progress");
+    dur_main    = $("#dur-main")[0],
+    curr_main   = $("#curr-main");
 
 $(".player").on("click", function(e){
 	var target    = $(e.target),
@@ -37,7 +38,8 @@ $(".player").each(function(){
   });
 
   audio[0].addEventListener("ended", function(){
-    container.removeClass("playing");
+    container.removeClass("playing")
+             .removeClass("active");
     
     document.title = "!@#$%";
     
@@ -56,7 +58,8 @@ $(".player").each(function(){
                .addClass("playing");
 
     container.addClass("playing")
-         .removeClass("paused");
+             .addClass("active")
+             .removeClass("paused");
   });
   audio[0].addEventListener("pause", function(){
     document.title = "!@#$%";
@@ -64,7 +67,7 @@ $(".player").each(function(){
                .addClass("paused");
 
     container.removeClass("playing")
-         .addClass("paused");
+             .addClass("paused");
   });
 });
 // pause music on explode
@@ -73,7 +76,13 @@ $(".music .close").click(function(){
       player = music.find("audio")[0];
 
   if (music.hasClass("playing")) {
-    player.pause();
+    player.pause()
+          .removeClass("playing")
+          .removeClass("active")
+  }
+  if (music.hasClass("paused")) {
+    player.removeClass("active")
+          .removeClass("paused");
   }
 });
 // play all
@@ -101,13 +110,15 @@ $("#playall").click(function(){
     }
   }
 });
-var mediaPlayerCurr = $("#track-progress");
 
 function mDur(id) {
   var aud = document.getElementById("player-" + id),
       dur = document.getElementById("dur-" + id);
 
   dur.max = aud.duration;
+
+  dur_main.max = aud.duration;
+
 }
 function mPlay(id) {
   var aud  = document.getElementById("player-" + id),
@@ -115,16 +126,18 @@ function mPlay(id) {
       curr = $("#curr-" + id);
 
   dur.value = aud.currentTime;
-
   curr.html(aud.currentTime);
+
+  dur_main.value = aud.currentTime;
+  curr_main.html(aud.currentTime);
 }
-function mSet(id) {
-  var aud  = document.getElementById("player-" + id),
-      dur  = document.getElementById("dur-" + id),
-      curr = $("#curr-" + id);
+function mSet(id, target) {
+  var aud  = document.getElementById(id),
+      dur  = target,
+      curr = target.parent().prev().find('.current-time');
+  console.log(id);
+  console.log(aud);
 
-  aud.currentTime = dur.value;
-
+  aud.currentTime = dur.val();
   curr.html(aud.currentTime);
-  mediaPlayerCurr.html(aud.currentTime);
 }

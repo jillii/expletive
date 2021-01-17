@@ -1,8 +1,10 @@
 @import 'variables.scss';
 .collages {
+	@extend .music-container;
 	display: flex;
 	flex-wrap: wrap;
 	.collage {
+		/*@extend .music;*/
 		height: 400px;
 		width: 450px;
 		display: inline-flex;

@@ -14,8 +14,9 @@ weight: 1
 <div id="tags">
 	{% assign tags  = site.data.tracks | map: "tags" | join: ',' | split: ',' | sort %}
 	{% assign count = 1 %}
+	{% assign prev = '' %}
 	{% for tag in tags %}
-		{% if prev %}
+		{% if prev != '' %}
 			{% if tag == prev %}
 				{% assign count = count | plus: 1 %}
 			{% else %}
@@ -45,13 +46,13 @@ weight: 1
 				  <button class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
 				  <button class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
 				  <button class="volume"><span>1.0</span></button>
-          <button>
-            <span id="curr-{{ id }}" class="current-time"></span>
-          </button>
+		          <button>
+		            <span id="curr-{{ id }}" class="current-time"></span>
+		          </button>
 				</div>
-        <div class="range-container">
-  				<input id="dur-{{ id }}" type="range" name="rng" min="0" value="0" onchange="mSet('{{ id }}')">
-        </div>
+		        <div class="range-container">
+  				<input id="dur-{{ id }}" type="range" name="rng" min="0" value="0" onchange="mSet('player-{{ id }}', $(this))" onclick="mSet('player-{{ id }}', $(this))">
+		        </div>
 			</div>
 		</div>
 	{% endfor %}

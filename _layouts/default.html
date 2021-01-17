@@ -29,11 +29,19 @@
     <div id="media-player" class="windows">
       <marquee id="track-title"></marquee>
       <div class="controls"> 
-        <button class="play" onclick="$('.paused audio')[0].play();">&#x23f5;</button> 
-        <button class="pause" onclick="$('.playing audio')[0].pause();">&#x23f8;</button> 
-          <span id="current-time" class="current-time"></span>
+        <button class="play" onclick="$('.music.active audio')[0].play();">&#x23f5;</button> 
+        <button class="pause" onclick="$('.music.active audio')[0].pause();">&#x23f8;</button>
+        <button class="vol vol-incr" onclick="$('.music.active audio')[0].volume += 0.1; $(this).parent().find('.volume span').html($('.music.active audio')[0].volume) ">+</button> 
+        <button class="vol vol-decr" onclick="$('.music.active audio')[0].volume -= 0.1;$(this).parent().find('.volume span').html($('.music.active audio')[0].volume)">-</button>
+        <button class="volume"><span>1.0</span></button>
+        <button>
+          <span id="curr-main" class="current-time"></span>
         </button>
-        <!-- <div id="track-progress"></div> -->
+      </div>
+      <div class="range-container">
+        <input id="dur-main" type="range" name="rng" min="0" value="0" onchange="mSet($('.music.active audio').attr('id'), $(this))" onclick="mSet($('.music.active audio').attr('id'), $(this))">
+      </div>
+
       </div>
     </div>
     <script

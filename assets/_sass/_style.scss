@@ -10,7 +10,7 @@ body {
   line-height: 1.1;
   color: $teal;
   font-family: "Cutive Mono",monospace;
-  background-color: #191b16;
+  background-color: $bg;
   overflow-x: hidden;
 }
 
@@ -69,7 +69,7 @@ section {
   .container {
     position: absolute;
     width: 99vw;
-    padding: 51px 28px;
+    /*padding: 51px 28px;*/
   }
 }
 /* Fonts */
@@ -159,12 +159,14 @@ p {
 }
 /* Footer */
 footer {
+  position: relative;
   width: 100%;
   padding: 80vh 0 51px;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
   overflow: hidden;
+  /*z-index: -1;*/
   #stars {
     position: absolute;
     width: 100vw;
@@ -369,13 +371,15 @@ form {
   border-radius: 24px;
   color: #fff;
   cursor: pointer;
-
+  &.black {
+    background-color: $bg;
+    opacity: .6;
+  }
   &:before {
     content: "z";
     position: absolute;
     animation: float 1.6s forwards infinite;
   }
-
   &:after {
     content: "-_-";
     white-space: nowrap;
@@ -391,7 +395,10 @@ form {
       animation: slow-blink-to-anger 10s forwards;
     }
   }
-
+  &.view:hover:after {
+    content: "View";
+    animation: none;
+  }
   &:active {
     &:after {
       animation: blink 2.5s;
@@ -416,6 +423,10 @@ form {
   &:focus .clones {
     animation: poptext .5s forwards;
   }
+}
+
+.draggable {
+  position: absolute;
 }
 
 @keyframes float {
@@ -541,11 +552,32 @@ form {
     height: 0em;
   }
 }
-  .monitor {
-    animation: tvflicker .5s infinite alternate; 
+.monitor {
+  animation: tvflicker .5s infinite alternate; 
+}
+.marquee {
+  position: fixed;
+  top: calc(100vh - 1em);
+  left: -1px;
+  width: 100%;
+  overflow: hidden;
+  background-color: $bg;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 0 $shadow-color;
+    span {
+    white-space: nowrap;
+    animation: marquee 10s infinite linear;
   }
-
-  @keyframes tvflicker {
-    0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
-    100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+}
+@keyframes tvflicker {
+  0%   { box-shadow: 0 0 100px 0 rgba(225,235,255,0.4); }
+  100% { box-shadow: 0 0 60px 0 rgba(200,220,255,0.6); }
+}
+@keyframes marquee {
+  from {
+    margin-left: 100%;
   }
+  to {
+    margin-left: -100%;
+  }
+}

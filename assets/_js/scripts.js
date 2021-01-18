@@ -3,20 +3,27 @@ $(function(){
 	var hash = location.hash;
 
 	$(".aos-animate").removeClass("aos-animate");
-
 	if (hash != "") {
 		$("section.active").removeClass("active");
 
 		$(hash).addClass("active")
 			   .find(".aos-init").addClass("aos-animate");
 	}
+	if (hash == '#about') {
+		$("section.active").find(".typing-init").addClass("typing");
+	}
 	$("#primary-nav").on("click", ".nav-link", function(e){
 		e.preventDefault();
-		$("section.active").removeClass("active");
+		var active = $("section.active");
+
+		active.removeClass("active");
+	    
+
 		var id = $(e.target).data("value");
 
 		$('#' + id).addClass("active")
-				   .find(".aos-init").addClass("aos-animate");
+				   .find(".aos-init").addClass("aos-animate")
+		    	   .find(".typing-init").addClass("typing");
 
 		location.hash = id;
 	});
@@ -115,7 +122,6 @@ $(function(){
 				$(this).show();
 			});
 			$(".collage.active").removeClass("active");
-			btn.html("View");
 		} else {
 			window.scrollTo(0, 0);
 			collages.each(function(){
@@ -127,7 +133,6 @@ $(function(){
 					collage.addClass("active");
 				}
 			});
-			btn.html("Return");
 		}
 	});
 });

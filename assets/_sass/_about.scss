@@ -3,33 +3,44 @@
 $height: 245px;
 $width: 317px;
 
+.about {
+  justify-content: center;
+  padding-top: 51px;
+}
 #jill {
   text-align: center;
-  .about--image {
-  	position: absolute;
-  	height: $height;
-  	width: $width;
-  	border-radius: 3px;
-    border: 1px solid;
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	img {
-  		position: absolute;
-  		height: 66%;
-      margin-top: 33px;
-  		cursor: pointer;
-  	}
+  .top {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 51px;
+    font-size: 100px;
+    background-color: #d7d3ce;
+    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 0 1px 3px #000;
+    .close {
+      position: static;
+    }
+  }
+  .about--copy {
+    margin: 12px;
+  }
+  .img-container {
+    margin: 10px;
   }
   .closed {
     display: none;
   }
   &.bye {
-    img {
-      display: none;
+    img, .top {
+      opacity: 0;
     }
     .closed {
       display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include center-hor-ver;
     }
   }
 }

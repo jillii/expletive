@@ -5,6 +5,7 @@
     color: #fff;
     font-size: 10px;
     font-weight: 400;
+    font-family: monospace;
     margin-bottom: 6px;
     padding-right: 30px;
     box-shadow: 2px 2px 0 $shadow-color;
@@ -24,10 +25,9 @@
 	    font-weight: 600;
     }
     &.active {
-    	border-color: $pink;
-    	background: linear-gradient(lightpink, $pink);
+    	background: $gradient;
     	.num {
-    		border-left-color: #de65c6;
+    		border-left-color: #53042D;
     	}
     }
 }
@@ -39,26 +39,25 @@
 	width: 100vw;
 	height: 500px;
 	.music {
-		/*right: 101%;*/
-		transform: translateX(0%);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: absolute;
+		left: -240px;
 		padding: 33px;
 		height: 100px;
 		border: 1px solid;
 		border-radius: 3px;
 		box-shadow: 3px 4px 0 $shadow-color;
-		animation: floatacross 60s infinite;
-		transition: transform .2s ease, background-color .2s ease;
+		animation: floatacross 60s infinite linear;
+		transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
 		&.playing {
-			background-color: $pink;
+			border-color: darkturquoise;
 			animation-play-state: paused;
 			z-index: 999;
 		}
 		&.paused {
-			background-color: darkblue;
+			background-color: #222328;
 			animation-play-state: paused;
 			z-index: 999;
 		}
@@ -96,17 +95,16 @@
 		}
 		&.match {
 			position: relative;
-			margin-left: calc(50% - 600px / 2) !important;
+			margin: 8px;
 			top: 0 !important;
 			left: unset !important;
-			animation-play-state: paused;
+			animation: none;
 		}
 		&.no-match {
 			display: none;
 		}
 		&.exact-match {
 			transform: scale(2.8);
-			top: 0;
 		}
 		label {
 			width: 100%;
@@ -114,6 +112,7 @@
 			top: 0;
 			left: 0;
 			border-bottom: 1px solid #fff;
+			border-color: inherit;
 			font-size: 12px;
 			font-weight: 400;
 			margin-bottom: 11px;
@@ -137,8 +136,8 @@
 	@for $i from 1 through 100 {
 		.music:nth-child(#{$i}) {
 			top: percentage(random(60) / 100);
-			left: percentage(random(100) / 100);
-			animation-duration: #{(random(40))+ 20}s;
+			animation-duration: #{(random(25)) + 45}s;
+			animation-delay: #{(random(100) * -1)}s;
 		}
 	}
 }
@@ -224,11 +223,9 @@
 }
 @keyframes floatacross {
 	0% {
-		/*transform: translateX(-400px);*/
-		transform: translateX(0%);
+		transform: translateX(0);
 	}
 	100% {
-		/*transform: translateX(calc(100% + 1000px));*/
-		transform: translateX(100%);
+		transform: translateX(100vw);
 	}
 }

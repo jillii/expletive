@@ -13,8 +13,8 @@ $(".draggable").mousedown(function(e) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
-
-    draggy.css("animation-play-state", "pause");
+    
+    draggy.css("animation-play-state", "paused");
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -26,6 +26,14 @@ $(".draggable").mousedown(function(e) {
       pos2 = pos4 - e.clientY;
       pos3 = e.clientX;
       pos4 = e.clientY;
+
+      console.log("pos1 = " + pos1);
+      console.log("pos2 = " + pos2);
+      console.log("pos3 = " + pos3);
+      console.log("pos4 = " + pos4);
+
+      console.log("el.offsetTop = " + el.offsetTop);
+      console.log("el.offsetLeft = " + el.offsetLeft);
       // set the element's new position:
       el.style.top = (el.offsetTop - pos2) + "px";
       el.style.left = (el.offsetLeft - pos1) + "px";

@@ -6,9 +6,9 @@ weight: 1
 	<p>
 		Please enter a key phrase to help identify what you'd like to listen to.
 	</p> 
-	<input class="input" type="text" id="search">
+	<input class="input" type="text" id="search" placeholder="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'search'">
   <button id="search-by-tag" class="btn" type="submit"></button>
-  <button id="playall">Play All</button>
+  <button id="playall" class="windows btn">Play All</button>
 
 </div>
 <div id="tags">

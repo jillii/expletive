@@ -5,8 +5,11 @@ $primary-bg: #eff0f4;
 $shadow-color: #000;
 $lime: #cf0;
 $blue: #37341f;
-$pink: #ff00cc;
+/*$pink: #ff00cc;*/
+$pink: #ffa79e;
 $teal: #add8e6;
+
+$gradient: linear-gradient(#9d2865, darkturquoise);
 
 @mixin boxshadow {
   text-shadow: 2px 5px 0 $shadow-color;
@@ -24,6 +27,12 @@ background: linear-gradient(145deg, #d7d7d7, #b5b5b500);
   border: none;
 }
 
+@mixin center-hor-ver {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 @font-face {
   font-family: Atari-Classic;
   src: url(../atari/Atari-Classic.ttf.woff) format("woff"), url(../atari/Atari-Classic.ttf.svg#Atari-Classic) format("svg"), url(../atari/Atari-Classic.ttf.eot), url(../atari/Atari-Classic.eot?#iefix) format("embedded-opentype");

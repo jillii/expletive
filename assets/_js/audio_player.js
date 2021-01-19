@@ -113,6 +113,10 @@ $("#playall").click(function(){
 function autoplay(index) {
   var curr      = players.eq(index),
       container = curr.parent().parent();
+
+  // reset played array
+  played = [];
+  played_pointer = -1;
   
   container.addClass("playing active");
 

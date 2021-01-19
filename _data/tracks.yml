@@ -1,5 +1,5 @@
 - title:  don't !@#$% the cap
-  map: https://feeds.soundcloud.com/stream/957352177-generalexpletive-dont-swallow-the-cap-remix.mp3
+  mp3: https://feeds.soundcloud.com/stream/957352177-generalexpletive-dont-swallow-the-cap-remix.mp3
   tags:
     - cover
     - don't swallow the cap
@@ -17,12 +17,14 @@
     - gritty
     - noisey
     - claps
+    - taxmasters
+    - overcompressed
 
 - title: "chase me (!@#$% remix)"
   mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fchase%20me%20(!%40%23%24%25).wav?alt=media&token=572c9b8e-cf80-476b-8a7d-def1525b3450
   tags:
     - chopped up
-    - chase me
+    - chase me (!@#$% remix)
     - remix
     - minimal
 
@@ -31,6 +33,8 @@
   tags:
     - storer
     - tutorials
+    - gritty
+    - driving
 
 - title: ice milk
   mp3: https://feeds.soundcloud.com/stream/182996715-generalexpletive-ice-milk.mp3
@@ -54,7 +58,7 @@
   tags:
     - video
     - piano
-    - Acoustic
+    - acoustic
 
 - title: karma's payment 2
   mp3: https://feeds.soundcloud.com/stream/364616780-user-594914147-karmas-payment-2.mp3
@@ -62,6 +66,7 @@
     - karma's payment 2
     - remix
     - chopped up
+    - modest mouse remix
 
 - title: tokyo sonata
   mp3: https://feeds.soundcloud.com/stream/364615643-user-594914147-tokyo-sonata.mp3
@@ -86,6 +91,7 @@
     - love
     - 4-to-the-floor
     - acid
+    - techno
 
 - title: big shift
   mp3: https://feeds.soundcloud.com/stream/287774890-generalexpletive-big-shift.mp3
@@ -93,7 +99,6 @@
     - melancholy
     - complex
     - subtle
-    - subversive
     - slow-build
     - melodic
     - 4-to-the-floor
@@ -150,6 +155,8 @@
     - whisk
     - detergent
     - laundry
+    - laundromat
+    - detergent
     - square waves
     - 8-bit
     - chiptune
@@ -165,6 +172,8 @@
     - laundry
     - detergent
     - laundromat
+    - laundry
+    - whisk
     - breaks
     - breakbeat
     - square waves
@@ -222,12 +231,11 @@
     - subtractive synthesis
     - 4-to-the-floor
     - driving
-    - hard techno
     - minimal
     - laundry
-    - detergent
     - bass
     - fast
+    - techno
 
 - title: the kuiper belt with alan stern v1
   mp3: https://feeds.soundcloud.com/stream/398947695-generalexpletive-the-kuiper-belt-with-alan.mp3
@@ -251,6 +259,7 @@
     - slow-build
     - house
     - fast
+    - pad
 
 - title: em cares
   mp3: https://feeds.soundcloud.com/stream/378091097-generalexpletive-em-cares.mp3
@@ -261,6 +270,7 @@
     - square waves
     - arpeggiated
     - melancholy
+    - lush
 
 - title: butter
   mp3: https://feeds.soundcloud.com/stream/749998141-generalexpletive-butter.mp3
@@ -271,9 +281,11 @@
     - fast
     - bass
     - 4-to-the-floor
-    - compression
+    - overcompressed
     - forceful
     - claps
+    - 50's commercials
+    - techno
 
 - title: now with 50% more plastic
   mp3: https://feeds.soundcloud.com/stream/792569818-generalexpletive-now-with-50-percent-more.mp3
@@ -290,6 +302,7 @@
     - chopped up
     - bubbly
     - claps
+    - techno
 
 - title: computer_stacks.jpg
   mp3: https://firebasestorage.googleapis.com/v0/b/expletive-official.appspot.com/o/audio%2Fslots.wav?alt=media&token=17fefcb7-a92f-4e95-8c83-4ce08562a5e5
@@ -337,6 +350,7 @@
     - overcompressed
     - 8-bit
     - claps
+    - techno
 
 - title: helen
   mp3: https://feeds.soundcloud.com/stream/626255295-generalexpletive-helen.mp3
@@ -471,3 +485,4 @@
     - 4-to-the-floor
     - driving
     - bubbly
+    - techno

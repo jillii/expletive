@@ -51,6 +51,9 @@
 		box-shadow: 3px 4px 0 $shadow-color;
 		animation: floatacross 60s infinite linear;
 		transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
+		&:hover {
+			animation-play-state: paused;
+		}
 		&.playing {
 			border-color: darkturquoise;
 			animation-play-state: paused;
@@ -71,7 +74,7 @@
 				z-index: 999;
 				span {
 					border: 1px solid;
-					background-color: blue;
+					background-color: $darkgreen;
 					margin-left: -200%;
 					transition: margin .2s ease;
 				}
@@ -226,6 +229,6 @@
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(100vw);
+		transform: translateX(calc(100vw + 208px));
 	}
 }

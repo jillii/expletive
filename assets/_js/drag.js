@@ -27,13 +27,6 @@ $(".draggable").mousedown(function(e) {
       pos3 = e.clientX;
       pos4 = e.clientY;
 
-      console.log("pos1 = " + pos1);
-      console.log("pos2 = " + pos2);
-      console.log("pos3 = " + pos3);
-      console.log("pos4 = " + pos4);
-
-      console.log("el.offsetTop = " + el.offsetTop);
-      console.log("el.offsetLeft = " + el.offsetLeft);
       // set the element's new position:
       el.style.top = (el.offsetTop - pos2) + "px";
       el.style.left = (el.offsetLeft - pos1) + "px";

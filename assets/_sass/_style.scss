@@ -302,6 +302,7 @@ footer {
 .input, input {
   position: relative;
   -webkit-appearance: none;
+  appearance: none;
   padding: 6px;
   margin-right: 6px;
   margin-bottom: 6px;
@@ -309,15 +310,23 @@ footer {
   border-radius: 0;
   font-family: "Cutive Mono",monospace;
   font-size: 14px;
-  background-color: #25350c;
+  background-color: $darkgreen;
   color: #b4ff00;
   box-sizing: border-box;
+  cursor: pointer;
+  &[type=range] {
+    background-color: transparent;
+  }
   &::placeholder {
     letter-spacing: 2px;
     color: #b4ff006b !important;
   }
   &:focus {
     outline: none;
+    cursor: text;
+  }
+  &:not([type=range]):hover {
+    background-color: $darkgreen + 10;
   }
   &:after {
     position:absolute;

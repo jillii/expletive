@@ -31,6 +31,8 @@
       <div class="controls"> 
         <button class="play" onclick="$('.music.active audio')[0].play();">&#x23f5;</button> 
         <button class="pause" onclick="$('.music.active audio')[0].pause();">&#x23f8;</button>
+        <button class="prev">&#x23ee;</button>
+        <button class="next">&#x23ed;</button>
         <button class="vol vol-incr" onclick="$('.music.active audio')[0].volume += 0.1; $(this).parent().find('.volume span').html($('.music.active audio')[0].volume) ">+</button> 
         <button class="vol vol-decr" onclick="$('.music.active audio')[0].volume -= 0.1;$(this).parent().find('.volume span').html($('.music.active audio')[0].volume)">-</button>
         <button class="volume"><span>1.0</span></button>
@@ -54,7 +56,7 @@
     </script>
     <script type="text/javascript" src="{{ '/assets/js/scripts.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/send_mail.min.js' | relative_url }}"></script>
-    <script type="text/javascript" src="{{ '/assets/js/explode.min.js' | relative_url }}"></script>
+    <!-- <script type="text/javascript" src="{{ '/assets/js/explode.min.js' | relative_url }}"></script> -->
     <script type="text/javascript" src="{{ '/assets/js/drag.min.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{ '/assets/js/audio_player.min.js' | relative_url }}"></script>
   </body>

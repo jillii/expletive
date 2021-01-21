@@ -7,7 +7,7 @@ weight: 1
 		Please enter a key phrase to help identify what you'd like to listen to.
 	</p> 
 	<input class="input" type="text" id="search" placeholder="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'search'">
-  <button id="search-by-tag" class="btn" type="submit"></button>
+  <button aria-label="search music" id="search-by-tag" class="btn" type="submit"></button>
   <button id="playall" class="windows btn">Play All</button>
 
 </div>
@@ -41,14 +41,14 @@ weight: 1
 					<source src="{{ track.mp3 }}" type="audio/wav">
 				</audio>
 				<div class="controls"> 
-				  <button class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;</button> 
-				  <button class="pause" onclick="document.getElementById('player-{{ id }}').pause();">&#x23f8;</button> 
-				  <button class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
-				  <button class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
-				  <button class="volume"><span>1.0</span></button>
-		          <button>
+				  <button aria-label="play" class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;</button> 
+				  <button aria-label="pause" class="pause" onclick="document.getElementById('player-{{ id }}').pause();">&#x23f8;</button> 
+				  <button aria-label="turn up volume" class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
+				  <button aria-label="lower volume" class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
+				  <div class="volume"><span>1.0</span></div>
+		          <div class="current-time-container" aria-label="current time">
 		            <span id="curr-{{ id }}" class="current-time"></span>
-		          </button>
+		          </div>
 				</div>
 		        <div class="range-container">
   				<input id="dur-{{ id }}" type="range" name="rng" min="0" value="0" onchange="mSet('player-{{ id }}', $(this))" onclick="mSet('player-{{ id }}', $(this))">

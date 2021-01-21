@@ -12,6 +12,6 @@ Questions? Comments? Concerns?
     <input type="text" class="input" name="name" placeholder="name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'name'">
 	<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'">
     <textarea type="textarea" rows="5" name="message" class="input" placeholder="message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'message'"></textarea>
-    <button type="submit" class="contact-form-button btn" value="-_-"></button>
+    <button aria-label="submit form" type="submit" class="contact-form-button btn" value="-_-"></button>
     <p class="contact-form-status"></p>
 </form>

@@ -8,12 +8,12 @@ name: " "
 		{% assign id = collage.title | replace: ' ', '-' %}
 		<div class="collage fire-explosion" id="{{ id }}" style="z-index: {{ collage.z }}">
 			<div class="img-container draggable">
-				<img src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
-				<button class="windows btn" data-value="{{ id }}" class="explode" data-value="{{ id }}"></button>
+				<img alt="{{ collage.title }}" src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}">
+				<button aria-label="view-return" class="windows btn" data-value="{{ id }}" class="explode" data-value="{{ id }}"></button>
 			</div>
 			<div class="copy-container">
 				<div>
-					<h4 class="flicker-text">{{ collage.title }}</h4>
+					<h3 class="flicker-text">{{ collage.title }}</h3>
 					<div class="desc marquee"><span>{{ collage.desc }}</span></div>
 				</div>
 			</div>

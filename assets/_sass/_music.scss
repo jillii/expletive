@@ -122,7 +122,8 @@
 			color: #fff;
 			cursor: pointer;
 		}
-		button {
+		button,
+		.current-time-container {
 			height: 21px;
 			width: 21px;
 			display: inline-flex;
@@ -134,6 +135,9 @@
 			border: none;
 			color: $lime;
 			border: none;
+		}
+		.volume {
+			display: inline-flex;
 		}
 	}
 	@for $i from 1 through 100 {

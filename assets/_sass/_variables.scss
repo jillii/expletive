@@ -37,12 +37,14 @@ background: linear-gradient(145deg, #d7d7d7, #b5b5b500);
   transform: translate(-50%, -50%);
 }
 @font-face {
+  font-display: swap;
   font-family: Atari-Classic;
   src: url(../atari/Atari-Classic.ttf.woff) format("woff"), url(../atari/Atari-Classic.ttf.svg#Atari-Classic) format("svg"), url(../atari/Atari-Classic.ttf.eot), url(../atari/Atari-Classic.eot?#iefix) format("embedded-opentype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
+  font-display: swap;
   font-family: 'Nintendoid1';
   font-style: normal;
   font-weight: 400;

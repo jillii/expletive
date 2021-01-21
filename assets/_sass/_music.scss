@@ -2,7 +2,8 @@
 
 .tag {
 	position: relative;
-    color: #fff;
+    color: #000;
+    background: #fff;
     font-size: 10px;
     font-weight: 400;
     font-family: monospace;
@@ -11,7 +12,6 @@
     box-shadow: 2px 2px 0 $shadow-color;
     border: 1px solid $blue;
     border-radius: 21px;
-    background: linear-gradient(transparent, $shadow-color);
     .num {
 	    position: absolute;
 	    height: 100%;
@@ -26,9 +26,13 @@
     }
     &.active {
     	background: $gradient;
+    	color: #fff;
     	.num {
     		border-left-color: #53042D;
     	}
+    }
+    &:hover {
+    	animation: strobe .01s infinite;
     }
 }
 .music-container {
@@ -107,7 +111,8 @@
 			display: none;
 		}
 		&.exact-match {
-			transform: scale(2.8);
+			animation: rainbow 1s infinite;
+			animation-duration: 1s !important
 		}
 		label {
 			width: 100%;
@@ -234,5 +239,90 @@
 	}
 	100% {
 		transform: translateX(calc(100vw + 208px));
+	}
+}
+@keyframes strobe {
+	0% {
+    	background: #fff;
+    	color: #000;
+	}
+	10% {
+	    color: #fff;
+	    background: linear-gradient(transparent, $shadow-color);
+	}
+	20% {
+    	background: #fff;
+    	color: #000;
+	}
+	30% {
+	    color: #fff;
+	    background: linear-gradient(transparent, $shadow-color);
+	}
+	40% {
+    	background: #fff;
+    	color: #000;
+	}
+	50% {
+	    color: #fff;
+	    background: linear-gradient(transparent, $shadow-color);
+	}
+	60% {
+    	background: #fff;
+    	color: #000;	
+	}
+	70% {
+	    color: #fff;
+	    background: linear-gradient(transparent, $shadow-color);
+	}
+	70% {
+    	background: #fff;
+    	color: #000;	
+	}
+	80% {
+	    color: #fff;
+	    background: linear-gradient(transparent, $shadow-color);
+	}
+	90% {
+    	background: #fff;
+    	color: #000;	
+	}
+	100% {
+	    color: #fff;
+	    background: linear-gradient(transparent, $shadow-color);
+	}
+}
+@keyframes rainbow {
+	0% {
+		background-color: magenta;
+	}
+	10% {
+		background-color: blue;
+	}
+	20% {
+		background-color: green;
+	}
+	30% {
+		background-color: blueviolet;
+	}
+	40% {
+		background-color: lightpink;
+	}
+	50% {
+		background-color: violet;
+	}
+	60% {
+		background-color: yellow;
+	}
+	70% {
+		background-color: azure
+	}
+	80% {
+		background-color: orangered
+	}
+	90% {
+		background-color: cadetblue;
+	}
+	100% {
+		background-color: yellowgreen;
 	}
 }

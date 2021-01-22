@@ -52,6 +52,7 @@
 		height: 100px;
 		border: 1px solid;
 		border-radius: 3px;
+		background-color: #191b1630;
 		box-shadow: 3px 4px 0 $shadow-color;
 		animation: floatacross 60s infinite linear;
 		transition: transform .2s ease, background-color .2s ease, border-color .2s ease;

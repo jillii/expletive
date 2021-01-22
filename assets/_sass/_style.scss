@@ -204,10 +204,12 @@ footer {
     }
   }
   #signup {
+    position: relative;
     text-align: left;
     max-width: 300px;
     margin-left: auto;
     transform: rotate(270deg) translate(45px, 120px);
+    z-index: 1;
     .popup {
       transform: rotate(-270deg);
       input,

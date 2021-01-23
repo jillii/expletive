@@ -1,6 +1,38 @@
+/* Star explosion */
+:root {
+  --duration: .5s;
+}
+
+.particles-container {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  animation: explode var(--duration) reverse linear;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+  &:after {
+    content: '\2B50';
+  }
+}
+
 .spin-out {
   animation: spinout .5s forwards !important;
 }
+
+@keyframes explode {
+  100% {
+    top: 50%;
+    left: 50%;
+    transform: scale(5);
+  }
+}
+
 @keyframes spinout {
   from {
     transform: rotate(0deg);
@@ -9,4 +41,25 @@
     transform: rotate(400deg) scale(.5);
     opacity: 0;
   }
+}
+
+/* Fire Explosion */
+.exploding, .exploding:focus, .exploding:hover {
+  background: transparent;
+  color: transparent;
+}
+.exploding {
+  pointer-events: none;
+  position: relative;
+  will-change: transform;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.particle--debris {
+  background: #255ff4;
+}
+.particle--fire {
+  border-radius: 50%;
 }

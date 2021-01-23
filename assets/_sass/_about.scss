@@ -7,6 +7,9 @@ $width: 317px;
   justify-content: center;
   padding-top: 51px;
 }
+.windows .top {
+  box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 0 1px 3px #000;
+}
 #jill {
   text-align: center;
   .top {
@@ -17,7 +20,6 @@ $width: 317px;
     height: 51px;
     font-size: 100px;
     background-color: #d7d3ce;
-    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 0 1px 3px #000;
     .close {
       position: static;
     }
@@ -32,8 +34,17 @@ $width: 317px;
     display: none;
   }
   &.bye {
-    img, .top {
-      opacity: 0;
+    transition-delay: 3s;
+    .close {
+      transform: none;
+      &:after {
+        content: '-';
+      }
+    }
+    video {
+      transition: height .2s ease;
+      transition-delay: 4s;
+      height: 0;
     }
     .closed {
       display: block;

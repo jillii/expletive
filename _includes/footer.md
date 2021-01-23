@@ -1,9 +1,9 @@
-<div id="stars-1" class="stars">
+<div id="stars-1" class="stars infinite">
 	{% for i in (1..50) %}
 		<div class="star"></div>
 	{% endfor %}
 </div>
-<div id="stars-2" class="stars">
+<div id="stars-2" class="stars infinite">
 	{% for i in (1..50) %}
 		<div class="star"></div>
 	{% endfor %}

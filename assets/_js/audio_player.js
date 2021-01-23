@@ -58,14 +58,7 @@ $(".player").each(function(){
   });
   // handle "play" event
   audio[0].addEventListener("play", function(){
-    
-
-    // console.log(playing);
-    // console.log(prev);
-
-    console.log(played);
-    console.log(played_pointer);
-
+    // update document title
     document.title = "Now playing: " + audio.data("title");
     title.html("Now playing: " + audio.data("title"));
 

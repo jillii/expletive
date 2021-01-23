@@ -16,7 +16,11 @@ body {
 body.disco-mode {
   animation: rainbow 1s infinite;
 }
-
+section.active .infinite,
+section.active #stars-1.infinite,
+section.active #stars-2.infinite {
+  animation-iteration-count: infinite;
+}
 div {
   box-sizing: border-box;
 }
@@ -98,7 +102,6 @@ p {
   letter-spacing: 0.125em;
   animation-duration: 0.01s;
   animation-name: textflicker;
-  animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 .bottom-left {
@@ -164,7 +167,6 @@ p {
 }
 /* Footer */
 footer {
-  /*position: relative;*/
   width: 100%;
   padding: 80vh 0 21px;
   text-align: center;
@@ -183,7 +185,6 @@ footer {
     bottom: 0;
     z-index: -999;
     animation-duration: 3s !important;
-    animation-iteration-count: infinite !important;
     animation-timing-function: linear !important;
     .star {
       position: absolute;
@@ -223,10 +224,11 @@ footer {
       input,
       .input {
         margin-bottom: 11px;
-        border-color: #000;
         color: #000;
         background-color: transparent;
         text-align: center;
+        border: none;
+        box-shadow: 0px 1px 2px inset;
         &::placeholder {
           color: #000 !important;
         }
@@ -287,7 +289,6 @@ footer {
   left: 0;
   width: 100%;
   height: 14px;
-  border-bottom: 2px solid #616161;
   .close {
     color: #616161
   }

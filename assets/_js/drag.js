@@ -1,4 +1,9 @@
+var tags = $(".tag");
 $(".draggable").mousedown(function(e) {
+    // pause tag css animation
+    // because it may be slowing down drag
+    tags.css("animation-play-state", "paused");
+
     // only drag musics if user clicks top bar
     if ($(this).is("label")) {
       draggy = $(this).parent();
@@ -33,6 +38,8 @@ $(".draggable").mousedown(function(e) {
     }
 
     function closeDragElement() {
+      // reset tag css animatio
+      tags.css("animation-play-state", "running");
       /* stop moving when mouse button is released:*/
       draggy.css("animation-play-state", "paused");
       document.onmouseup = null;

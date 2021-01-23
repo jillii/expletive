@@ -164,20 +164,27 @@ p {
 }
 /* Footer */
 footer {
-  position: relative;
+  /*position: relative;*/
   width: 100%;
   padding: 80vh 0 21px;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
-  overflow: hidden;
-  #stars {
+  #stars-1 {
+    animation: fall-down-1;
+  }
+  #stars-2 {
+    animation: fall-down-2;
+  }
+  .stars {
     position: absolute;
     width: 100vw;
-    height: 560px;
-    left: 0;
+    height: 100%;
     bottom: 0;
     z-index: -999;
+    animation-duration: 3s !important;
+    animation-iteration-count: infinite !important;
+    animation-timing-function: linear !important;
     .star {
       position: absolute;
       padding: 21px;
@@ -189,7 +196,7 @@ footer {
       &:hover {
         animation: shoot .5s forwards;
       }
-      @for $i from 1 through 20 {
+      @for $i from 1 through 50 {
         &:nth-child(#{$i}) {
           top: percentage(random(100) / 100);
           left: percentage(random(100) / 100);
@@ -198,6 +205,7 @@ footer {
       }
     }
     &.fallen {
+      animation-play-state: paused !important;
       .star {
         top: calc(100% - 55px);
       }
@@ -643,4 +651,23 @@ form {
 @keyframes blink-caret {
   from, to { color: transparent; }
   50% { color: orange }
+}
+
+@keyframes fall-down-1 {
+  0% {
+    position: absolute;
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+@keyframes fall-down-2 {
+  0% {
+    position: absolute;
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
 }

@@ -20,7 +20,7 @@ section.active .infinite,
 section.active #stars-1.infinite,
 section.active #stars-2.infinite {
   animation-iteration-count: infinite;
-  .fallen {
+  &.fallen {
     animation-play-state: paused !important;
   }
 }

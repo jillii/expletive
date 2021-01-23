@@ -42,9 +42,7 @@ $width: 317px;
       }
     }
     video {
-      transition: height .2s ease;
-      transition-delay: 4s;
-      height: 0;
+      opacity: 0;
     }
     .closed {
       display: block;

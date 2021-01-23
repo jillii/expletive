@@ -44,28 +44,3 @@ $width: 317px;
     }
   }
 }
-.x {
-  animation: x 13s linear infinite alternate;
-  &:hover {
-  	animation-play-state: paused;
-  }
-}
-
-.y {
-  animation: y 7s linear infinite alternate;
-  &:hover {
-  	animation-play-state: paused;
-  }
-}
-
-@keyframes x {
-  100% {
-    transform: translateX( calc(95vw - #{$width}) );
-  }
-}
-
-@keyframes y {
-  100% {
-    transform: translateY( calc(95vh - #{$height}) );
-  }
-}

@@ -37,7 +37,7 @@ weight: 1
 			<label class="draggable">{{ track.title }}</label>
 			<div class="close"></div>
 			<div class="player">
-				<audio id="player-{{ id }}" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')" data-title="{{ track.title }}">
+				<audio preload="none" id="player-{{ id }}" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')" data-title="{{ track.title }}">
 					<source src="{{ track.mp3 }}" type="audio/wav">
 				</audio>
 				<div class="controls"> 

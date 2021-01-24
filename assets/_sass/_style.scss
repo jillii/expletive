@@ -177,10 +177,10 @@ footer {
   font-size: 12px;
   font-weight: 600;
   #stars-1 {
-    animation: fall-down-1;
+    animation-name: fall-down-1;
   }
   #stars-2 {
-    animation: fall-down-2;
+    animation-name: fall-down-2;
   }
   .stars {
     position: absolute;

@@ -428,7 +428,6 @@ section.active .btn {
     position: absolute;
     animation: float 1.6s forwards;
     will-change: bottom, opacity;
-    animation-delay: .5s;
   }
   &:after {
     content: "-_-";

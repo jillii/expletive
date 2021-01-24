@@ -13,6 +13,7 @@
     border-radius: 21px;
 	animation: strobe .01s;
 	animation-delay: 4s;
+	will-change: background-color, color;
     .num {
 	    position: absolute;
 	    height: 100%;
@@ -58,6 +59,7 @@
 		box-shadow: 3px 4px 0 $shadow-color;
 		animation: floatacross 60s linear;
 		animation-delay: .2s;
+		will-change: transform;
 		transition: transform .2s ease, background-color .2s ease, border-color .2s ease;
 		&:hover {
 			animation-play-state: paused;

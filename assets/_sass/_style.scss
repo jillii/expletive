@@ -426,6 +426,7 @@ section.active .btn {
     content: "z";
     position: absolute;
     animation: float 1.6s forwards;
+    will-change: bottom, opacity;
     animation-delay: .5s;
   }
   &:after {
@@ -433,6 +434,7 @@ section.active .btn {
     white-space: nowrap;
     animation: snore 1.6s forwards;
     animation-delay: .5s;
+    will-change: font-size, content;
   }
 
   &:hover {
@@ -464,6 +466,9 @@ section.active .btn {
     height: 0;
     line-height: 1em;
     overflow: hidden;
+  }
+  .clones {
+    will-change: height;
   }
   &:focus .clones {
     animation: poptext .5s forwards;
@@ -497,7 +502,6 @@ section.active .btn {
   }
   50% {
     content: "´ ・｀";
-    /*font-size: 11px;*/
   }
 }
 @keyframes slow-blink-to-anger {

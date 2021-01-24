@@ -20,9 +20,6 @@ section.active .infinite,
 section.active #stars-1.infinite,
 section.active #stars-2.infinite {
   animation-iteration-count: infinite;
-  &.fallen {
-    animation-play-state: paused !important;
-  }
 }
 div {
   box-sizing: border-box;
@@ -197,6 +194,9 @@ footer {
       padding: 21px;
       transition: top .1s ease;
       transition-delay: 2s;
+      &.fallen {
+        animation-play-state: paused !important;
+      }
       &:after {
         content: '+';
       }

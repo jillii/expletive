@@ -189,14 +189,14 @@ footer {
     animation-duration: 3s !important;
     animation-timing-function: linear !important;
     will-change: left;
+    &.fallen {
+      animation-play-state: paused !important;
+    }
     .star {
       position: absolute;
       padding: 21px;
       transition: top .1s ease;
       transition-delay: 2s;
-      &.fallen {
-        animation-play-state: paused !important;
-      }
       &:after {
         content: '+';
       }

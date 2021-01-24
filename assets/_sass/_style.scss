@@ -191,6 +191,7 @@ footer {
     animation-delay: .5s;
     animation-duration: 3s !important;
     animation-timing-function: linear !important;
+    will-change: left;
     .star {
       position: absolute;
       padding: 21px;

@@ -79,10 +79,6 @@ function update_musics(input, reset, time = 5) {
 			} else {
 				if (title == input) { // if exact match
 					music.addClass("exact-match");
-				} else {
-					if (music.hasClass("exact-match")) {
-						music.removeClass("exact-match");
-					}
 				}
 				music.addClass("match");
 

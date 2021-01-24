@@ -106,6 +106,7 @@ p {
   animation-duration: 0.01s;
   animation-name: textflicker;
   animation-direction: alternate;
+  animation-delay: .5s;
 }
 .bottom-left {
   margin-top: 50vh;
@@ -187,6 +188,7 @@ footer {
     height: 100%;
     bottom: 0;
     z-index: -999;
+    animation-delay: .5s;
     animation-duration: 3s !important;
     animation-timing-function: linear !important;
     .star {
@@ -196,9 +198,6 @@ footer {
       transition-delay: 2s;
       &:after {
         content: '+';
-      }
-      &:hover {
-        animation: shoot .5s forwards;
       }
       @for $i from 1 through 50 {
         &:nth-child(#{$i}) {
@@ -407,6 +406,12 @@ form {
     float: right;
   }
 }
+section.active .btn {
+  &:before,
+  &:after {
+    animation-iteration-count: infinite;
+  }
+}
 .btn {
   position: relative;
   width: 60px;
@@ -420,12 +425,14 @@ form {
   &:before {
     content: "z";
     position: absolute;
-    animation: float 1.6s forwards infinite;
+    animation: float 1.6s forwards;
+    animation-delay: .5s;
   }
   &:after {
     content: "-_-";
     white-space: nowrap;
-    animation: snore 1.6s forwards infinite;
+    animation: snore 1.6s forwards;
+    animation-delay: .5s;
   }
 
   &:hover {
@@ -593,6 +600,7 @@ form {
 }
 .monitor {
   animation: tvflicker .5s infinite alternate; 
+  animation-delay: .5s;
 }
 .marquee {
   position: absolute;
@@ -603,7 +611,8 @@ form {
   box-shadow: 2px 2px 0 $shadow-color;
     span {
     white-space: nowrap;
-    animation: marquee 10s infinite linear;
+    animation: marquee 10s linear;
+    animation-delay: .2s;
   }
 }
 @keyframes tvflicker {

@@ -34,25 +34,27 @@ weight: 1
 	{% for track in site.data.tracks %}
     {% assign id = forloop.index0 %}
 		<div class="music infinite" data-value="{{ track.tags | join: ' ' }}">
-			<label class="draggable">{{ track.title }}</label>
-			<div class="close"></div>
-			<div class="player">
-				<audio preload="none" id="player-{{ id }}" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')" data-title="{{ track.title }}">
-					<source src="{{ track.mp3 }}" type="audio/wav">
-				</audio>
-				<div class="controls"> 
-				  <button aria-label="play" class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;</button> 
-				  <button aria-label="pause" class="pause" onclick="document.getElementById('player-{{ id }}').pause();">&#x23f8;</button> 
-				  <button aria-label="turn up volume" class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
-				  <button aria-label="lower volume" class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
-				  <div class="volume"><span>1.0</span></div>
-		          <div class="current-time-container" aria-label="current time">
-		            <span id="curr-{{ id }}" class="current-time"></span>
-		          </div>
+			<div class="music--inner">
+				<label class="draggable">{{ track.title }}</label>
+				<div class="close"></div>
+				<div class="player">
+					<audio preload="none" id="player-{{ id }}" onloadedmetadata="mDur('{{ id }}')" ontimeupdate="mPlay('{{ id }}')" data-title="{{ track.title }}">
+						<source src="{{ track.mp3 }}" type="audio/wav">
+					</audio>
+					<div class="controls"> 
+					  <button aria-label="play" class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;</button> 
+					  <button aria-label="pause" class="pause" onclick="document.getElementById('player-{{ id }}').pause();">&#x23f8;</button> 
+					  <button aria-label="turn up volume" class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
+					  <button aria-label="lower volume" class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
+					  <div class="volume"><span>1.0</span></div>
+			          <div class="current-time-container" aria-label="current time">
+			            <span id="curr-{{ id }}" class="current-time"></span>
+			          </div>
+					</div>
+			        <div class="range-container">
+	  				<input id="dur-{{ id }}" type="range" name="rng" min="0" value="0" onchange="mSet('player-{{ id }}', $(this))" onclick="mSet('player-{{ id }}', $(this))">
+			        </div>
 				</div>
-		        <div class="range-container">
-  				<input id="dur-{{ id }}" type="range" name="rng" min="0" value="0" onchange="mSet('player-{{ id }}', $(this))" onclick="mSet('player-{{ id }}', $(this))">
-		        </div>
 			</div>
 		</div>
 	{% endfor %}

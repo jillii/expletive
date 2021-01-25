@@ -16,10 +16,26 @@ body {
 body.disco-mode {
   animation: rainbow 1s infinite;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+body::-webkit-scrollbar-track {
+  background: linear-gradient(darkgrey, $bg);
+} 
+body::-webkit-scrollbar-thumb {
+  background: #fff;
+  opacity: .3;
+  box-shadow: 0 0 2px #fff inset, 2px -2px 0px #000 inset, 1px 1px 0 #000;
+  border-radius: 13px;
+}
 section.active .infinite,
 section.active #stars-1.infinite,
 section.active #stars-2.infinite {
   animation-iteration-count: infinite;
+}
+section:not(.active) .stars.fallen {
+  animation-iteration-count: unset !important;
 }
 div {
   box-sizing: border-box;

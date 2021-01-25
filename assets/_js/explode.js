@@ -40,7 +40,7 @@ function explode(e, options) {
         var parent = $(target).parent(),
             grandparent = parent.parent();
 
-        if (parent.hasClass("music")) {
+        if (grandparent.hasClass("music")) {
           parent.addClass("spin-out");
         }
         if (grandparent.hasClass("popup")) {

@@ -6,7 +6,7 @@ $(".draggable").mousedown(function(e) {
 
     // only drag musics if user clicks top bar
     if ($(this).is("label")) {
-      draggy = $(this).parent().parent();
+      draggy = $(this).closest('.music');
     } else {
       draggy = $(this);
     }

@@ -66,15 +66,19 @@
 		&:hover {
 			animation-play-state: paused;
 		}
-		&.playing {
-			border-color: darkturquoise;
-			animation-play-state: paused;
+		&.playing { 
 			z-index: 999;
+			animation-play-state: paused;
+			.music--inner {
+				border-color: darkturquoise;
+			}
 		}
-		&.paused {
-			background-color: #222328;
-			animation-play-state: paused;
+		&.paused { 
 			z-index: 999;
+			animation-play-state: paused;
+			.music--inner {
+				background-color: #222328;
+			}
 		}
 		.player {
 			.vol-incr {

@@ -38,7 +38,7 @@ $(".player").each(function(){
       dur             = audio[0].duration,
       current_time_el = $("#curr-" + audio.attr("id").split("-")[1]),
       slider          = $("#dur-" + audio.attr("id").split("-")[1]),
-      container       = player.parent();
+      container       = player.closest('.music');
 
   player.change(function(){
     current_time_el.html(audio[0].currentTime);
@@ -47,6 +47,9 @@ $(".player").each(function(){
   audio[0].addEventListener("ended", function(){
     container.removeClass("playing")
              .removeClass("active");
+
+    // stop stars
+    $('footer').removeClass("active");
     
     if (player.eq(index++)) {
       autoplay(index++);
@@ -62,7 +65,10 @@ $(".player").each(function(){
     document.title = "Now playing: " + audio.data("title");
     title.html("Now playing: " + audio.data("title"));
 
-    playing = $(this).parent().parent().index();
+    // start stars
+    $('footer').addClass("active");
+
+    playing = $(this).closest('.music').index();
     // add current track to "played" array
     if (!repeat) {
       played.push(playing);
@@ -105,7 +111,7 @@ $("#playall").click(function(){
 });
 function autoplay(index) {
   var curr      = players.eq(index),
-      container = curr.parent().parent();
+      container = curr.closest('.music');
 
   // reset played array
   played = [];
@@ -145,7 +151,7 @@ mediaPlayer.click(function(e){
 
   if(target.hasClass("next") || target.hasClass("prev")) {
     var curr      = players.eq(playing),
-        container = curr.parent().parent();
+        container = curr.closest('.music');
 
     // if play next
     if (target.hasClass("next")) {

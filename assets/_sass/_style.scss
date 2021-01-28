@@ -92,7 +92,7 @@ section {
   .container {
     position: absolute;
     width: 97.5vw;
-    /*padding: 51px 28px;*/
+    overflow: hidden;
   }
 }
 /* Fonts */
@@ -189,11 +189,13 @@ footer {
   text-align: center;
   font-size: 12px;
   font-weight: 600;
-  #stars-1 {
-    animation-name: fall-down-1;
-  }
-  #stars-2 {
-    animation-name: fall-down-2;
+  &.active {
+    #stars-1 {
+      animation-name: fall-down-1;
+    }
+    #stars-2 {
+      animation-name: fall-down-2;
+    }
   }
   .stars {
     position: absolute;

@@ -5,8 +5,10 @@ var mediaPlayer = $("#media-player"),
     players     = $("audio"),
     playing     = -1,
     played      = [],
-    played_pointer = -1,
-    repeat      = false;
+    pointer     = -1,
+    repeat      = false,
+    footer      = $("footer"),
+    stopping    = false;
 
 // handle all player related clicks
 $(".player").on("click", function(e){
@@ -43,36 +45,39 @@ $(".player").each(function(){
   player.change(function(){
     current_time_el.html(audio[0].currentTime);
   });
+
   // handle end of track (stop and go to next)
   audio[0].addEventListener("ended", function(){
+
     container.removeClass("playing")
+             .removeClass("paused")
              .removeClass("active");
 
-    // stop stars
-    $('footer').removeClass("active");
-    
-    if (player.eq(index++)) {
+    if (player.eq(index++) && !stopping) {
       autoplay(index++);
     } else {
-      document.title = "!@#$%";
-      playing = -1;
+      stop();
     }
     mediaPlayer.removeClass("paused");
   });
   // handle "play" event
   audio[0].addEventListener("play", function(){
+
+    stopping = false;
     // update document title
+
     document.title = "Now playing: " + audio.data("title");
     title.html("Now playing: " + audio.data("title"));
-
+    speak('Now playing ' + audio.data("title"));
     // start stars
-    $('footer').addClass("active");
+    footer.addClass("active");
+    
+    playing = players.index($(this));
 
-    playing = $(this).closest('.music').index();
     // add current track to "played" array
     if (!repeat) {
       played.push(playing);
-      played_pointer++;
+      pointer++;
     } else {
       repeat = false;
     }
@@ -93,7 +98,33 @@ $(".player").each(function(){
 
     container.removeClass("playing")
              .addClass("paused");
+
+    footer.removeClass("active");
   });
+});
+// shuffle
+$("#shuffle").click(function(){
+  $(".music.playing").each(function(){
+    $(this).find("audio")[0].pause();
+  });
+  // if tag(s) selected
+  // otherwise reset player list, in case it had been updated previously
+  if ($(".tag.active").length > 0){
+    players = $(".match audio");
+  } else {
+    players = $("audio");
+  }
+  // shuffle tracks
+  players.sort(function() { return 0.5 - Math.random() });
+  
+  $(".music-container").toggleClass("shuffle");
+  // reset everything
+  played = [];
+  pointer = -1;
+  playing = -1;
+  repeat = false;
+
+  players.first()[0].play();
 });
 // play all
 $("#playall").click(function(){
@@ -102,20 +133,23 @@ $("#playall").click(function(){
     $(this).find("audio")[0].pause();
   });
   // if tag(s) selected
+  // otherwise reset player list, in case it had been updated previously
   if ($(".tag.active").length > 0){
     players = $(".match audio");
+  } else {
+    players = $("audio");
   }
   players.first()[0].play();
   // others will play automatically upon end of this track
-
 });
+
 function autoplay(index) {
   var curr      = players.eq(index),
       container = curr.closest('.music');
 
   // reset played array
   played = [];
-  played_pointer = -1;
+  pointer = -1;
   
   container.addClass("playing active");
 
@@ -124,15 +158,14 @@ function autoplay(index) {
   curr[0].addEventListener("ended", function(){
     autoplay(++index);
   });
-  container.find(".close").click(function(){
-    autoplay(++index);
-  });
 }
 // pause music on explode
 $(".music").click(function(e){
   if ($(e.target).hasClass("close")) {
     var music  = $(this),
         player = music.find("audio");
+    
+    if (music.hasClass("playing")) {
       
       player[0].pause();
       player[0].currentTime = 0;
@@ -140,8 +173,9 @@ $(".music").click(function(e){
             .removeClass("paused")
             .removeClass("playing");
 
-    // close media player
-    mediaPlayer.removeClass("active");
+      // close media player
+      mediaPlayerSpinOut();
+    }
   }
   // handle play next button
 });
@@ -153,24 +187,27 @@ mediaPlayer.click(function(e){
     var curr      = players.eq(playing),
         container = curr.closest('.music');
 
+    
     // if play next
     if (target.hasClass("next")) {
       // if playing previously played track
-      if (played_pointer != -1 && played_pointer < played.length - 1) {
-        played_pointer++;
-        next_track = played[played_pointer];
+      if (pointer != -1 && pointer < played.length - 1) {
+        pointer++;
+        next_track = played[pointer];
         repeat = true;
       } else {
         // if next track exists
         if (players.eq(playing + 1).length > 0) {
           next_track = playing + 1;
+        } else {
+          next_track = 0;
         }
       }
     } else { // has class prev
-      if (played_pointer > 0) {
+      if (pointer > 0) {
         repeat = true;
-        played_pointer--;
-        next_track = played[played_pointer];
+        pointer--;
+        next_track = played[pointer];
       }
     }
     if (next_track != -1) {
@@ -185,6 +222,35 @@ mediaPlayer.click(function(e){
     }
   }
 });
+
+function stop(audio) {
+  var audio = $(".music.playing").find('audio')[0];
+  
+  document.title = "!@#$%";
+  stopping = true;
+  playing = -1;
+  
+  audio.pause();
+  audio.currentTime = 0;
+
+  $(audio).closest(".music").removeClass("active")
+                           .removeClass("playing")
+                           .removeClass("paused");
+
+  footer.removeClass("active");
+  mediaPlayerSpinOut();
+}
+
+function mediaPlayerSpinOut() {
+  mediaPlayer.addClass("spin-out");
+  mediaPlayer[0].addEventListener('animationend', (e) => {
+    mediaPlayer.removeClass("active")
+               .removeClass("paused")
+               .removeClass("playing")
+               .removeClass("spin-out");
+  });
+  footer.removeClass("active");
+}
 
 function mDur(id) {
   var aud = document.getElementById("player-" + id),
@@ -212,4 +278,11 @@ function mSet(id, target) {
 
   aud.currentTime = dur.val();
   curr.html(aud.currentTime);
+}
+
+function speak (message) {
+  var msg = new SpeechSynthesisUtterance(message);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  window.speechSynthesis.speak(msg)
 }

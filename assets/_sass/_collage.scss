@@ -15,6 +15,7 @@
 			display: inline-flex;
 			justify-content: center;
 			align-self: center;
+			transition:  transform .5s ease;
 			img {
 				height: auto;
 				width: auto;
@@ -51,11 +52,12 @@
 			}
 			.img-container {
 				display: block;
-				position: relative;
-				top: unset !important;
-				left: unset !important;
+				top: 50vh !important;
+				left: 50vw !important;
+				transform: translate(-50%, -50%);
+				transition: top .5s ease, left .5s ease;
 				img {
-					height: 110vh;
+					height: 90vh;
 					float: right;
 				}
 			}

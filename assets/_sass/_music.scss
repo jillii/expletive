@@ -39,16 +39,16 @@
     }
 }
 .music-container {
+	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
-	height: 500px;
+	height: 100vh;
 	.music {
 		position: absolute;
 		left: -240px;
-		height: 100px;
 		animation: floatacross 60s linear;
 		animation-delay: .2s;
 		will-change: transform;
@@ -118,6 +118,9 @@
 			top: 0 !important;
 			left: unset !important;
 			animation: none;
+			.draggable {
+				cursor: default;
+			}
 		}
 		&.no-match {
 			display: none;
@@ -157,6 +160,17 @@
 			display: inline-flex;
 		}
 	}
+	@for $i from 1 through 100 {
+		.music:nth-child(#{$i}) {
+			top: percentage(random(60) / 100);
+			animation-duration: #{(random(25)) + 45}s;
+			animation-delay: #{(random(100) * -1)}s;
+		}
+	}
+}
+.shuffle {
+	position: static;
+	transform: rotate(360deg);
 	@for $i from 1 through 100 {
 		.music:nth-child(#{$i}) {
 			top: percentage(random(60) / 100);

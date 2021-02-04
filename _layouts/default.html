@@ -30,7 +30,8 @@
       <marquee id="track-title"></marquee>
       <div class="controls"> 
         <button aria-label="play" class="play" onclick="$('.music.active audio')[0].play();">&#x23f5;</button> 
-        <button aria-label="pause" class="pause" onclick="$('.music.active audio')[0].pause();">&#x23f8;</button>
+        <button aria-label="pause" class="pause" onclick="$('.music.playing audio')[0].pause();">&#x23f8;</button>
+        <button aria-label="stop" class="stop" onclick="stop(this)">&#x23F9;</button>
         <button aria-label="previous track" class="prev">&#x23ee;</button>
         <button aria-label="next track" class="next">&#x23ed;</button>
         <button aria-label="increase volume" class="vol vol-incr" onclick="$('.music.active audio')[0].volume += 0.1; $(this).parent().find('.volume span').html($('.music.active audio')[0].volume) ">+</button> 
@@ -58,6 +59,6 @@
     <script defer type="text/javascript" src="{{ '/assets/js/send_mail.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
     <script defer type="text/javascript" src="{{ '/assets/js/explode.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
     <script defer type="text/javascript" src="{{ '/assets/js/drag.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
-    <script defer type="text/javascript" src="{{ '/assets/js/audio_player.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
+    <script preload type="text/javascript" src="{{ '/assets/js/audio_player.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
   </body>
 </html>

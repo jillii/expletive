@@ -172,11 +172,8 @@ p {
     font-size: 26px;
     text-decoration: none;
     transform: scale(0);
-    color: #fff;
+    color: #fff !important;
     transition: transform .2s ease;
-    &:visited {
-      color: #fff;
-    }
   }
 
   &.active {

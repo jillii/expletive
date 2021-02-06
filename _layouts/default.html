@@ -9,6 +9,14 @@
     <header>
       {% include_cached header.md %}
     </header>
+    <div id="choose-theme">
+      <select onchange="$('body').attr('class', this.value.toLowerCase())">
+        <option>Choose theme</option>
+        <option>Night</option>
+        <option>Sterile</option>
+        <option>DiscoMode</option>
+      </select>
+    </div>
     {% for section in sections %}
       <section id="{{ section.title }}"{% if forloop.index0 == 0 %} class="active"{% endif %}>
         <div class="container fixed">

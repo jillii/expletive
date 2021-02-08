@@ -31,21 +31,18 @@
     	color: #000 !important;
     }
     &.active {
-    	background: $gradient !important;
+    	background: linear-gradient(#fff, #000) !important;
     	color: #fff !important;
-    	.num {
-    		border-left-color: #53042D;
-    	}
     }
 }
 .music-container {
-	position: relative;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	width: 100vw;
 	height: 100vh;
+	padding-top: 51px;
 	.music {
 		position: absolute;
 		left: -240px;

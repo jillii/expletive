@@ -1,0 +1,161 @@
+#choose-theme {
+  @extend .tag;
+  position: relative;
+  width: 200px;
+  padding: 1px 6px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background-color: #fafafa;
+  select {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    -webkit-appearance: none;
+    appearance: none;
+    option {
+      width: 100%;
+    }
+  }
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translateY(-50%);
+    display: inline-block;
+    border-top: 5px solid #000;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    pointer-events: none;
+  }
+
+}
+body.night {
+  .tag:not(#choose-theme) {
+    background-color: transparent !important;
+    color: #fff !important;
+    &.active {
+      background: #ffffff1a !important;
+    }
+  }
+  .btn {
+    &:before {
+      content: "z";
+      position: absolute;
+      animation: float 1.6s forwards;
+      will-change: bottom, opacity;
+    }
+    &:after {
+      content: "-_-";
+      white-space: nowrap;
+      animation: snore 1.6s forwards;
+      will-change: font-size, content;
+    }
+  }
+}
+body.discomode {
+  animation: rainbow 1s infinite;
+  .input, input:not([type=range]) {
+    background-color: #fafafa;
+    border: none;
+    box-shadow: 0 0 1px #000 inset;
+    color: #000;
+    &::placeholder {
+      color: #000 !important;
+      transition: letter-spacing .2s ease;
+    }
+    &:hover {
+      background-color: #fff;
+      &::placeholder {
+        letter-spacing: 6px;
+      }
+    }
+  }
+  .btn[type=submit] {
+    @extend .windows;
+    &:after {
+      content: "submit" !important;
+    }
+    &:before {
+      content: none;
+    }
+  }
+  .music--inner {
+    background: $gradient;
+    .player .volume span {
+      background-color: transparent;
+    }
+  }
+  .tag.active {
+    background: transparent !important;
+    border-color: #fff;
+    .num {
+      border-color: #fff;
+    }
+  }
+}
+body.sterile {
+  background-color: #fff;
+  section, a {
+    color: #000;
+  }
+  .flicker-text {
+    text-shadow: 1px 1px 1px #000 !important;
+  }
+  #primary-nav a {
+    color: #191b1630 !important;
+  }
+  .btn {
+    color: #000;
+    border-color: #000;
+  }
+  .windows {
+    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 12px 12px 0 #00000017
+  }
+  .music-container .music {
+    .music--inner {
+      box-shadow: 3px 4px 0 #00000017;
+    }
+    label {
+      border-color: #000;
+    }
+    .player .volume span {
+      background-color: transparent;
+    }
+  }
+  .input, 
+  input:not([type=range]) {
+    border-radius: 8px;
+    background-color: #fafafa;
+    color: #000;
+    &::placeholder {
+      color: #00000085 !important;
+    }
+    &:hover {
+      background-color: #eee;
+    }
+  }
+  #primary-nav {
+    p {
+      text-shadow: 2px 5px 0 #00000017;
+      &:after {
+        color: #000 !important;
+      }
+    }
+    a {
+      color: #000;
+      text-shadow: none !important;
+    }
+  }
+  .music button {
+    color: #000;
+  }
+  .tag.active {
+    background: $gradient;
+  }
+}

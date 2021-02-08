@@ -13,83 +13,7 @@ body {
   background-color: $bg;
   overflow-x: hidden;
 }
-#choose-theme {
-  @extend .tag;
-  position: relative;
-  width: 200px;
-  padding: 1px 6px;
-  border-radius: 8px;
-  border: 1px solid #000;
-  background-color: #fafafa;
-  select {
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-family: inherit;
-    -webkit-appearance: none;
-    appearance: none;
-    option {
-      width: 100%;
-    }
-  }
-  &:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 50%;
-    right: 6px;
-    transform: translateY(-50%);
-    display: inline-block;
-    border-top: 5px solid #000;
-    border-right: 7px solid transparent;
-    border-left: 7px solid transparent;
-    pointer-events: none;
-  }
 
-}
-body.discomode {
-  animation: rainbow 1s infinite;
-}
-body.sterile {
-  background-color: #fff;
-  .flicker-text {
-    text-shadow: 1px 1px 1px #000 !important;
-  }
-  #primary-nav a {
-    color: #eee !important;
-  }
-  .btn {
-    color: #000;
-    border-color: #000;
-  }
-  .input, 
-  input:not([type=range]) {
-    border-radius: 8px;
-    background-color: #fafafa;
-    color: #000;
-    &::placeholder {
-      color: #00000085 !important;
-    }
-    &:hover {
-      background-color: #eee;
-    }
-  }
-  #primary-nav {
-    p {
-      text-shadow: 2px 5px 0 #00000017;
-      &:after {
-        color: #000 !important;
-      }
-    }
-    a {
-      color: #000;
-      text-shadow: none !important;
-    }
-  }
-}
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -108,9 +32,7 @@ section.active #stars-1.infinite,
 section.active #stars-2.infinite {
   animation-iteration-count: infinite;
 }
-section:not(.active) .stars.fallen {
-  animation-iteration-count: unset !important;
-}
+
 div {
   box-sizing: border-box;
 }
@@ -231,6 +153,7 @@ p {
       content: '\01F354';
     }
     &:active {
+      text-shadow: none;
       animation: spin .2s linear forwards;
     }
   }
@@ -286,9 +209,6 @@ p {
     animation-duration: 3s !important;
     animation-timing-function: linear !important;
     will-change: left;
-    &.fallen {
-      animation-play-state: paused !important;
-    }
     .star {
       position: absolute;
       padding: 21px;
@@ -303,11 +223,6 @@ p {
           left: percentage(random(100) / 100);
 
         }
-      }
-    }
-    &.fallen {
-      .star {
-        top: calc(100% - 55px);
       }
     }
   }
@@ -475,14 +390,17 @@ footer {
     font-family: 'Atari-Classic';
     background-color: #d7d3ce;
     color: #000;
-    &:after {
-      animation: none;
+    &:not(:hover):after {
+      animation: none !important;
       content: none;
     }
     &:active {
       margin-top: 12px;
       margin-left: 12px;
       box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset;
+    }
+    &:hover:after  {
+      animation: slow-blink-to-anger 10s forwards !important;
     }
   }
 }
@@ -515,7 +433,7 @@ form {
 section.active .btn {
   &:before,
   &:after {
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite !important;
   }
 }
 .btn {
@@ -529,25 +447,18 @@ section.active .btn {
   color: #fff;
   cursor: pointer;
   &:before {
-    content: "z";
+    content: ".";
     position: absolute;
     animation: float 1.6s forwards;
     will-change: bottom, opacity;
   }
   &:after {
-    content: "-_-";
+    content: "._.";
     white-space: nowrap;
-    animation: snore 1.6s forwards;
-    will-change: font-size, content;
   }
-
   &:hover {
     &:before {
-      content: none;
-    }
-
-    &:after {
-      animation: slow-blink-to-anger 10s forwards;
+      animation: what 2s forwards, float 2s forwards;
     }
   }
   &:active {
@@ -555,11 +466,11 @@ section.active .btn {
       animation: blink 2.5s;
     }
   }
-
   &:focus {
     outline: 0;
   }
 }
+
 .copy-area {
   width: Max(300px, calc(100% - 600px));
   max-width: 100%;
@@ -597,6 +508,14 @@ section.active .btn {
   100% {
     bottom: calc(100% + 20px);
     opacity: 0;
+  }
+}
+@keyframes what {
+  0%, 100% {
+    content: "";
+  }
+  50% {
+    content: "what"
   }
 }
 @keyframes snore {

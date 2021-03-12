@@ -12,12 +12,12 @@
     <div id="choose-theme">
       <select onchange="$('body').attr('class', this.value.toLowerCase())">
         <option>Choose theme</option>
-        <option>Night</option>
+        <option>Space</option>
         <option>Sterile</option>
         <option>Bubbles</option>
       </select>
     </div>
-    {% for section in sections %}
+    {% for ssection in sections %}
       <section id="{{ section.title }}"{% if forloop.index0 == 0 %} class="active"{% endif %}>
         <div class="container fixed">
           <h2 class="flicker-text infinite" style="position:absolute;">

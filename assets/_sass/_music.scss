@@ -11,8 +11,6 @@
     box-shadow: 2px 2px 0 $shadow-color;
     border: 1px solid $blue;
     border-radius: 21px;
-	animation: strobe .01s;
-	animation-delay: 4s;
 	will-change: background-color, color;
     .num {
 	    position: absolute;
@@ -307,5 +305,13 @@
 	}
 	100% {
 		background-color: yellowgreen;
+	}
+}
+@keyframes floatup {
+	0% {
+		transform: translateY(calc(100vh));
+	}
+	100% {
+		transform: translateY(-200px);
 	}
 }

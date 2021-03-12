@@ -88,7 +88,6 @@ section {
   .container {
     position: absolute;
     width: 97.5vw;
-    overflow: hidden;
   }
 }
 /* Fonts */
@@ -285,11 +284,18 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
       }
+      &:after {
+        animation: roll 1s linear;
+      }
     }
     &:hover {
       .fab {
         animation: roll 1s forwards infinite linear;
         animation-direction: reverse;
+        &:after {
+          animation: roll 1s forwards infinite linear;
+          animation-direction: forwards;
+        }
       }
       .fab:hover {
         background-color: $shadow-color;
@@ -298,8 +304,14 @@ footer {
         &:before {
           color: #fff;
         }
+        &:after {
+          animation: none;
+        }
         & + .fab {
           animation-direction: normal;
+          &:after {
+            animation-direction: reverse;
+          }
         }
       }
     }

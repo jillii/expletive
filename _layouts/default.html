@@ -17,7 +17,7 @@
         <option>Bubbles</option>
       </select>
     </div>
-    {% for ssection in sections %}
+    {% for section in sections %}
       <section id="{{ section.title }}"{% if forloop.index0 == 0 %} class="active"{% endif %}>
         <div class="container fixed">
           <h2 class="flicker-text infinite" style="position:absolute;">

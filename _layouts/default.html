@@ -11,7 +11,6 @@
     </header>
     <div id="choose-theme">
       <select onchange="$('body').attr('class', this.value.toLowerCase())">
-        <option>Choose theme</option>
         <option>Space</option>
         <option>Sterile</option>
         <option>Bubbles</option>
@@ -68,5 +67,6 @@
     <script defer type="text/javascript" src="{{ '/assets/js/explode.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
     <script defer type="text/javascript" src="{{ '/assets/js/drag.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
     <script preload type="text/javascript" src="{{ '/assets/js/audio_player.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
+    <script preload type="text/javascript" src="{{ '/assets/js/random-theme.min.js' | relative_url }}?v={{ site.time | date:'%s' }}"></script>
   </body>
 </html>

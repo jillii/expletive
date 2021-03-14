@@ -36,6 +36,9 @@ section.active #stars-2.infinite {
 div {
   box-sizing: border-box;
 }
+video {
+  max-width: 100%;
+}
 .flexbox {
   display: flex;
 }
@@ -145,8 +148,9 @@ p {
   position: fixed;
   top: 0;
   right: 0;
+  width: 12px;
+  height: 12px;
   z-index: 999;
-
   #menu-toggle {
     &:after {
       content: '\01F354';
@@ -650,7 +654,7 @@ section.active .btn {
   box-shadow: 2px 2px 0 $shadow-color;
     span {
     white-space: nowrap;
-    animation: marquee 10s linear;
+    animation: marquee 10s linear infinite;
     animation-delay: .2s;
   }
 }
@@ -669,6 +673,7 @@ section.active .btn {
 .typing {    
   max-width: none;
   p {
+    padding: 4px 0;
     display: inline-block;
     width: 0;
     margin: 0;
@@ -752,5 +757,19 @@ section.active .btn {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes bubble-text {
+
+}
+
+@keyframes sliding-background {
+  0%,
+  100% {
+    background-position: 0 40%;
+  }
+
+  50% {
+    background-position: 100% 40%;
   }
 }

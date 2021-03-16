@@ -12,7 +12,7 @@
     <div class="choose-theme-container">
       <div id="paint-brush" onclick="$(this).parent().toggleClass('expand')"></div>
       <div id="choose-theme">
-        <select onchange="$('body').attr('class', this.value.toLowerCase())">
+        <select onchange="$('body').attr('class', this.value.toLowerCase());$(this).parent().parent().removeClass('expand')">
           <option>Space</option>
           <option>Sterile</option>
           <option>Bubbles</option>

@@ -1,27 +1,31 @@
 .choose-theme-container {
   @extend .tag;
+  width: 0;
   position: fixed;
-  left: 0;
-  top: 75%;
-  padding-left: 21px;
+  left: 0;  
+  top: 50%;
   border-radius: 8px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  padding: 1px 6px;
+  padding: 2px 6px;
+  padding-left: 21px;
   border: 1px solid #000;
   background-color: #fafafa;
   overflow: hidden;
+  transition: width .2s ease;
   z-index: 999;
   #paint-brush {
+    position: absolute;
     background-image: url(../images/paint-brush.png);
     background-size: contain;
     display: inline-block;
     width: 12px;
     height: 12px;
-    left: 2px;
+    left: 4px;
     cursor: pointer;
   }
   &.expand {
+    width: 100px;
     #paint-brush {
       background-image: none;
       &:after {
@@ -72,6 +76,12 @@
   }
 }
 body.space {
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #90918f;
+  }
   .tag:not(.choose-theme-container) {
     background-color: transparent !important;
     color: #fff !important;
@@ -92,6 +102,14 @@ body.space {
       animation: snore 1.6s forwards;
       will-change: font-size, content;
     }
+    &:hover {
+      &:before {
+        content: none;
+      }
+      &:after {
+        animation: slow-blink-to-anger 15s ease-out;
+      }
+    }
   }
   .music-container {
     .music {
@@ -103,6 +121,16 @@ body.space {
 }
 body.bubbles {
   background-color: pink;
+  &::-webkit-scrollbar-track {
+    background: pink;
+  }
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(#b2ffff, orange);
+    box-shadow: 2px 2px 0 #00000040;
+  }
   #primary-nav p {
     text-shadow: 2px 5px 0 #00000040;
   }
@@ -113,12 +141,12 @@ body.bubbles {
     box-shadow: 2px 2px 0 #00000040;
   }
   .flicker-text {
+    color: pink;
+    text-shadow: 4px 4px 0 #fff, -.01px -1px 1px #fff;
+    animation: none;
     &:not(.bottom-left) {
       margin-top: -4px;
     }
-    color: pink;
-    text-shadow: 4px 4px 0 #fff, -.01px -1px 1px #fff;
-    animation: bubble-text 2s infinite linear;
     &.about--copy {
       color: #fff;
       text-shadow: none;
@@ -140,15 +168,32 @@ body.bubbles {
       }
     }
   }
+  .btn:not(.windows) {
+    will-change: border-radius, height;
+    transition: border-radius .2s ease, height .2s ease;
+    &:hover {
+      border-radius: 50%;
+      height: 60px;
+      animation: spin 3s linear infinite;
+      &:before {
+        animation: spin 3s linear infinite reverse;
+      }
+    }
+  }
   .music-container .music {
     animation: floatup 60s linear infinite;
-    &:hover {
-      animation-play-state: paused;
+    &.exact-match {
+      animation: none;
+      .music--inner {
+        animation: wobble 2s infinite linear;
+      }
     }
     &.playing {
+      animation: none;
       .music--inner {
         background: linear-gradient(pink, #7ff9ffad);
         border: none;
+        animation-play-state: paused;
       }
     }
     .current-time-container {
@@ -191,6 +236,12 @@ body.bubbles {
         background-color: transparent;
       }
     }
+    &:hover {
+      animation-play-state: paused;
+      .music--inner {
+        animation-play-state: paused;
+      }
+    }
   }
   @for $i from 1 through 100 {
     .music:nth-child(#{$i}) {
@@ -209,6 +260,9 @@ body.bubbles {
 }
 body.sterile {
   background-color: #fff;
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  } 
   section, a {
     color: #000;
   }
@@ -307,5 +361,19 @@ body.sterile {
     &:hover {
       box-shadow: none;
     }
+  }
+}
+@keyframes wobble {
+  0%, 50%, 100% {
+    height: 200px;
+    width: 200px;
+  }
+  25% {
+    height: 175px;
+    width: 225px;
+  }
+  75% {
+    height: 225px;
+    width: 175px;
   }
 }

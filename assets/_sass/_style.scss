@@ -416,7 +416,7 @@ footer {
       box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset;
     }
     &:hover:after  {
-      animation: slow-blink-to-anger 10s forwards !important;
+      animation: slow-blink-to-anger 15s forwards !important;
     }
   }
 }
@@ -759,10 +759,6 @@ section.active .btn {
     transform: rotate(360deg);
   }
 }
-@keyframes bubble-text {
-
-}
-
 @keyframes sliding-background {
   0%,
   100% {

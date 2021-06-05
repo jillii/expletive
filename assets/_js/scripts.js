@@ -36,7 +36,7 @@ $(function(){
   var search = location.search;
 
   if (search) {
-    var track_title = search.split('=')[1];
+    var track_title = decodeURIComponent(search.split('=')[1]);
 
     update_musics(track_title, false, 5, true);
 

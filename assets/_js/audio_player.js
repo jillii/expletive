@@ -9,22 +9,6 @@ var mediaPlayer = $("#media-player"),
     repeat      = false,
     footer      = $("footer"),
     stopping    = false;
-// play track on window load, if specified in query
-$(function(){
-  var search = location.search;
-
-  if (search) {
-    var track_id = search.split('=')[1];
-
-    $('.music').each(function(){
-      $(this).addClass("no-match");
-    });
-    $('#player-' + track_id).parents('.music')
-                            .removeClass('no-match')
-                            .addClass('match')
-                            .addClass("exact-match");
-  }
-});
 
 // handle all player related clicks
 $(".player").on("click", function(e){

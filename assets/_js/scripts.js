@@ -31,7 +31,17 @@ $(function(){
 // handle music items
 var musics = $('.music'),
 	tags   = $('.tag');
+// play track on window load, if specified in query
+$(function(){
+  var search = location.search;
 
+  if (search) {
+    var track_title = search.split('=')[1];
+
+    update_musics(track_title, false, 5, true);
+
+  }
+});
 $("#search").keyup(function(){
 	var input = $(this).val(),
 		reset = false;
@@ -55,7 +65,7 @@ $(".tag").click(function(){
 
 });
 
-function update_musics(input, reset, time = 5) {
+function update_musics(input, reset, time = 5, exact_match = false) {
 	var active_tags = "";
 
 	musics.each(function(){
@@ -79,11 +89,17 @@ function update_musics(input, reset, time = 5) {
 			} else {
 				if (title == input) { // if exact match
 					music.addClass("exact-match");
+				} else {
+					if (exact_match) {
+						music.addClass("no-match");
+					}
 				}
-				music.addClass("match");
 
-				// collect active tags
-				active_tags += music.data("value");
+				if (!exact_match || title == input) {
+					music.addClass("match");
+					// collect active tags
+					active_tags += music.data("value");
+				}
 			}
 		}
 	});

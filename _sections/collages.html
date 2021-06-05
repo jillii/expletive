@@ -14,7 +14,7 @@ name: " "
 			<div class="copy-container">
 				<div>
 					<h3 class="flicker-text infinite">{{ collage.title }}</h3>
-					{% if collage.desc %}
+					{% if collage.desc and collage.desc != '' %}
 						<div class="desc marquee infinite"><span>{{ collage.desc }}</span></div>
 					{% endif %}
 				</div>

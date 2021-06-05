@@ -120,17 +120,12 @@
 		&.no-match {
 			display: none;
 		}
-		&.exact-match {
-			.music--inner {
-				animation: rainbow 1s infinite;
-				animation-duration: 1s;
-			}
-		}
 		label {
 			width: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
+			padding: 2px;
 			border-bottom: 1px solid #fff;
 			border-color: inherit;
 			font-size: 12px;

@@ -182,6 +182,9 @@ body.bubbles {
   }
   .music-container .music {
     animation: floatup 60s linear infinite;
+    &.match {
+      animation: none;
+    }
     &.exact-match {
       animation: none;
       .music--inner {
@@ -261,8 +264,8 @@ body.bubbles {
 body.sterile {
   background-color: #fff;
   &::-webkit-scrollbar-track {
-    background: #fff;
-  } 
+    background: #0006;
+  }
   section, a {
     color: #000;
   }
@@ -278,13 +281,13 @@ body.sterile {
     border-color: #000;
   }
   .windows {
-    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 2px 13px 9px #aaa;
+    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 2px 13px 9px #0006;
   }
   .music-container .music {
     .music--inner {
       background-color: #fafafa;
       border: none;
-      box-shadow: 1px 1px 0px grey, 1px 1px 6px #fff inset, -1px -1px 1px #aaa inset, 3px 3px 1px #aaaaaa42;
+      box-shadow: -1px -1px 4px #0006 inset, 1px 1px 6px #fff inset, -1px -1px 1px #aaa inset, 3px 3px 14px #0006;
       label {
         color: #aaa;
       }
@@ -304,12 +307,7 @@ body.sterile {
     }
     &.playing {
       .music--inner {
-        background: linear-gradient(#0000080d, #0003);
-        border: 1px solid #aaa;
-        box-shadow: none;
-        label {
-          border-color: #000;
-        }
+        background: linear-gradient(45deg, #fff, #ddd);
       }
     }
     .player .volume span {
@@ -356,7 +354,7 @@ body.sterile {
       height: 100%;
       border-radius: 50%;
       background: linear-gradient(45deg, #00000052, transparent);
-      box-shadow: 1px 1px 2px #aaa, 2px 2px 8px #fff inset;
+      box-shadow: 1px 1px 6px #0006, -1px 1px 9px #fff inset;
     }
     &:hover {
       box-shadow: none;

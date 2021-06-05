@@ -15,7 +15,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
  
 body::-webkit-scrollbar-track {
@@ -24,7 +24,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #fff;
   opacity: .3;
-  box-shadow: 0 0 2px #fff inset, 2px -2px 0px #000 inset, 1px 1px 0 #000;
   border-radius: 13px;
 }
 section.active .infinite,
@@ -36,8 +35,9 @@ section.active #stars-2.infinite {
 div {
   box-sizing: border-box;
 }
-video {
-  max-width: 100%;
+select,
+option {
+  cursor: pointer;
 }
 .flexbox {
   display: flex;
@@ -393,7 +393,7 @@ footer {
 }
 
 .windows {
-  border: none;
+  border: none !important;
   border-radius: 0;
   background-color: #d7d3ce;
   color: #000;
@@ -738,17 +738,17 @@ section.active .btn {
 }
 @keyframes move-shadow {
   0% {
-    text-shadow: 1px 3px 0 #000
+    text-shadow: 1px 3px 0 #0006
   }
   60% {
     margin-top: -3px;
     margin-left: -3px;
-    text-shadow: 4px 6px 2px #000;
+    text-shadow: 4px 6px 2px #0006;
   }
   100% {
     margin-top: -2px;
     margin-left: -2px;
-    text-shadow: 2px 5px 1px #000;
+    text-shadow: 2px 5px 1px #0006;
   }
 }
 @keyframes spin {

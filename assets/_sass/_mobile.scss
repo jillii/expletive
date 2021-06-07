@@ -10,10 +10,7 @@
 	.bottom-left {
 		margin-left: 0;
 	}
-	footer {
-		padding-bottom: 0;
-		#signup {
-			transform: rotate(270deg) translate(35px,110px);
-		}
+	form {
+		max-width: none;
 	}
 }

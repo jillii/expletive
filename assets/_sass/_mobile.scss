@@ -1,4 +1,12 @@
 @media screen and (max-width: 560px) {
+	.music-container {
+		width: unset;
+		height: unset;
+		padding-top: 0;
+	}
+	.music:not(.match):not(.exact-match) {
+		display: none;
+	}
 	.bottom-left {
 		margin-left: 0;
 	}

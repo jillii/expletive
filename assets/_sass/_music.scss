@@ -80,6 +80,9 @@
 			}
 		}
 		.player {
+			button {
+				touch-action: manipulation;
+			}
 			.vol-incr {
 				opacity: .75;
 			}
@@ -245,6 +248,11 @@
 	&.active {
 		top: unset;
 	}
+
+	button {
+		touch-action: manipulation;
+	}
+
 	.pause {
 		display: none;
 	}

@@ -412,8 +412,7 @@ footer {
       content: none;
     }
     &:active {
-      margin-top: 12px;
-      margin-left: 12px;
+      transform: translate(12px, 12px);
       box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset;
     }
     &:hover:after  {

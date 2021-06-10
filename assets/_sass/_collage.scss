@@ -46,6 +46,7 @@
 		&.active {
 			height: unset;
 			width: 100vw;
+			max-width: none;
 			flex-direction: row-reverse;
 			.copy-container {
 			    width: 100%;

@@ -8,7 +8,11 @@ name: " "
 		{% assign id = collage.title | replace: ' ', '-' %}
 		<div class="collage fire-explosion" id="{{ id }}" style="z-index: {{ collage.z }}">
 			<div class="img-container draggable">
-				<img alt="{{ collage.title }}" src="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}?v={{ site.time | date:'%s' }}">
+				<picture>
+					<source src="{{ site.baseurl }}/assets/images/collag/{{ collage.image-bk | relative_path }}?v={{ site.time | date:'%s' }}" type="image/png+jpg">
+					<img alt="{{ collage_title }}" srcset="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}?v={{ site.time | date:'%s' }}">
+				</picture>
+
 				<button aria-label="view-return" class="windows btn" data-value="{{ id }}" class="explode" data-value="{{ id }}"></button>
 			</div>
 			<div class="copy-container">

@@ -185,7 +185,7 @@ body.bubbles {
       }
     }
   }
-  .btn:not(.windows) {
+  .btn:not(.windows):not(.contact-form-button) {
     will-change: border-radius, height;
     transition: border-radius .2s ease, height .2s ease;
     &:hover {

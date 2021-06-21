@@ -204,7 +204,7 @@ body.bubbles {
       }
     }
     &.playing {
-      animation: none;
+      animation-play-state: paused;
       .music--inner {
         background: linear-gradient(pink, #7ff9ffad);
         border: none;
@@ -221,6 +221,7 @@ body.bubbles {
     .music--inner {
       position: relative;
       background: transparent;
+      border: none;
       border-radius: 50%;
       box-shadow: -9px 8px 17px #b2ffff inset;
       height: 200px;

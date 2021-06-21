@@ -159,6 +159,11 @@ body.bubbles {
     &:not(.bottom-left) {
       margin-top: -4px;
     }
+
+    &:not(.page-title) {
+      color: #fff;
+      text-shadow: 4px 4px 0 $teal, -0.01px -1px 1px orange;
+    }
     &.about--copy {
       color: #fff;
       text-shadow: none;

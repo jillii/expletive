@@ -56,9 +56,12 @@
 				position: relative !important;
 				min-height: 100vh;
 				transition: top .5s ease, left .5s ease;
-				img {
-					height: 90vh;
-					float: right;
+				picture {
+					width: 100%;
+					source, img {
+						width: 100%;
+						object-fit: contain;
+					}
 				}
 			}
 			.desc {

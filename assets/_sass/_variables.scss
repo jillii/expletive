@@ -54,8 +54,8 @@ background: linear-gradient(145deg, #d7d7d7, #b5b5b500);
 
 @font-face {
     font-family: 'Segoe UI Emoji';
-    src: url('SegoeUIEmoji.woff2') format('woff2'),
-        url('SegoeUIEmoji.woff') format('woff');
+    src: url('../fonts/SegoeUIEmoji.woff2') format('woff2'),
+        url('../fonts/SegoeUIEmoji.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

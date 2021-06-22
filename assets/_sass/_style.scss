@@ -153,7 +153,7 @@ p {
   z-index: 999;
   #menu-toggle {
     &:after {
-      font-family: 'seguiemj';
+      font-family: 'Segoe UI Emoji';
       content: '\01F354';
       font-size: 18px;
     }
@@ -181,6 +181,7 @@ p {
   &.active {
     #menu-toggle {
       &:after {
+        font-family: 'Atari-Classic';
         content: 'x';
         color: #fff;
       }

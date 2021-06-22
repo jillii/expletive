@@ -54,6 +54,9 @@
 			}
 			.img-container {
 				position: relative !important;
+				left: unset !important;
+				top: unset !important;
+
 				min-height: 100vh;
 				transition: top .5s ease, left .5s ease;
 				picture {

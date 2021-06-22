@@ -9,7 +9,7 @@ name: " "
 		<div class="collage fire-explosion" id="{{ id }}" style="z-index: {{ collage.z }}">
 			<div class="img-container draggable">
 				<picture>
-					<source src="{{ site.baseurl }}/assets/images/collag/{{ collage.image-bk | relative_path }}?v={{ site.time | date:'%s' }}" type="image/png+jpg">
+					<source src="{{ site.baseurl }}/assets/images/collag/{{ collage.image_bk | relative_path }}?v={{ site.time | date:'%s' }}" type="image/png+jpg">
 					<img alt="{{ collage_title }}" srcset="{{ site.baseurl }}/assets/images/collag/{{ collage.image | relative_path }}?v={{ site.time | date:'%s' }}">
 				</picture>
 

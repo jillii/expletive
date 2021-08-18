@@ -47,8 +47,8 @@ weight: 1
 						<source src="{{ track.mp3 }}" type="audio/mpeg">
 					</audio>
 					<div class="controls"> 
-					  <button aria-label="play" class="play" onclick="document.getElementById('player-{{ id }}').play();">&#x23f5;&#xfe0e;</button> 
-					  <button aria-label="pause" class="pause" onclick="document.getElementById('player-{{ id }}').pause();">&#x23f8;&#xfe0e;</button> 
+					  <button aria-label="play" class="play" onclick="document.getElementById('player-{{ id }}').play();"></button> 
+					  <button aria-label="pause" class="pause" onclick="document.getElementById('player-{{ id }}').pause();"></button> 
 					  <button aria-label="turn up volume" class="vol vol-incr" onclick="document.getElementById('player-{{ id }}').volume += 0.1">+</button> 
 					  <button aria-label="lower volume" class="vol vol-decr" onclick="document.getElementById('player-{{ id }}').volume -= 0.1">-</button> 
 					  <div class="volume"><span>1.0</span></div>

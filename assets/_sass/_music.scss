@@ -2,6 +2,67 @@
 #tags {
 	max-width: 1400px;
 }
+.controls {
+	margin: 6px 0;
+	button {
+		display: inline-flex;
+		padding: 0;
+		margin: 0 6px;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:after {
+			content: '';
+		}
+	}
+	.play:after {
+	    width: 0;
+	    height: 0;
+	    border-top: 5px solid transparent;
+	    border-bottom: 5px solid transparent;
+	    border-left: 5px solid;
+	    border-left-color: inherit;
+	}
+	.pause:after {
+		display: table;
+	    border-left: 2px solid;
+	    border-right: 2px solid;
+	    width: 2px;
+	    height: 9px;
+	}
+	.stop:after {
+		width: 9px;
+		height: 9px;
+		background-color: currentColor;
+	}
+	.next {
+		border-right: 2px solid;
+		&:after {
+		    width: 0;
+		    height: 0;
+		    border-top: 5px solid transparent;
+		    border-bottom: 5px solid transparent;
+		    border-left: 5px solid;
+		    border-left-color: inherit;
+		}
+	}
+	.prev {
+		border-left: 2px solid;
+		&:after {
+		    width: 0;
+		    height: 0;
+		    border-top: 5px solid transparent;
+		    border-bottom: 5px solid transparent;
+		    border-right: 5px solid;
+		    border-right-color: inherit;
+		}
+	}
+}
 .tag {
 	position: relative;
 	max-width: 90%;
@@ -147,8 +208,6 @@
 		}
 		button,
 		.current-time-container {
-			height: 21px;
-			width: 21px;
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
@@ -231,6 +290,7 @@
 		}
 		button.pause {
 			display: unset;
+			margin-left: 0;
 		}
 		&:hover {
 			input[type=range] {
@@ -266,6 +326,7 @@
 		}
 		.pause {
 			display: unset;
+			margin-left: 0;
 		}
 	}
 }

@@ -41,11 +41,11 @@
     <div id="media-player" class="windows">
       <marquee id="track-title"></marquee>
       <div class="controls"> 
-        <button aria-label="play" class="play" onclick="$('.music.active audio')[0].play();">&#x23f5;&#xfe0e;</button> 
-        <button aria-label="pause" class="pause" onclick="$('.music.playing audio').each(function(){this.pause();});">&#x23f8;</button>
-        <button aria-label="stop" class="stop" onclick="stop(this)">&#x23F9;&#xfe0e;</button>
-        <button aria-label="previous track" class="prev">&#x23ee;&#xfe0e;</button>
-        <button aria-label="next track" class="next">&#x23ed;&#xfe0e;</button>
+        <button aria-label="play" class="play" onclick="$('.music.active audio')[0].play();"></button> 
+        <button aria-label="pause" class="pause" onclick="$('.music.playing audio').each(function(){this.pause();});"></button>
+        <button aria-label="stop" class="stop" onclick="stop(this)"></button>
+        <button aria-label="previous track" class="prev"></button>
+        <button aria-label="next track" class="next"></button>
         <button aria-label="increase volume" class="vol vol-incr" onclick="$('.music.active audio')[0].volume += 0.1; $(this).parent().find('.volume span').html($('.music.active audio')[0].volume) ">+</button> 
         <button aria-label="decrease volume" class="vol vol-decr" onclick="$('.music.active audio')[0].volume -= 0.1;$(this).parent().find('.volume span').html($('.music.active audio')[0].volume)">-</button>
         <div class="volume"><span>1.0</span></div>

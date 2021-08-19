@@ -281,6 +281,9 @@ footer {
     justify-content: center;
     align-items: center;
     .fab {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 22px 12px;
       background-color: $primary-bg;
       position: relative;
       height: 21px;
@@ -293,40 +296,38 @@ footer {
       color: $blue;
       transition: transform .5s linear, margin 3s ease, background-color .5s ease;
       animation: reverse-roll 1s linear;
+
+      &.icon {
+        &-facebook {
+          background-image: url(../images/facebook-f-brands.svg);
+        }
+        &-instagram {
+          background-image: url(../images/instagram-brands.svg);
+        }
+        &-soundcloud {
+          background-image: url(../images/soundcloud-brands.svg);
+        }
+      }
       &:before {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-      &:after {
-        animation: roll 1s linear;
-      }
     }
     &:hover {
       .fab {
         animation: roll 1s forwards infinite linear;
         animation-direction: reverse;
-        &:after {
-          animation: roll 1s forwards infinite linear;
-          animation-direction: forwards;
-        }
       }
       .fab:hover {
         background-color: $shadow-color;
         margin: 0 100%;
+        filter: invert(1);
         animation: none;
-        &:before {
-          color: #fff;
-        }
-        &:after {
-          animation: none;
-        }
+
         & + .fab {
           animation-direction: normal;
-          &:after {
-            animation-direction: reverse;
-          }
         }
       }
     }
@@ -381,6 +382,10 @@ footer {
   cursor: pointer;
   &[type=range] {
     background-color: transparent;
+
+    &::moz-range-track {
+      background-color: transparent;
+    }
   }
   &::placeholder {
     letter-spacing: 2px;

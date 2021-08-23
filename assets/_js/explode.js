@@ -41,7 +41,7 @@ function explode(e, options) {
             grandparent = parent.parent();
 
         if (grandparent.hasClass("music")) {
-          parent.addClass("spin-out");
+          grandparent.addClass("spin-out");
         }
         if (grandparent.hasClass("popup")) {
           grandparent.addClass("spin-out");

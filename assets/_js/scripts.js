@@ -36,9 +36,12 @@ $(function(){
   var search = location.search;
 
   if (search) {
-    var track_title = decodeURIComponent(search.split('=')[1]);
+    var track_title = decodeURIComponent(search.split('=')[1]),
+    	is_play     = decodeURIComponent(search.split('=')[0]);
 
-    update_musics(track_title, false, 5, true);
+    if ( is_play.indexOf('play') != -1 ) {
+	    update_musics(track_title, false, 5, true);
+	}
 
   }
 });

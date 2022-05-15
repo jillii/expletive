@@ -146,9 +146,6 @@ body.bubbles {
       animation: water 7s infinite linear;
     }
   }
-  .windows {
-    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 12px 12px 0 #00000040;
-  }
   .tag {
     box-shadow: 2px 2px 0 #00000040;
   }
@@ -297,9 +294,6 @@ body.sterile {
   .btn {
     color: #000;
     border-color: #000;
-  }
-  .windows {
-    box-shadow: 3px 3px 2px #fff inset, -3px -3px 2px #979593 inset, 2px 13px 9px #0006;
   }
   .music-container .music {
     .music--inner {

@@ -12,6 +12,7 @@
 <div class="signup"><a href="#" onclick="event.preventDefault();$(this).next().toggleClass('active');">Sign up</a> for !@#$%'s mailing list and stay updated about show's. Will talk about other things upon request.
 	<div id="signup-popup" class="popup windows">
 		<div class="top">
+			<p>Signup</p>
 			<div class="close"></div>
 		</div>
 		Sign me up!<br><br>

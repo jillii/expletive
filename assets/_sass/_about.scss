@@ -3,4 +3,20 @@
 .about {
   justify-content: center;
   padding-top: 51px;
+
+  &--inner {
+  	position: relative;
+  	max-width: 400px;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding: 28px 12px 12px;
+
+  	.about--copy {
+  		p {
+  			margin: 0;
+  			padding: 0;
+  			color: #000;
+  		}
+  	}
+  }
 }

@@ -21,6 +21,7 @@
 			  method="POST">
 			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'" validate="email">
 		    <input type="hidden" name="message" value="sign me up for emails">
+		    <input type="checkbox" name="contact_me_by_fax_only" value="1" tabindex="-1" autocomplete="off" class="honey">
 		    <button type="submit" class="contact-form-button btn" value="-_-"></button>
 		    <p class="contact-form-status"></p>
 		</form>

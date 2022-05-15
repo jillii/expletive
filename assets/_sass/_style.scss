@@ -380,12 +380,21 @@ footer {
   color: #b4ff00;
   box-sizing: border-box;
   cursor: pointer;
+  &.honey {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
   &[type=range] {
     background-color: transparent;
 
     &::moz-range-track {
       background-color: transparent;
     }
+  }
+  &[type=checkbox] {
+    appearance: checkbox;
+    -webkit-appearance: checkbox;
   }
   &::placeholder {
     letter-spacing: 2px;

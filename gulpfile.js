@@ -1,6 +1,6 @@
 'use strict';
 var gulp        = require('gulp'),
-    sass        = require('gulp-sass'),
+    sass        = require('gulp-sass')(require('node-sass')),
     minify      = require('gulp-clean-css'),
     minify_js   = require('gulp-minify'),
     notify      = require("gulp-notify"),

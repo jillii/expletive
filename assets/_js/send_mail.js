@@ -22,11 +22,28 @@ window.addEventListener("DOMContentLoaded", function() {
 
     form.addEventListener("submit", function(ev) {
       ev.preventDefault();
-      var data = new FormData(form);
+      var data  = new FormData(form),
+          honey = $(form).find('.honey'),
+          bot   = false;
+      // weed out the bots
+      honey.each(function(){
+        var input = $(this),
+            type  = input.attr('type');
 
-      if (!$(form).find('.honey').is(':checked')) { // prevent spam
-        ajax(form.method, form.action, data, success, error);
-      }
+        if ('checkbox' === type) {
+          if (input.is(':checked')) {
+            bot = true;
+          }
+        }
+        if ('text' === type || 'email' === type) {
+          if (input.val() !== '') {
+            bot = true;
+          }
+        }
+      });
+
+      if (bot) { return false; } // exit function upon finding a bot
+      ajax(form.method, form.action, data, success, error);
     });
   });
 

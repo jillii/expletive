@@ -384,8 +384,9 @@ footer {
   box-sizing: border-box;
   cursor: pointer;
   &.honey {
-    position: absolute;
-    opacity: 0;
+    position: fixed;
+    left: -100px;
+    bottom: 100px;
     pointer-events: none;
   }
   &[type=range] {

@@ -23,6 +23,10 @@
 			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'" validate="email">
 		    <input type="hidden" name="message" value="sign me up for emails">
 		    <input type="checkbox" name="contact_me_by_fax_only" value="1" tabindex="-1" autocomplete="off" class="honey">
+		    <input type="text" name="name_2" tabindex="-1" autocomplete="off" class="honey input">
+		    <input type="email" name="email_2" tabindex="-1" autocomplete="off" class="honey input">
+		    <textarea type="text" name="message_2" tabindex="-1" autocomplete="off" class="honey input"></textarea>
+		    <input type="checkbox" name="contact_me_by_fax_only" value="1" autocomplete="off" class="honey input">
 		    <button type="submit" class="contact-form-button btn" value="-_-"></button>
 		    <p class="contact-form-status"></p>
 		</form>

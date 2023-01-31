@@ -168,6 +168,19 @@
 				margin-left: 0;
 			}
 		}
+		.release-link {
+			font-size: 12px;
+			color: inherit;
+			z-index: 1;
+
+			&:before {
+				content: '-->';
+			}
+
+			&:after {
+				content: '<--'
+			}
+		}
 		&:after {
 			position: absolute;
 			height: 100%;
@@ -273,10 +286,11 @@
 .music {
 	.range-container {
 		margin-top: 0;
-		position: absolute;
+		position: relative;
 		left: 0;
 		overflow: hidden;
 		input[type=range] {
+			position: absolute;
 			margin-top: 100%;
 			width: unset;
 			border-color: #fff;

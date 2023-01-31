@@ -118,7 +118,11 @@ body.space {
   }
   .music-container {
     .music {
+      .range-container {
+        margin-top: unset;
+      }
       .music--inner {
+        flex-direction: column;
         background-color: #ffffff1c;
       }
     }
@@ -196,6 +200,10 @@ body.bubbles {
   }
   .music-container .music {
     animation: floatup 60s linear infinite;
+
+    .release-link {
+      align-self: flex-start;
+    }
     &.match {
       animation: none;
     }
@@ -297,6 +305,7 @@ body.sterile {
   }
   .music-container .music {
     .music--inner {
+      flex-direction: column;
       background-color: #fafafa;
       border: none;
       box-shadow: -1px -1px 4px #0006 inset, 1px 1px 6px #fff inset, -1px -1px 1px #aaa inset, 3px 3px 14px #0006;

@@ -387,7 +387,7 @@ footer {
   box-sizing: border-box;
   cursor: pointer;
   &.honey {
-/*    position: fixed;
+    position: fixed;
     left: -100px;
     bottom: 100px;
     pointer-events: none;
@@ -397,7 +397,7 @@ footer {
     box-shadow: none !important;
     appearance: none;
     -webkit-appearance: none;
-    resize: none;*/
+    resize: none;
   }
   &[type=range] {
     background-color: transparent;

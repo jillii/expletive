@@ -28,9 +28,7 @@ $(function(){
 		location.hash = id;
 	});
 });
-// handle music items
-var musics = $('.music'),
-	tags   = $('.tag');
+
 // play track on window load, if specified in query
 $(function(){
   var search = location.search;
@@ -45,16 +43,16 @@ $(function(){
 
   }
 });
-$("#search").keyup(function(){
-	var input = $(this).val(),
+$(".search").keyup(function(event){
+	var input = $(this).val().toLowerCase(),
 		reset = false;
 
 	if (input == "") {
 		reset = true;
 	}
-	update_musics(input, reset);
+	update_musics(input, reset, event);
 });
-$(".tag").click(function(){
+$(".tag").click(function(event){
 	var btn   = $(this),
 		id    = btn.attr("id");
 		reset = false;
@@ -63,19 +61,20 @@ $(".tag").click(function(){
 		reset = true;
 	}
 
-	update_musics(id, reset);
+	update_musics(id, reset, event);
 	btn.toggleClass("active");
 
 });
 
-function update_musics(input, reset, time = 5, exact_match = false) {
+function update_musics(input, reset, event = null, time = 5, exact_match = false) {
 	var active_tags = "";
+	const targets = $("#" + $(event.target).data('target')).find('.music');
 
-	musics.each(function(){
+	targets.each(function(){
 		// hide musics with non-matching tags
 		var music = $(this),
-			title = music.find("label").html(),
-		    tags  = music.data("value");
+			title = music.find(".music-title").html().toLowerCase(),
+		    tags  = music.data("value").toLowerCase();
 
 		if (reset) {
 			music.removeClass("no-match")
@@ -83,7 +82,7 @@ function update_musics(input, reset, time = 5, exact_match = false) {
 				 .removeClass("exact-match");
 		} else {
 
-			if (!tags.includes(input)) {
+			if (!tags.includes(input) && !title.includes(input)) {
 				music.addClass("no-match")
 					 .removeClass("match");
 			    if (music.hasClass("exact-match")) {
@@ -107,10 +106,13 @@ function update_musics(input, reset, time = 5, exact_match = false) {
 		}
 	});
   
-	update_tags(active_tags, reset);
+	update_tags(active_tags, reset, event);
 }
-function update_tags(active_tags, reset, time = 5) {
-	tags.each(function(){
+function update_tags(active_tags, reset, event = null, time = 5) {
+	const target = $(event.target);
+	let parent = target.hasClass('search') ? target.parent().next() : target.parent();
+
+	parent.find('.tag').each(function(){
 		var tag = $(this),
 		 	id  = tag.attr("id");
 

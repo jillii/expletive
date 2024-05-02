@@ -6,7 +6,7 @@ weight: 1
 	<p>
 		Please enter a key phrase to help identify what you'd like to listen to.
 	</p> 
-	<input class="input" type="text" id="search" placeholder="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'search'">
+	<input class="input search" data-target="musics" type="text" id="search" placeholder="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'search'">
   <button aria-label="search music" id="search-by-tag" class="btn" type="submit"></button>
   <button id="playall" class="windows btn">Play All</button>
   <button id="shuffle" class="btn windows">Shuffle Tracks</button>
@@ -21,7 +21,7 @@ weight: 1
 			{% if tag == prev %}
 				{% assign count = count | plus: 1 %}
 			{% else %}
-				<button class="tag infinite" id="{{ prev }}">{{ prev }}<span class="num">{{ count }}</span></button>
+				<button class="tag infinite" id="{{ prev }}" data-target="musics">{{ prev }}<span class="num">{{ count }}</span></button>
 				{% assign count = 1 %}
 			{% endif %}
 		{% endif %}
@@ -31,13 +31,13 @@ weight: 1
 	{% endfor %}
 </div>
 
-<div class="music-container">
+<div id="musics" class="music-container">
 	{% for track in site.data.tracks %}
     {% assign id = forloop.index0 %}
 		<div itemscope itemtype="https://schema.org/MusicRecording" itemprop="audio" class="music infinite" data-value="{{ track.tags | join: ' ' }}">
 			<meta itemprop="keywords" content="{{ track.tags | join: ' ' }}">
 			<div class="music--inner">
-				<label class="draggable" itemprop="name">{{ track.title }}</label>
+				<label class="draggable music-title" itemprop="name">{{ track.title }}</label>
 				<div class="close"></div>
 				<div class="player">
 					<audio preload="none" id="player-{{ id }}" 

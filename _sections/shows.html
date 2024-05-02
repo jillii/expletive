@@ -1,0 +1,55 @@
+---
+title: shows
+weight: 2
+---
+<div class="copy-area">
+	<p>
+		Enter a location or artist name to filter shows
+	</p> 
+	<input class="input search" data-target="shows" type="text" id="search-shows" placeholder="search" onfocus="this.placeholder = ''" onblur="this.placeholder = 'search'">
+  <button aria-label="search shows" id="search-by-tag-shows" class="btn" type="submit"></button>
+</div>
+<div id="tags">
+	{% assign lineups = site.data.shows | map: "lineup"  %}
+    {% assign venues = site.data.shows | map: "venue" %}
+    {% assign locations = site.data.shows | map: "location" %}
+    {% assign tags = lineups | concat: venues | concat: locations | join: ',' | split: ',' | sort_natural %}
+	{% assign count = 1 %}
+	{% assign prev = '' %}
+	{% for tag in tags %}
+		{% if prev != '' %}
+			{% if tag == prev %}
+				{% assign count = count | plus: 1 %}
+			{% else %}
+				<button class="tag infinite" id="{{ prev }}" data-target="shows">{{ prev }}<span class="num">{{ count }}</span></button>
+				{% assign count = 1 %}
+			{% endif %}
+		{% endif %}
+
+		{% assign prev = tag %}
+
+	{% endfor %}
+</div>
+
+<div class="music-container" id="shows">
+	{% for show in site.data.shows %}
+        {% assign id = forloop.index0 %}
+        {% assign info = show.lineup | join: ', ' | append: ', ' | append: show.venue | append: ', ' | append: show.location %}
+        <div itemscope itemtype="https://schema.org/MusicRecording" itemprop="audio" class="music infinite" data-value="{{ info }}">
+			<meta itemprop="keywords" content="{{ info }}">
+			<div class="music--inner">
+				<label class="draggable music-title" itemprop="name">{{ show.title }}</label>
+				<div class="close"></div>
+                {% if show.date %}
+                    <span>{{ show.date }}</span>
+                {% endif %}
+                {% if show.venue %}
+                    <span>{{ show.venue }}</span>
+                {% endif %}
+                {% if show.link %}
+                    <a href="{{ show.link }}" class="release-link" target="_blank">link</a>
+                {% endif %}
+			</div>
+		</div>
+	{% endfor %}
+</div>

@@ -1,3 +1,64 @@
+- title: "Secret Location"
+  date: 06-03-17
+  venue: skylight
+  link: https://www.instagram.com/p/BUgXdPpDY3V/
+  lineup: 
+    - IVVY
+    - echinacea
+    - black jade
+    - ancient origin
+
+- title: "Cake Factory"
+  date: 09-24-16
+  lineup: 
+    - w00dy
+    - TOR
+    - assistant director
+    - pink0
+    - dee diggs
+
+- title: "EXOPLANET"
+  date: 04-01-17
+  location: somerville ma
+  link: https://www.facebook.com/events/193782997776432
+  lineup: 
+    - englesia
+    - boydjbouti
+    - insha
+    - market basket
+    - black jade
+    - ancient origin
+    - elizabeth dalton
+    - ole mic odd
+
+- title: "Aeronaut Presents: Curious Sound Objects x Moon Villain"
+  date: 08-17-18
+  venue: aeronaut
+  location: somerville ma
+  link: https://www.facebook.com/events/236042167040216/
+  lineup: 
+    - moon villain
+    - a. campbell payne
+    - squelcher
+    - dinnersss
+
+- title: "BOSTON8BIT Presents: Terrific Tuesday"
+  date: 09-13-22
+  venue: the jungle
+  location: somerville ma
+  link: https://www.facebook.com/events/2871342963171575/
+  lineup: 
+    - robbie dean rhodes
+    - donutshoes
+
+- title: "Hannah Jay // Mike Sim // !@#$% // Post No Bills"
+  date: 08-27-22
+  venue: poopy's
+  lineup: 
+    - hannah jay
+    - mike sim
+    - post no bills
+
 - title: "SCENE'S INDOOR HANG"
   date: 04-06-24
   venue: MAGMA
@@ -211,7 +272,7 @@
   location: cambridge ma
   link: https://www.facebook.com/events/153570175261301
   lineup: 
-    - soso gutter
+    - so_so_gutter
     - s. nicaenum
     - ancient origin
 
@@ -270,7 +331,7 @@
     - bookworms
     - luna mariposa
     - isabella
-    - jakeancient origin
+    - ancient origin
     - squelcher
     - gobby
     - grutch
@@ -336,7 +397,7 @@
   lineup: 
     - grutch
     - ancient origin
-    - dinnerss
+    - dinnersss
     - assistant director
     - echinacea
     - passersby
@@ -347,7 +408,7 @@
   location: cambridge ma
   link: https://www.facebook.com/events/1397303680308452/
   lineup: 
-    - dinnerss
+    - dinnersss
     - dee diggs
     - TOR
 
@@ -357,7 +418,7 @@
   lineup: 
     - pink0
     - dinnersss
-    - assistant directory
+    - assistant director
     - passersby
     - echinacea
 
@@ -368,7 +429,7 @@
     - elizabeth dalton
     - oscar huang
     - dinnersss
-    - assistant directory
+    - assistant director
     - TOR
 
 - title: 'THRASH OR DONT #02'
@@ -394,10 +455,10 @@
     - standing wave
     - celestial svvitch
 
-- title: 'HEXX HEAD // !#$% // SERIAL KRUSHER // CEREMONIAL ABYSS // FRKSE // ANDA VOLLEY // CHRISTINA SHIVERS'
+- title: 'Untitled Event #01'
   date: 06-17-23
   venue: rabbithole
-  link: https://www.instagram.com/p/CtE5f-ROVfH/
+  link: https://www.facebook.com/events/653702966600120/
   lineup: 
     - anda volley
     - serial krusher
@@ -503,16 +564,6 @@
     - SWITCH HEATERS
     - market basket
     - heckidecimal
-
-- title: 'JACK LIFE 01'
-  date: 02-23-17
-  venue: zuzu
-  location: cambridge ma
-  link: https://www.facebook.com/events/238341546623953/
-  lineup: 
-    - ole mic odd
-    - isabella
-    - liquid asset
 
 - title: 'Watch Out For Snakes Fall 2021 Tour'
   date: 10-25-21

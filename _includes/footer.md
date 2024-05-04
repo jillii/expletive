@@ -36,7 +36,7 @@
 <p>Do you use<br>"social media?"</p>
 <div data-aos="fade-up" data-aos-anchor="#contact" class="socials">
   <a class="fab icon-discogs" href="https://www.discogs.com/artist/5747236-!"></a>
-  <a class="fab icon-facebook" href="https://www.facebook.com/generalexpletive"></a>
+  <a class="fab icon-spotify" href="https://open.spotify.com/artist/3jEWgooop0xQIOMiC1zj1U"></a>
   <a class="fab icon-instagram" href="https://www.instagram.com/____expletive/"></a>
   <a class="fab icon-soundcloud" href="https://soundcloud.com/generalexpletive"></a>
 </div>

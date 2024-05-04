@@ -40,13 +40,17 @@ weight: 2
 			<div class="music--inner">
 				<label class="draggable music-title" itemprop="name">{{ show.title }}</label>
 				<div class="close"></div>
-				<div itemprop="performer" itemscope="" itemtype="https://schema.org/MusicGroup">
-					{% for performer in show.lineup %}
+				{% for performer in show.lineup %}
+					<div itemprop="performer" itemscope="" itemtype="https://schema.org/MusicGroup">
 						<meta itemprop="name" content="{{ performer }}" />
-					{% endfor %}
-				</div>
+					</div>
+				{% endfor %}
                 {% if show.date %}
-				<span itemprop="startDate">{{ show.date }}</span>
+					{%- assign month = show.date | slice: 0, 2 %}
+					{%- assign day   = show.date | slice: 3, 2 %}
+					{%- assign year  = show.date | slice: 6, 2 %}
+					<meta itemprop="startDate" content="20{{ year }}-{{ month }}-{{ day }}" />
+					<span>{{ show.date }}</span>
                 {% endif %}
                 {% if show.venue %}
 				<span itemprop="location" itemscope="" itemtype="https://schema.org/MusicVenue">
@@ -54,7 +58,7 @@ weight: 2
 						<span itemprop="name">{{ show.venue }}</span>
 					</span>
 				{% else %}
-					{% if show.location %}<meta itemprop="location" content="{{ show.location }}" />{% endif %}
+					<meta itemprop="location" content="{{ show.location }}" />
                 {% endif %}
                 {% if show.link %}
                     <a itemprop="url" href="{{ show.link }}" class="release-link" target="_blank">link</a>

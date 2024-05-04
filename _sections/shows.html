@@ -35,19 +35,29 @@ weight: 2
 	{% for show in site.data.shows %}
         {% assign id = forloop.index0 %}
         {% assign info = show.lineup | join: ', ' | append: ', ' | append: show.venue | append: ', ' | append: show.location %}
-        <div itemscope itemtype="https://schema.org/MusicRecording" itemprop="audio" class="music infinite" data-value="{{ info }}">
+        <div itemscope itemtype="https://schema.org/MusicEvent" class="music infinite" data-value="{{ info }}">
 			<meta itemprop="keywords" content="{{ info }}">
 			<div class="music--inner">
 				<label class="draggable music-title" itemprop="name">{{ show.title }}</label>
 				<div class="close"></div>
+				<div itemprop="performer" itemscope="" itemtype="https://schema.org/MusicGroup">
+					{% for performer in show.lineup %}
+						<meta itemprop="name" content="{{ performer }}" />
+					{% endfor %}
+				</div>
                 {% if show.date %}
-                    <span>{{ show.date }}</span>
+				<span itemprop="startDate">{{ show.date }}</span>
                 {% endif %}
                 {% if show.venue %}
-                    <span>{{ show.venue }}</span>
+				<span itemprop="location" itemscope="" itemtype="https://schema.org/MusicVenue">
+						{% if show.location %}<meta itemprop="address" content="{{ show.location }}" />{% endif %}
+						<span itemprop="name">{{ show.venue }}</span>
+					</span>
+				{% else %}
+					{% if show.location %}<meta itemprop="location" content="{{ show.location }}" />{% endif %}
                 {% endif %}
                 {% if show.link %}
-                    <a href="{{ show.link }}" class="release-link" target="_blank">link</a>
+                    <a itemprop="url" href="{{ show.link }}" class="release-link" target="_blank">link</a>
                 {% endif %}
 			</div>
 		</div>

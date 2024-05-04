@@ -54,7 +54,7 @@ $(".search").keyup(function(event){
 });
 $(".tag").click(function(event){
 	var btn   = $(this),
-		id    = btn.attr("id");
+		id    = btn.attr("id").toLowerCase(),
 		reset = false;
 
 	if (btn.hasClass("active")) {

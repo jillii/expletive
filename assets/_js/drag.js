@@ -23,6 +23,7 @@ $(".draggable").mousedown(function(e) {
     pos4 = e.clientY;
     
     draggy.css("animation-play-state", "paused");
+    draggy.addClass("dragged");
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;

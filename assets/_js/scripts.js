@@ -68,7 +68,9 @@ $(".tag").click(function(event){
 
 function update_musics(input, reset, event = null, time = 5, exact_match = false) {
 	var active_tags = "";
-	const targets = $("#" + $(event.target).data('target')).find('.music');
+	var match_found = false;
+	const container = $("#" + $(event.target).data('target'));
+	const targets = container.find('.music');
 
 	targets.each(function(){
 		// hide musics with non-matching tags
@@ -90,6 +92,7 @@ function update_musics(input, reset, event = null, time = 5, exact_match = false
 			    }
 			} else {
 				if (title == input) { // if exact match
+					match_found = true;
 					music.addClass("exact-match");
 				} else {
 					if (exact_match) {
@@ -98,6 +101,7 @@ function update_musics(input, reset, event = null, time = 5, exact_match = false
 				}
 
 				if (!exact_match || title == input) {
+					match_found = true
 					music.addClass("match");
 					// collect active tags
 					active_tags += music.data("value");
@@ -105,7 +109,7 @@ function update_musics(input, reset, event = null, time = 5, exact_match = false
 			}
 		}
 	});
-  
+	if (match_found) {container.addClass('active')} else {container.removeClass('active')}
 	update_tags(active_tags, reset, event);
 }
 function update_tags(active_tags, reset, event = null, time = 5) {

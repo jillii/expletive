@@ -21,7 +21,7 @@ weight: 2
 			{% if tag == prev %}
 				{% assign count = count | plus: 1 %}
 			{% else %}
-				<button class="tag infinite" id="{{ prev }}" data-target="shows">{{ prev }}<span class="num">{{ count }}</span></button>
+				<button class="tag infinite" id="{{ prev }}" data-target="shows-container">{{ prev }}<span class="num">{{ count }}</span></button>
 				{% assign count = 1 %}
 			{% endif %}
 		{% endif %}
@@ -31,7 +31,7 @@ weight: 2
 	{% endfor %}
 </div>
 
-<div class="music-container" id="shows">
+<div class="music-container" id="shows-container">
 	{% for show in site.data.shows %}
         {% assign id = forloop.index0 %}
         {% assign info = show.lineup | join: ', ' | append: ', ' | append: show.venue | append: ', ' | append: show.location %}

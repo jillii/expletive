@@ -1,3 +1,13 @@
+- title: ghosts
+  mp3: https://feeds.soundcloud.com/stream/1438627837-user-594914147-ghosts.mp3
+  tags:
+    - ghosts
+    - technology
+    - melancholy
+    - melodic
+    - square
+    - beepy
+
 - title: spiritual paralysis
   mp3: https://feeds.soundcloud.com/stream/1830873042-generalexpletive-spiritual-paralysis.mp3
   tags:
@@ -36,16 +46,6 @@
     - thoughful
     - melodic
     - fast
-
-- title: ghosts
-  mp3: https://feeds.soundcloud.com/stream/1438627837-user-594914147-ghosts.mp3
-  tags:
-    - ghosts
-    - technology
-    - melancholy
-    - melodic
-    - square
-    - beepy
 
 - title: basketball asmr
   mp3: https://feeds.soundcloud.com/stream/1437140875-user-594914147-basketball-asmr.mp3

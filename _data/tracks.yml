@@ -1,3 +1,25 @@
+- title: ghosts
+  mp3: https://feeds.soundcloud.com/stream/1438627837-user-594914147-ghosts.mp3
+  tags:
+    - ghosts
+    - technology
+    - melancholy
+    - melodic
+    - square
+    - beepy
+
+- title: spiritual paralysis
+  mp3: https://feeds.soundcloud.com/stream/1830873042-generalexpletive-spiritual-paralysis.mp3
+  tags:
+    - spiritual paralysis
+    - fast
+    - minimal
+    - bit-crushed
+    - 200bpm
+    - bass
+    - 808
+    - 4-to-the-floor
+
 - title: outgroup
   mp3: https://feeds.soundcloud.com/stream/1669508628-generalexpletive-outgroup.mp3
   tags:
@@ -24,16 +46,6 @@
     - thoughful
     - melodic
     - fast
-
-- title: ghosts
-  mp3: https://feeds.soundcloud.com/stream/1438627837-user-594914147-ghosts.mp3
-  tags:
-    - ghosts
-    - technology
-    - melancholy
-    - melodic
-    - square
-    - beepy
 
 - title: basketball asmr
   mp3: https://feeds.soundcloud.com/stream/1437140875-user-594914147-basketball-asmr.mp3
@@ -140,6 +152,7 @@
     - remix
     - minimal
     - rhythmus records
+  link: https://propertytapes.bandcamp.com/track/chase-me-bootleg
 
 - title: storer
   mp3: https://feeds.soundcloud.com/stream/938509030-jill-hoenig-627090603-storer.mp3

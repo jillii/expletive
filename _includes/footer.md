@@ -16,15 +16,10 @@
 			<div class="close"></div>
 		</div>
 		Sign me up!<br><br>
-		<form id="contact-form" class="contact-form" action="mailto:jho3292@gmail.com" method="post" enctype="text/plain">
-			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'" validate="email">
+		<form id="contact-form" class="contact-form" action="https://formsubmit.co/jho3292@gmail.com" method="post">
+			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'" validate="email" required>
 		    <input type="hidden" name="message" value="sign me up for emails">
-		    <input type="checkbox" name="contact_me_by_fax_only" value="1" tabindex="-1" autocomplete="off" class="honey">
-		    <input type="text" name="name_2" tabindex="-1" autocomplete="off" class="honey input">
-		    <input type="email" name="email_2" tabindex="-1" autocomplete="off" class="honey input">
-		    <textarea type="text" name="message_2" tabindex="-1" autocomplete="off" class="honey input"></textarea>
-		    <input type="checkbox" name="contact_me_by_fax_only" value="1" autocomplete="off" class="honey input">
-		    <button type="submit" class="contact-form-button btn" value="-_-"></button>
+		    <button type="submit" name="submit" class="contact-form-button btn" value="-_-"></button>
 		    <p class="contact-form-status"></p>
 		</form>
 	</div>

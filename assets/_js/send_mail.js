@@ -22,6 +22,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     form.addEventListener("submit", function(ev) {
       ev.preventDefault();
+      status.innerHTML = "Sending...";
       var data  = new FormData(form),
           honey = $(form).find('.honey'),
           bot   = false;
@@ -50,7 +51,6 @@ window.addEventListener("DOMContentLoaded", function() {
   // helper function for sending an AJAX request
 
   function ajax(method, url, data, success, error) {
-    console.log(data);
     var xhr = new XMLHttpRequest();
     xhr.open(method, url);
     xhr.setRequestHeader("Accept", "application/json");
@@ -59,7 +59,6 @@ window.addEventListener("DOMContentLoaded", function() {
       if (xhr.status === 200) {
         success(xhr.response, xhr.responseType);
       } else {
-        console.log(error);
         error(xhr.status, xhr.response, xhr.responseType);
       }
     };

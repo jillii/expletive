@@ -16,10 +16,7 @@
 			<div class="close"></div>
 		</div>
 		Sign me up!<br><br>
-		<form id="contact-form"
-			  class="contact-form"
-			  action="https://formspree.io/f/xqkgpllv"
-			  method="POST">
+		<form id="contact-form" class="contact-form" action="https://formsubmit.co/jho3292@gmail.com" method="POST">
 			<input type="email" name="email" class="input" placeholder="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'email'" validate="email">
 		    <input type="hidden" name="message" value="sign me up for emails">
 		    <input type="checkbox" name="contact_me_by_fax_only" value="1" tabindex="-1" autocomplete="off" class="honey">
